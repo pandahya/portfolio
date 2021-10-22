@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+<meta charset="utf-8">
+<title>EXPERIMENTAL CAMERA - HWENG</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="../css/reset.css" rel="stylesheet">
+<link href="../css/portfolio-style.css" rel="stylesheet">
+
+</head>
+<body>
+<nav>
+	<div id="menu">
+		<ul>
+			<li>
+				<a href="index.html">weng, hyacinth</a>
+			</li>
+			<li>
+				<a href="portfolio.html">portfolio</a>
+			</li>
+			<li>
+				<a href="">archive</a>
+			</li>
+			<li>
+				<a href="about.html">about</a>
+			</li>
+		</ul>
+	</div>	
+	<div id="menu-list">
+		<div id="portfolio-list">
+			<h1>current</h1>
+			<ol>
+				<li>kodak competitor</li>
+				<li>clarence city</li>
+				<li>quantum arcade</li>
+			</ol>
+			<h1>graphic design</h1>
+			<ol>
+				<li>life, death, ducks</li>
+				<li>let me speak</li>
+				<li>contemporary type posters</li>
+				<li>shanghai in chicago</li>
+				<li>manifesto poster</li>
+				<li>eggs zine</li>
+			</ol>
+			<h1>code</h1>
+			<ol>
+				<li>click for frogs</li>
+				<li>itchy</li>
+				<li>interactive type</li>
+				<li><a href="experimental-camera.html">experimental camera</a></li>
+			</ol>
+			<h1>play</h1>
+			<ol>
+				<li>beetle beetle</li>
+				<li>a plant monarchy</li>
+				<li>pies</li>
+			</ol>
+			<h1>identity</h1>
+			<ol>
+				<li>blob logo</li>
+				<li>design for change</li>
+			</ol>
+			<h1>build</h1>
+			<ol>
+				<li>toy polyhedron</li>
+				<li>baby at the beach</li>
+				<li>small happiness machine</li>
+			</ol>
+			<h1>art</h1>
+			<ol>
+				<li>paper cut</li>
+				<li>pixel me</li>
+			</ol>
+			<h1>other</h1>
+			<ol>
+				<li>ACNH data viz</li>
+			</ol>
+		</div>
+	</div>      
+</nav>
+<main>
+<section class="work-page">
+	<header>
+        <h1>EXPERIMENTAL CAMERA</h1>
+        <h2>2021</h2>
+        <p>
+            Playing with the webcam and <a href="https://github.com/auduno/clmtrackr" target="_blank" rel="noopener noreferrer"> clmtrackr</a> to make an experimental camera in response to life in quarantine and school over Zoom.
+            This project allows the user to draw on the canvas with different colored objects in front of the camera and even with their own face. 
+			<br>
+			The camera works best on desktop and in a separate tab.
+            <br>
+            <a href="https://editor.p5js.org/pandahya/present/lsv4iJA6l" target="_blank" rel="noopener noreferrer">&rarr; link to camera</a>
+            <br>
+            <a href="https://editor.p5js.org/pandahya/sketches/lsv4iJA6l" target="_blank" rel="noopener noreferrer">&rarr; link to code</a>
+        </p>
+        <figure class='topbar'><img src="../imgs/drawing.png"/></figure>
+	</header>
+    <article>
+        <h2>DESIGN PROCESS</h2>
+		<p>
+			I started off knowing I wanted to do something with the color pixels. One of the things I associate with "the camera" and photography and things is color. And since the webcamera information is in pixels, I thought that would be fun to play with.
+			<br>
+			I also wanted to focus on the facial features because I think that these are the parts of the face that basically communicate everything. You can consider the rest of the face less necessary. And since I've been staring at my face all day on Zoom, I've become super self conscious, so why not just get rid of everything unnecessary on my face and just replace it with something more interesting.
+			Not exactly sure what I wanted to be doing with the color pixels, I decided on letting the user have control over that. And so my project would be isolating the different color categories and allowing the user to draw on the screen with that.
+		</p>
+		<!-- <figure>
+			<img src="../imgs/ecam1.jpeg"/>
+		</figure> -->
+		<p>
+        The biggest component of this project was being able have pixels in certain color ranges grouped together as one color, and to draw those pixels on the canvas. 
+        <br>
+        I started off with testing just red and blue and found that, since color information on a screen is divided into R, G, & B channels, it was actually quite difficult to separate colors cleanly. The camera doesn't register and recognize color the way humans do, so lighting, especially low lighting, affected the registering of colors.
+      </p>
+	  <p>
+        After successfully figuring out the color pixel things, I worked on adding clmtrackr and the face into the canvas.
+        <br>
+        I separated the color drawing layer and the face layer with createGraphics(). My initial idea was to keep the face above the layer of color pixels being drawn, but I wasn't able to work out a simple solution, so the colors are drawn above the face. But because of this problem I thought of adding the face as one of the drawing options, so you could actually see the face if you wanted over the colors. And that worked out really nice.
+        <br>
+        Working with clmtrackr, I took the points from the corners of the mouth and the corners of the eyes to draw rectangles around them as the area to show on the canvas. I initially had circles but rectangles were more flexible. I removed the nose and added the eyebrows because I thought the eyebrows were much more crucial to facial expression and communication than the nose.
+		<br>
+		I excluded black and white and brown because of lighting as well and to allow the other 7 colors a bigger range. Multiple colors can be selected at once and drawn on the canvas, and the image can be downloaded at the end if so wished.
+      </p>
+    </article>
+	<article>
+		<h2>
+			Reflection
+		</h2>
+		<p>
+			This project was really fun. It was interesting to think about and use the camera in an alternate method, not to necessarily capture a photo or image but building a tool that can take parts of that infomrmation to create something new. I basically made a camera-based drawing software, and I really like how "undetermined" the result of using this tool is. Even though I'm the one determining the ranges for the colors, the user has to use things from their own environment to be able to draw and it's what the user is presenting that is represented on the canvas. So it's a collaborative tool in a way, that requires both the developer and the user to contribute for it to work.
+		</p>
+	</article>	
+</section>
+</main>
+</body>
+</html>
