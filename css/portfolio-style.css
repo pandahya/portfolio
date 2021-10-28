@@ -141,7 +141,11 @@ nav a:active{
     display: none;
 }
 
-
+.portfolio-page{
+    display: grid;
+    grid: 1fr / 1fr 1fr 1fr 1fr; 
+    gap: 3%;
+}
 .portfolio-page img{
     width: 100%;
 }
@@ -191,10 +195,14 @@ iframe{
     margin: 10px;
 }
 .two{
+    width: 900px;
     display: grid;
     grid: 1fr / 1fr 1fr;
     /* align-items: stretch; */
     position: relative;
+}
+.two img{
+    height: 50%;
 }
 .two iframe{
     width: 600px;
@@ -205,11 +213,10 @@ iframe{
     position:absolute;
     top: 50%;
 }
-.portfolio-page{
-    display: grid;
-    grid: 1fr / 1fr 1fr 1fr 1fr; 
-    gap: 3%;
+.gallery{
+    display: flex;
 }
+
 .space{
     height: 20px;
 }
