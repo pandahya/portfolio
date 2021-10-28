@@ -3,6 +3,7 @@
 
 body{
     font-family: 'Space Mono', monospace;
+    background-color: whitesmoke;
     max-width:1500px;
     margin: 0px;
     padding: 0px;
@@ -15,6 +16,12 @@ section {
     position:relative;
     top: 125px;
     z-index: 1;
+}
+header{
+    margin-bottom: 50px;
+}
+article{
+    margin-bottom: 40px;
 }
 h1{
     font-size: 2em;
@@ -62,6 +69,9 @@ nav{
     padding: 0;
     margin: 0;
     z-index: 3;
+}
+nav h1{
+    color: black;
 }
 nav ul{
     /* font-size: 1em; */
@@ -131,6 +141,7 @@ nav a:active{
     display: none;
 }
 
+
 .portfolio-page img{
     width: 100%;
 }
@@ -155,32 +166,61 @@ nav a:active{
     color:white;
     text-decoration: none;
 }
+.topbar{
+    margin:20px 0;
+}
 .topbar img{
     width: 1000px;
-    margin-bottom: 50px;
     transition: 2s;
 }
-.topbar img:hover{
+.three{
+    display: flex;
+    justify-content: center;
+}
+.three img{
+    width: 33%;
+    transition: 2s;
+}
+.topbar img:hover, .three img:hover{
     -webkit-transform: rotate(10deg);
     -moz-transform: rotate(10deg);
     -o-transform: rotate(10deg);
     transform: rotate(10deg);
-    transition: 2s;
+}
+iframe{
+    margin: 10px;
+}
+.two{
+    display: grid;
+    grid: 1fr / 1fr 1fr;
+    /* align-items: stretch; */
+    position: relative;
+}
+.two iframe{
+    width: 600px;
+    grid-column: 1 / 2;
+}
+.two figcaption{
+    grid-column: 2 / 3;
+    position:absolute;
+    top: 50%;
 }
 .portfolio-page{
     display: grid;
     grid: 1fr / 1fr 1fr 1fr 1fr; 
     gap: 3%;
 }
+.space{
+    height: 20px;
+}
 
 ::selection{
     background-color: gold;
 }
 @media only screen and (max-width: 1000px){
-    body{
+    /* body{
         background-color: turquoise;
-    }
-    
+    } */
     .topbar img{
         width: 95vw;
     }
@@ -198,9 +238,9 @@ nav a:active{
     }
 }
 @media only screen and (max-width: 700px){
-    body{
+    /* body{
         background-color: green;
-    }
+    } */
     #menu ul li{
         font-size: 1rem;
     }
