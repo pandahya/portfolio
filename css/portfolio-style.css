@@ -127,9 +127,8 @@ nav a:active{
     list-style:decimal;
     line-height:1.5rem;
 }
-#archive-list{
+#portfolio-list,#archive-list{
     display: none;
-    background-color: violet;
 }
 
 .portfolio-page img{

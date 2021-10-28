@@ -17,7 +17,7 @@ function openMenu(){
     portfolioList.style.display = "block";
 }
 function openMenuA(){
-    nav.style.height="50vh";
+    nav.style.height="20vh";
     portfolioList.style.display = "none";
     archiveList.style.display = "block";
 }
