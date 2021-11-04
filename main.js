@@ -4,6 +4,7 @@ const portfolioList = document.getElementById('portfolio-list');
 const archive = document.getElementById('archive-menu');
 const archiveList = document.getElementById('archive-list');
 const menuList = document.getElementById('menu-list');
+
 portfolio.addEventListener('mouseover', openMenu);
 portfolioList.addEventListener('mouseover', openMenu);
 menuList.addEventListener('mouseout', closeMenu);
@@ -15,14 +16,18 @@ function openMenu(){
     nav.style.height="60vh";
     archiveList.style.display = "none";
     portfolioList.style.display = "block";
+    menuList.style.height = "50vh";
+
 }
 function openMenuA(){
     nav.style.height="20vh";
     portfolioList.style.display = "none";
     archiveList.style.display = "block";
+    menuList.style.height = "10vh";
 }
 function closeMenu(){
     nav.style.height="43px";
     portfolioList.style.display = "none";
     archiveList.style.display = "none";
+    menuList.style.height = "0px";
 }

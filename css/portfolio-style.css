@@ -43,7 +43,13 @@ ul{
 /* img:hover{
     outline: 1px solid gold;
 } */
-
+footer{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 50px;
+    z-index: 20;
+}
 #abt{
     display: flex;
 }
@@ -118,6 +124,7 @@ nav a:active{
     margin-right: auto;
 }
 #menu-list{
+    height: 0px;
     background-color: white;
     text-align: left;
     margin: 0 2% 2% 2%;
@@ -125,6 +132,7 @@ nav a:active{
     overflow-y: hidden;
     columns: 4;
     column-fill: auto;
+    transition: 0.2s;
 }
 #menu-list h1{
     font-size: 1.5rem;
@@ -215,6 +223,12 @@ iframe{
 }
 .gallery{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.gallery img{
+    width: 300px;
+    margin: 10px 0;
 }
 
 .space{
