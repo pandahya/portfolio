@@ -51,6 +51,7 @@ img{
 }
 figcaption{
     color: white;
+    padding: 0.5em;
 }
 footer{
     display: flex;
@@ -175,7 +176,6 @@ nav a:active{
 }
 .portfolio-page figcaption{
     text-align: center;
-    padding: 0.5em;
 }
 
 .work-page a:link, section a:visited{
@@ -264,10 +264,13 @@ iframe{
     background-color: gold;
 }
 @media only screen and (max-width: 1000px){
-    /* body{
+    body{
         background-color: turquoise;
-    } */
+    }
     .topbar img{
+        width: 95vw;
+    }
+    .two{
         width: 95vw;
     }
     #menu ul li{
@@ -282,11 +285,19 @@ iframe{
     #menu-list ol{
         font-size: 1.95vw;
     }
+    .gallery{
+        width: 95vw;
+        grid: 1fr / 1fr 1fr;
+
+    }
 }
 @media only screen and (max-width: 700px){
-    /* body{
+    body{
         background-color: green;
-    } */
+    }
+    .two{
+        display: block;
+    }
     #menu ul li{
         font-size: 1rem;
     }
@@ -295,5 +306,8 @@ iframe{
     }
     #menu-list ol{
         font-size: 0.9rem;
+    }
+    .gallery{
+        display: block;
     }
 }
