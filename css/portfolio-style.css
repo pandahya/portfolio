@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
+:root{
+    --blue: #283077;
+    --accent: gold;
+    --white: white;
+}
+
 body{
     font-family: 'Space Mono', monospace;
-    background-color: #283077;
+    background-color: var(--blue);
     max-width:1500px;
     margin: 0px;
     padding: 0px;
@@ -26,20 +32,23 @@ article{
 h1{
     font-size: 2em;
     padding: 5px;
-    color: white;
+    color: var(--white);
+    line-height: normal;
 }
 h2{
     font-size: 1.5em;
     padding: 5px;
-    color: white;
+    color: var(--white);
+    line-height: normal;
 }
 h3{
     font-size: 1.25em;
     padding: 5px;
-    color: white;
+    color: var(--white);
+    line-height: normal;
 }
 p{
-    color: white;
+    color: var(--white);
     padding:5px;
     line-height: 1.5rem;
 }
@@ -50,8 +59,9 @@ img{
     width: 100%;
 }
 figcaption{
-    color: white;
+    color: var(--white);
     padding: 0.5em;
+    line-height: normal;
 }
 footer{
     display: flex;
@@ -64,16 +74,68 @@ footer{
     display: flex;
 }
 #abt img{
-    width: 20vw;
+    width:200%;
 }
 #abt div{
     padding: 10px;
 }
+.resume ul{
+    color: var(--white);
+    list-style: circle;
+    margin-left: 20px;
+}
+#skillset{
+    margin-top: 0;
+}
+.skillbar{
+    display: grid;
+    height: 50px;
+    margin-left: -10px;
+    margin-right: 10px;
+}
+.skillbar p{
+    padding-top: 0px;
+    grid-column: 1 / span 2;
+}
+.level{
+    background-color: var(--accent);
+}
+.max{
+    background-color: var(--white);
+}
+#indesign{
+    grid: 1fr 1fr / 0.85fr 0.15fr;
+}
+#photoshop{
+    grid: 1fr 1fr / 0.85fr 0.15fr;
+}
+#illustrator{
+    grid: 1fr 1fr / 0.85fr 0.15fr;
+}
+#premiere{
+    grid: 1fr 1fr / 0.4fr 0.6fr;
+}
+#unity{
+    grid: 1fr 1fr / 0.2fr 0.8fr;
+}
+#htmlcss{
+    grid: 1fr 1fr / 0.7fr 0.3fr;
+}
+#javascript{
+    grid: 1fr 1fr / 0.6fr 0.4fr;
+}
+#csharp{
+    grid: 1fr 1fr / 0.2fr 0.8fr;
+}
+#cplus{
+    grid: 1fr 1fr / 0.2fr 0.8fr;
+}
+
 
 
 nav{
-    background: white;
-    outline: 1px dashed #283077;
+    background: var(--white);
+    outline: 1px dashed var(--blue);
     width:100vw;
     height: 43px;
     /* height: 60vh; */
@@ -99,20 +161,20 @@ nav:hover{
     grid: 43px 1fr / 1fr;
 }
 nav a:link,a:visited{
-    color: #283077;
+    color: var(--blue);
     text-decoration: none;
 }
 nav a:hover{
-    color:white;
-    background-color: #283077;
+    color:var(--white);
+    background-color: var(--blue);
     text-decoration: none;
 }
 nav a:active{
-    background-color: gold;
+    background-color: var(--accent);
     text-decoration: line-through;
 }
 #menu{
-    background-color: white;
+    background-color: var(--white);
     margin: 0;
     padding: 0;
     grid-column: 1 / 2;
@@ -135,7 +197,7 @@ nav a:active{
 }
 #menu-list{
     height: 0px;
-    background-color: white;
+    background-color: var(--white);
     text-align: left;
     margin: 0 2% 2% 2%;
     overflow-x: hidden;
@@ -168,7 +230,7 @@ nav a:active{
     width: 100%;
 }
 .portfolio-page img:hover{
-    outline: 2px solid gold;
+    outline: 2px solid var(--accent);
 }
 .portfolio-page img:active{
     border-radius: 50%;
@@ -178,13 +240,16 @@ nav a:active{
     text-align: center;
 }
 
-.work-page a:link, section a:visited{
-    color:gold;
+.work-page h2, #abt-page h3{
+    font-style: italic;
+}
+.work-page a:link, .work-page a:visited, #abt-page a:link, #abt-page a:visited{
+    color: var(--accent);
     text-decoration: underline;
 }
-.work-page a:hover{
-    background-color: gold;
-    color:white;
+.work-page a:hover, #abt-page a:hover{
+    background-color: var(--accent);
+    color:var(--white);
     /* text-decoration: none; */
 }
 .brief{
@@ -261,12 +326,14 @@ iframe{
 }
 
 ::selection{
-    background-color: gold;
+    background-color: var(--accent);
 }
+
+
 @media only screen and (max-width: 1000px){
-    body{
+    /* body{
         background-color: turquoise;
-    }
+    } */
     .topbar img{
         width: 95vw;
     }
@@ -292,9 +359,9 @@ iframe{
     }
 }
 @media only screen and (max-width: 700px){
-    body{
+    /* body{
         background-color: green;
-    }
+    } */
     .two{
         display: block;
     }
