@@ -223,6 +223,17 @@ nav a:active{
 #home{
     overflow: hidden;
 }
+
+#draw2{
+    position: fixed;
+    top: 0;
+    /* z-index: 2; */
+}
+#draw3{
+    position: fixed;
+    top: 0;
+}
+
 .portfolio-page{
     display: grid;
     grid: 1fr / 1fr 1fr 1fr 1fr; 
