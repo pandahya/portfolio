@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+<meta charset="utf-8">
+<title>BABY AT THE BEACH - HWENG</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="../css/reset.css" rel="stylesheet">
+<link href="../css/portfolio-style.css" rel="stylesheet">
+
+</head>
+<body>
+<nav id="nav">
+    <div id="menu">
+        <ul>
+            <li>
+                <a href="../index.html">weng, hyacinth</a>
+            </li>
+            <li id="portfolio-menu">
+                <a href="../portfolio.html">portfolio</a>
+            </li>
+            <li id="archive-menu">
+                <a href="">archive</a>
+            </li>
+            <li>
+                <a href="../about.html">about</a>
+            </li>
+        </ul>
+    </div>	
+    <div id="menu-list">
+        <div id="portfolio-list">
+            <h1>current</h1>
+            <ol>
+                <li><a href="../work/quantum-arcade.html">quantum arcade</a></li>
+            </ol>
+            <h1>graphic design</h1>
+            <ol>
+                <li><a href="../work/ducks.html">life, death, ducks</a></li>
+                <li><a href="../work/let-me-speak.html">let me speak</a></li>
+                <!-- <li><a href="../work/contemporary-type-poster.html">contemporary type posters</a></li> -->
+                <!-- <li><a href="../work/shanghai-chicago.html">shanghai in chicago</a></li> -->
+                <li><a href="../work/manifesto-poster.html">manifesto poster</a></li>
+                <li><a href="../work/eggs-zine.html">eggs zine</a></li>
+            </ol>
+            <h1>code</h1>
+            <ol>
+                <li><a href="../work/click-for-frogs.html">click for frogs</a></li>
+                <li><a href="../work/itchy.html">itchy</a></li>
+                <li><a href="../work/interactive-type.html">interactive type</a></li>
+                <li><a href="../work/experimental-camera.html">experimental camera</a></li>
+            </ol>
+            <h1>play</h1>
+            <ol>
+                <li><a href="../work/beetle-beetle.html">beetle beetle</a></li>
+                <!-- <li><a href="../work/plant-monarchy.html">a plant monarchy</a></li> -->
+                <li><a href="../work/pies.html">pies</a></li>
+            </ol>
+            <h1>identity</h1>
+            <ol>
+                <li><a href="../work/blob.html">blob logo</a></li>
+                <!-- <li><a href="../work/design-for-change.html">design for change</a></li> -->
+                <li><a href="../work/pose.html">POSE</a></li>
+            </ol>
+            <h1>build</h1>
+            <ol>
+                <li><a href="../work/toy-polyhedron.html">toy polyhedron</a></li>
+                <li><a href="../work/baby-beach.html">baby at the beach</a></li>
+                <li><a href="../work/happy-machine.html">small happiness machine</a></li>
+            </ol>
+            <!-- <h1>art</h1>
+            <ol>
+                <li><a href="../work/paper-cut.html">paper cut</a></li>
+                <li><a href="../work/pixel-me.html">pixel me</a></li>
+            </ol> -->
+            <!-- <h1>other</h1>
+            <ol>
+                <li><a href="../work/acnh-data.html">ACNH data viz</a></li>
+            </ol>	 -->
+        </div>
+        <div id='archive-list'>
+            <ol>
+                <li><a href="https://code-1-portfolio-hyacinth.glitch.me/" target="_blank" rel="noopener noreferrer">Code 1 Portfolio</a></li>
+                <li><a href="https://code-2-portfolio-hyacinth.glitch.me/" target="_blank" rel="noopener noreferrer">Code 2 Portfolio</a></li>
+                <li><a href="https://critical-code-portfolio-hyacinth.glitch.me/index.html" target="_blank" rel="noopener noreferrer">Critical Code Portfolio</a></li>
+                <li><a href="https://pandahya.github.io/lab-systems-2021/index.html" target="_blank" rel="noopener noreferrer">Lab Systems</a></li>
+            </ol>
+        </div>
+    </div>		
+</nav>
+<main>
+<section class="work-page">
+	<header>
+        <h1>BABY AT THE BEACH</h1>
+        <h2>2020</h2>
+        <p>
+            About increasing human reliance on machines for menial everyday tasks, imaging a world where humans have essentially become babies, unable to do anything without the help of machines.
+            <br>
+            The assignment was to use a sensor in an interactive setting. 
+            <br>
+            There are three states: umbrella open with LED off, umbrella closed with LED off, and umbrella closed with LED on. The first state is triggered by high light registered by the LDR, the second state is triggered by a low light, the third state is triggered by complete darkness or little to no light registered by the LDR. 
+            <br>
+            <a href="" target="_blank" rel="noopener noreferrer">&rarr; link to code</a>
+        </p>
+        <figure class="topbar_two" style="justify-content: space-between;">
+            <video controls="" width="48%"><source src="../imgs/babydark.mp4"></video>
+            <video controls="" width="48%"><source src="../imgs/babydim.mp4"></video>
+        </figure>
+	</header>
+    <article>
+        <h2>Components</h2>
+        <ul>
+            <li>servo</li>
+            <li>LDR</li>
+            <li>yellow LED</li>
+            <li>breadboard</li>
+            <li>Arduino Uno</li>
+            <li>9V battery</li>
+            <li>corresponding resistors & cables</li>
+            <li>cocktail umbrella, plastic baby</li>
+            <li>styrofoam, paper, plastic, felt, googly eyes</li>
+            <li>tape, string, wire, fabric pins, glue</li>
+        </ul>
+    </article>
+    <article>
+        <h2>Design Process</h2>
+        <p>
+            I decided to work with a photoresistor, an LDR, to open and close an umbrella via servo motor. I wanted to make a small scale model-type that could sit on a desk to mimic what an automatic sun umbrella would be like at a full scale. 
+        </p>
+        <div class="two">
+            <figure><img src="../imgs/baby10.jpeg"></figure>
+            <figure><img src="../imgs/baby11.jpeg"></figure>
+        </div>
+        <p>
+            I started by figuring out the wiring and the code, to make sure the parts functioned and moved as I wanted.
+            <br>
+            In a loop, the value the LDR is reading is checked and executes an action accordingly. Upon reading a value above 550, the servo arm will raise. A value between 550 and 100 will lower the servo arm. 100 or below will lower the arm and turn the LED on. 
+            <br>
+            To translate the servo motion to the umbrella, I attached a 16 gauge wire to the moveable part of the umbrella and connected it to the servo arm. I stabilized the umbrella and servo body in a piece of foam so the force of the servo would actually translate. 
+            <br>
+            My original plan was to attach the LDR to the top of the umbrella, but I opted to put it on the side and create a small beach environment instead, covering the foam with paper and other materials. I wasn't able to fit the rest of the electronics in the foam, so they had to stick out the side. 
+        </p>
+    </article>
+    <div class='gallery'>
+        <figure><img src="../imgs/baby1.jpeg"></figure>
+        <figure><img src="../imgs/baby2.jpeg"></figure>
+        <figure><img src="../imgs/baby3.jpeg"></figure>
+        <figure><img src="../imgs/baby4.jpeg"></figure>
+        <figure><img src="../imgs/baby5.jpeg"></figure>
+        <figure><img src="../imgs/baby6.png"></figure>
+        <figure><img src="../imgs/baby7.jpeg"></figure>
+        <figure><img src="../imgs/baby8.png"></figure>
+        <figure><img src="../imgs/baby9.png"></figure>
+    </div>
+</section>
+</main>
+</body>
+<script src="../main.js"></script>
+</html>
