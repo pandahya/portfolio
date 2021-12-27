@@ -326,6 +326,14 @@ iframe{
     position:absolute;
     top: 50%;
 }
+.three{
+    width: 900px;
+    display: grid;
+    grid: 1fr / 1fr 1fr 1fr;
+    gap: 0 2%;
+    margin: 20px 0;
+    position: relative;
+}
 .gallery{
     width: 900px;
     display: grid;

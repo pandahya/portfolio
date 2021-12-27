@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+<meta charset="utf-8">
+<title>SMALL HAPPINESS MACHINE - HWENG</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="../css/reset.css" rel="stylesheet">
+<link href="../css/portfolio-style.css" rel="stylesheet">
+
+</head>
+<body>
+<nav id="nav">
+    <div id="menu">
+        <ul>
+            <li>
+                <a href="../index.html">weng, hyacinth</a>
+            </li>
+            <li id="portfolio-menu">
+                <a href="../portfolio.html">portfolio</a>
+            </li>
+            <li id="archive-menu">
+                <a href="">archive</a>
+            </li>
+            <li>
+                <a href="../about.html">about</a>
+            </li>
+        </ul>
+    </div>	
+    <div id="menu-list">
+        <div id="portfolio-list">
+            <h1>current</h1>
+            <ol>
+                <li><a href="../work/quantum-arcade.html">quantum arcade</a></li>
+            </ol>
+            <h1>graphic design</h1>
+            <ol>
+                <li><a href="../work/ducks.html">life, death, ducks</a></li>
+                <li><a href="../work/let-me-speak.html">let me speak</a></li>
+                <!-- <li><a href="../work/contemporary-type-poster.html">contemporary type posters</a></li> -->
+                <!-- <li><a href="../work/shanghai-chicago.html">shanghai in chicago</a></li> -->
+                <li><a href="../work/manifesto-poster.html">manifesto poster</a></li>
+                <li><a href="../work/eggs-zine.html">eggs zine</a></li>
+            </ol>
+            <h1>code</h1>
+            <ol>
+                <li><a href="../work/click-for-frogs.html">click for frogs</a></li>
+                <li><a href="../work/itchy.html">itchy</a></li>
+                <li><a href="../work/interactive-type.html">interactive type</a></li>
+                <li><a href="../work/experimental-camera.html">experimental camera</a></li>
+            </ol>
+            <h1>play</h1>
+            <ol>
+                <li><a href="../work/beetle-beetle.html">beetle beetle</a></li>
+                <!-- <li><a href="../work/plant-monarchy.html">a plant monarchy</a></li> -->
+                <li><a href="../work/pies.html">pies</a></li>
+            </ol>
+            <h1>identity</h1>
+            <ol>
+                <li><a href="../work/blob.html">blob logo</a></li>
+                <!-- <li><a href="../work/design-for-change.html">design for change</a></li> -->
+                <li><a href="../work/pose.html">POSE</a></li>
+            </ol>
+            <h1>build</h1>
+            <ol>
+                <li><a href="../work/toy-polyhedron.html">toy polyhedron</a></li>
+                <li><a href="../work/baby-beach.html">baby at the beach</a></li>
+                <li><a href="../work/happy-machine.html">small happiness machine</a></li>
+            </ol>
+            <!-- <h1>art</h1>
+            <ol>
+                <li><a href="../work/paper-cut.html">paper cut</a></li>
+                <li><a href="../work/pixel-me.html">pixel me</a></li>
+            </ol> -->
+            <!-- <h1>other</h1>
+            <ol>
+                <li><a href="../work/acnh-data.html">ACNH data viz</a></li>
+            </ol>	 -->
+        </div>
+        <div id='archive-list'>
+            <ol>
+                <li><a href="https://code-1-portfolio-hyacinth.glitch.me/" target="_blank" rel="noopener noreferrer">Code 1 Portfolio</a></li>
+                <li><a href="https://code-2-portfolio-hyacinth.glitch.me/" target="_blank" rel="noopener noreferrer">Code 2 Portfolio</a></li>
+                <li><a href="https://critical-code-portfolio-hyacinth.glitch.me/index.html" target="_blank" rel="noopener noreferrer">Critical Code Portfolio</a></li>
+                <li><a href="https://pandahya.github.io/lab-systems-2021/index.html" target="_blank" rel="noopener noreferrer">Lab Systems</a></li>
+            </ol>
+        </div>
+    </div>		
+</nav>
+<main>
+<section class="work-page">
+	<header>
+        <h1>SMALL HAPPINESS MACHINE</h1>
+        <h2>2020</h2>
+        <p>
+            Creating an interactive project with Arduino and at least one sensor.
+            <br>
+            Concept on momentary and surface level happiness vs "true" happiness: small artificial interactions may be fun and interesting at first but end up disappointing and unfulfilling after you realize the pattern and the element of surprise wears off.  
+            <!-- <br>
+            <a href="" target="_blank" rel="noopener noreferrer">&rarr; link to code</a> -->
+        </p>
+        <figure class="topbar_two" style="justify-content: space-between;">
+            <video controls="" width="50%"><source src="../imgs/happy.mp4"></video>
+        </figure>
+	</header>
+    <article>
+        <h2>Components</h2>
+        <ul>
+            <li>servo motor x2</li>
+            <li>stepper motor + driver module</li>
+            <li>red LED x2</li>
+            <li>push button</li>
+            <li>breadboard</li>
+            <li>Arduino Uno</li>
+            <li>corresponding resistors & cables</li>
+            <li>tiny hands, sticker roll, paper, string</li>
+            <li>cardboard, hot glue, tape, more tape, hinges, cork, a lot of tape, styrofoam</li>
+        </ul>
+    </article>
+    <article>
+        <h2>Design Process</h2>
+        <p>
+            I initially started with the idea of a clapping machine, something that would provide a bit of artificial encouragement to someone upon command. To make it a little less predictable, I thought of adding other functions like giving an encouraging message or dispensing a happy face sticker(I happened to have a roll of them on hand). For my final plan I decided on three functions and drew up their mechanisms accordingly: hand clapping using a servo, turning a roll of stickers and messages with a stepper motor, and opening/closing paper flowers with a servo. The roll of stickers/messages would alternate between happy face stickers, encouraging messages, passive agressive messages, and other weird things. The paper flowers would have different faces in their centers displaying different emotions and a random one would open up each time it was prompted.  
+        </p>
+        <div class="two">
+            <figure><img src="../imgs/happy1.jpeg"></figure>
+        </div>
+        <p>
+            More than anything, building this project was a test of my creative construction/problem solving skills. Being away from campus and not having access to a shop, tools, and nice supplies, had me utilize things around the house instead, evident in the use of styrofoam, wine corks, and masking tape everywhere.
+        </p>
+        <p>
+            The logic here is basically, upon button push, a random integer between 1 & 4 inclusive is selected, each number corresponds to a different case in a switch statement. Each case runs a different set of actions in the hardware, so turning the first servo arm to clap the hands, turning the stepper motor to roll the roll, or turning the second servo to open the paper flower. The roll is designated two cases due to its own variations of outcome. When a case is running, the red LEDs light up to indicate so.
+        </p>
+        <div class="three">
+            <video controls="" width="100%"><source src="../imgs/happyclap.mp4"></video>
+            <video controls="" width="100%"><source src="../imgs/happyflower.mp4"></video>
+            <video controls="" width="100%"><source src="../imgs/happysticker.mp4"></video>
+        </div>
+        <p>
+            The hand clapping mechanism was made by attaching the hands to popsicle sticks which were connected at the other end by a hinge, so something like tongs. A string running between the two popsicle sticks was connected to a servo's arm, which would pull the string taut to bring the hands together and release to bring the hands apart. The servo motor was stabilized by attaching it to some scrap wood taped to one of the popsicle sticks.
+            <br>
+            I taped all the messages and things onto the roll of stickers. To attach the motor to the roll I stuffed styrofoam and a wine cork into the roll and attached that to the end of the stepper motor. To keep the motor upright and standing in the correct orientation I attached it to a cork standing up and attached the other end of the cork in the middle to another cork glued to the side of my containing box.
+            <br>
+            The mechanism for the paper flowers was the most complicated to engineer and I ultimately wasn't able to work it out in time. I was trying to use string attached to both sides of the petals to pull open and release to close the flowers, each set attached to a opposing side on the two sided servo arm. It didn't work out too well so I was only able to put one flower. The servo and flower were stabilized by a chunk of styrofoam.
+            <br>
+            Packing everything into a compact and nice looking container was the most difficult portion of the whole build. I was using a breadboard and premade jumper wires that were often way too long that took up unnecessary space. My other parts were all quite makeshift as well so everything was pretty wonky. I was also unable to extend the push button from the breadboard, so I had to use a hot glue stick to reach it from the outside. To power it, it needed to connect to my computer via USB because the 9V battery was not working for some reason. 
+        </p>
+    </article>
+    <div class='gallery'>
+        <figure><img src="../imgs/happy2.jpeg"></figure>
+        <figure><img src="../imgs/happy3.jpeg"></figure>
+        <figure><img src="../imgs/happy4.jpeg"></figure>
+        <figure><img src="../imgs/happy5.jpeg"></figure>
+        <figure><img src="../imgs/happy6.jpeg"></figure>
+        <figure><img src="../imgs/happy7.jpeg"></figure>
+        <figure><img src="../imgs/happy8.jpg"></figure>
+        <figure><img src="../imgs/happy9.jpeg"></figure>
+        <figure><img src="../imgs/happy10.jpeg"></figure>
+        <figure><img src="../imgs/happy11.jpeg"></figure>
+        <figure><img src="../imgs/happy12.jpeg"></figure>
+        <figure><img src="../imgs/happy13.jpeg"></figure>
+    </div>
+</section>
+</main>
+</body>
+<script src="../main.js"></script>
+</html>
