@@ -20,10 +20,10 @@ function openMenu(){
 
 }
 function openMenuA(){
-    nav.style.height="20vh";
+    nav.style.height="30vh";
     portfolioList.style.display = "none";
     archiveList.style.display = "block";
-    menuList.style.height = "10vh";
+    menuList.style.height = "20vh";
 }
 function closeMenu(){
     nav.style.height="43px";
