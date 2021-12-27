@@ -278,6 +278,7 @@ nav a:active{
 .topbar_two{
     display: flex;
     justify-content: left;
+    margin:20px 0;
 }
 .topbar_two img{
     width: 50%;
@@ -286,6 +287,7 @@ nav a:active{
 .topbar_three{
     display: flex;
     justify-content: left;
+    margin:20px 0;
 }
 .topbar_three img{
     width: 33%;
