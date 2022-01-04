@@ -250,6 +250,10 @@ nav a:active{
 .portfolio-page figcaption{
     text-align: center;
 }
+.underline{
+    text-decoration: underline wavy;
+    text-decoration-skip-ink: none;
+}
 
 .work-page h2, #abt-page h3{
     font-style: italic;
