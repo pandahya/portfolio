@@ -2,7 +2,7 @@
 <html lang="en"> 
 <head>
 <meta charset="utf-8">
-<title>HWENG</title>
+<title>ARCHIVE - HWENG</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href="./css/reset.css" rel="stylesheet">
 <link href="./css/portfolio-style.css" rel="stylesheet">
@@ -92,35 +92,20 @@
 		</div>
 	</div>		
 </nav>
-<main id="home">
-    <canvas id="draw" width="2880" height="800"></canvas>
+<main>
+    <section id="archive-pg">
+        <header>
+            <h1>Archive</h1>
+            <p>An archive of all Hyacinth's works.</p>
+        </header>
+        <ol>
+            <li><a href="https://code-1-portfolio-hyacinth.glitch.me/" target="_blank" rel="noopener noreferrer">Code 1 Portfolio</a></li>
+            <li><a href="https://code-2-portfolio-hyacinth.glitch.me/" target="_blank" rel="noopener noreferrer">Code 2 Portfolio</a></li>
+            <li><a href="https://critical-code-portfolio-hyacinth.glitch.me/index.html" target="_blank" rel="noopener noreferrer">Critical Code Portfolio</a></li>
+            <li><a href="https://pandahya.github.io/lab-systems-2021/index.html" target="_blank" rel="noopener noreferrer">Lab Systems</a></li>
+        </ol>
+    </section>
 </main>
-</body>	
+</body>
 <script src="main.js"></script>
-<script>
-    const c = document.getElementById("draw");
-    const ctx = c.getContext('2d');
-    
-    window.addEventListener('load', function(){
-        c.addEventListener('mousemove', draw);
-    })
-    function draw(e){
-        let xPos = event.clientX;
-        let yPos = event.clientY;
-
-        let canvLocation = c.getBoundingClientRect();
-        let canvX = canvLocation.x;
-        let canvY = canvLocation.y;
-
-        let mouseX = xPos - canvX;
-        let mouseY = yPos - canvY;
-
-        ctx.beginPath();
-        ctx.arc(mouseX, mouseY, 10, 0, 2 * Math.PI, false);
-        ctx.fillStyle = 'white';
-        ctx.fill();
-        console.log('hi');
-    }
-    
-</script>
 </html>

@@ -58,6 +58,12 @@ ul{
     margin-left: 20px;
     line-height: 1.5rem;
 }
+ol{
+    color: var(--white);
+    padding-left: 3rem;
+    list-style: decimal;
+    line-height: 1.5rem;
+}
 img{
     width: 100%;
 }
@@ -210,6 +216,7 @@ nav a:active{
     line-height: 1.5rem;
 }
 #menu-list ol{
+    color: black;
     padding-left: 3rem;
     font-size: 1.2rem;
     list-style:decimal;
@@ -258,11 +265,11 @@ nav a:active{
 .work-page h2, #abt-page h3{
     font-style: italic;
 }
-.work-page a:link, .work-page a:visited, #abt-page a:link, #abt-page a:visited{
+.work-page a:link, .work-page a:visited, #abt-page a:link, #abt-page a:visited, #archive-pg a:link, #archive-pg a:visited{
     color: var(--accent);
     text-decoration: underline;
 }
-.work-page a:hover, #abt-page a:hover{
+.work-page a:hover, #abt-page a:hover, #archive-pg a:hover{
     background-color: var(--accent);
     color:var(--white);
     /* text-decoration: none; */
