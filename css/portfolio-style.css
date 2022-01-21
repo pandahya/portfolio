@@ -73,11 +73,26 @@ figcaption{
     line-height: normal;
 }
 footer{
+    width: 100%;
     display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 50px;
+    justify-content: right;
+    position: fixed;
+    bottom: 0px;
     z-index: 20;
+}
+footer p{
+    margin: 5px 0 10px 20px;
+}
+#socials{
+    margin: 5px 20px 10px auto;
+}
+.social{
+    width: 30px;
+    height: 30px;
+}
+main a:link, main a:visited{
+    color: var(--accent);
+    text-decoration: none;
 }
 #abt{
     display: flex;
@@ -225,18 +240,29 @@ nav a:active{
 #portfolio-list,#archive-list{
     display: none;
 }
-#home{
-    overflow: hidden;
-}
-
-#draw2{
+#draw{
     position: fixed;
     top: 0;
     /* z-index: 2; */
 }
-#draw3{
-    position: fixed;
-    top: 0;
+
+#home h1{
+    font-size: 3em;
+}
+#home section{
+    padding-bottom: 20px; 
+}
+#home article{
+    padding-bottom: 30px;
+}
+/* #home figure a:link, #home figure a:visited{
+    color: var(--accent);
+} */
+#home figure a:hover{
+    background-color: transparent;
+}
+#home img:hover{
+    outline: 2px solid var(--accent);
 }
 
 .portfolio-page{
@@ -265,14 +291,13 @@ nav a:active{
 .work-page h2, #abt-page h3{
     font-style: italic;
 }
-.work-page a:link, .work-page a:visited, #abt-page a:link, #abt-page a:visited, #archive-pg a:link, #archive-pg a:visited{
+/* .work-page a:link, .work-page a:visited, #abt-page a:link, #abt-page a:visited, #archive-pg a:link, #archive-pg a:visited{
     color: var(--accent);
     text-decoration: underline;
-}
-.work-page a:hover, #abt-page a:hover, #archive-pg a:hover{
+} */
+#home a:hover, .work-page a:hover, #abt-page a:hover, #archive-pg a:hover{
     background-color: var(--accent);
     color:var(--white);
-    /* text-decoration: none; */
 }
 .brief{
     margin: 10px 0 20px 0;
@@ -282,7 +307,7 @@ nav a:active{
 }
 .topbar img{
     width: 100%;
-    transition: 2s;
+    transition: 0.5s;
 }
 .embed-container { position: relative; padding-bottom:56.25%; height:0; overflow: hidden; max-width: 100%; } 
 .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
@@ -293,7 +318,7 @@ nav a:active{
 }
 .topbar_two img{
     width: 50%;
-    transition: 2s;
+    transition: 0.5s;
 }
 .topbar_three{
     display: flex;
@@ -302,9 +327,12 @@ nav a:active{
 }
 .topbar_three img{
     width: 33%;
-    transition: 2s;
+    transition: 0.5s;
 }
-.topbar img:hover, .topbar_two img:hover, .topbar_three img:hover{
+#home img{
+    transition: 0.5s;
+}
+#home img:hover, .topbar img:hover, .topbar_two img:hover, .topbar_three img:hover{
     -webkit-transform: rotate(10deg);
     -moz-transform: rotate(10deg);
     -o-transform: rotate(10deg);
