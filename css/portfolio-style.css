@@ -138,10 +138,10 @@ main a:link, main a:visited{
     grid: 1fr 1fr / 0.2fr 0.8fr;
 }
 #htmlcss{
-    grid: 1fr 1fr / 0.7fr 0.3fr;
+    grid: 1fr 1fr / 0.8fr 0.2fr;
 }
 #javascript{
-    grid: 1fr 1fr / 0.6fr 0.4fr;
+    grid: 1fr 1fr / 0.7fr 0.3fr;
 }
 #csharp{
     grid: 1fr 1fr / 0.2fr 0.8fr;
