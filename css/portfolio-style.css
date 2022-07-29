@@ -82,6 +82,7 @@ footer{
 }
 footer p{
     margin: 5px 0 10px 20px;
+    background: var(--blue);
 }
 #socials{
     margin: 5px 20px 10px auto;
@@ -96,9 +97,14 @@ main a:link, main a:visited{
 }
 #abt{
     display: flex;
+    flex-direction: column;
+}
+#abt figure{
+    width:50%;
+    margin: auto auto;
 }
 #abt img{
-    width:200%;
+    border-radius: 50% 50% 0 0;
 }
 #abt div{
     padding: 10px;
