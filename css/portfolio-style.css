@@ -221,6 +221,7 @@ nav a:active{
     margin-right: auto;
 }
 #menu-list{
+    /* height: 50vh; */
     height: 0px;
     background-color: var(--white);
     text-align: left;
@@ -240,7 +241,7 @@ nav a:active{
     color: black;
     padding-left: 3rem;
     font-size: 1.2rem;
-    list-style:decimal;
+    list-style: decimal;
     line-height:1.5rem;
 }
 #portfolio-list,#archive-list{
@@ -270,10 +271,21 @@ nav a:active{
 #home img:hover{
     outline: 2px solid var(--accent);
 }
+.split-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.split-title h3{
+    font-size: small;
+    margin: 0.1em;
+    color: var(--accent);
+    /* background-color: var(--accent); */
+}
 
 .portfolio-page{
     display: grid;
-    grid: 1fr / 1fr 1fr 1fr 1fr; 
+    grid: 1fr / 1fr 1fr 1fr; 
     gap: 3%;
 }
 .portfolio-page img{
