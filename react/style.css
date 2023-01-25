@@ -1,0 +1,125 @@
+@font-face {
+    font-family: Handjet;
+    src: url("./assets/fonts/HandjetVFWeb-All.woff2") format('woff2');
+}
+
+body{
+    font-family: "PP Mori";
+    color: var(--text);
+    background-color: var(--background);
+    line-height: normal;
+}
+main{
+    padding: 4rem;
+}
+li{
+    margin: 1rem;
+}
+hr{
+    margin: 20px 2px;
+    color: var(--text);
+}
+h2{
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+.circle-list li{
+    list-style: circle;
+}
+a:link,a:visited{
+    color: var(--text);
+    text-decoration: none;
+}
+a:hover{
+    color: var(--accent);
+    text-decoration: underline wavy;
+}
+
+
+#home, #about{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 2rem;
+    /* background-color: red; */
+    padding: 20vh 10vw;
+    min-height: 60vh;
+}
+#home h1{
+    margin: 2rem 1rem;
+    font-size: 2rem;
+}
+#home-img{
+    margin: auto;
+}
+#nav, #footer{
+    /* font-family: "Handjet"; */
+    font-family: "PP NeueBit";
+    background-color: var(--main);
+    display: flex;
+    justify-content: space-between;
+    width: 100vw
+}
+#nav{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    position: fixed;
+    /* outline: 1px solid var(--text); */
+}
+#footer{
+    font-size: 1.3rem;
+}
+
+#work{
+    font-family: "PP NeueBit";
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+#tags-container{
+    display: flex;
+    justify-content: flex-start;
+}
+#work-root{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2rem;
+}
+.work-preview img{
+    width: 100%;
+}
+.work-tags{
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* #about{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 1rem;
+} */
+#about h1{
+    font-family: "PP NeueBit";
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
+#about figure{
+    margin: 0 auto auto auto;
+}
+
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --background: #283077;
+        --main: #283077;
+        --text: white;
+        --accent: gold;
+    }
+}
+@media (prefers-color-scheme: light){
+    :root{
+        --background: #F1F0E7;
+        --main: #F1F0E7;
+        --text: black;
+        --accent: gold;
+    }
+}
