@@ -11,6 +11,10 @@ body{
 }
 main{
     padding: 4rem;
+    max-width: 1024px;
+    /* min-height: calc(100vh - 12rem); */
+    /* background-color: cornflowerblue; */
+    margin: 0 auto;
 }
 li{
     margin: 1rem;
@@ -19,8 +23,16 @@ hr{
     margin: 20px 2px;
     color: var(--text);
 }
+img{
+    width: 100%;
+}
+h1{
+    font-family: "PP NeueBit";
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
 h2{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin: 1rem 0;
 }
 .circle-list li{
@@ -36,7 +48,30 @@ a:hover{
 }
 
 
-#home, #about{
+#nav, #footer{
+    /* font-family: "Handjet"; */
+    font-family: "PP NeueBit";
+    background-color: var(--main);
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+#nav li, #footer li{
+    margin: 0.5rem 1.5rem;
+}
+#nav{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    position: fixed;
+    height: 2.75rem;
+    /* outline: 1px solid var(--text); */
+}
+#footer{
+    font-size: 1.3rem;
+}
+
+
+#home-page, #about-page{
     display: grid;
     grid-template-columns: 50% 50%;
     gap: 2rem;
@@ -44,32 +79,16 @@ a:hover{
     padding: 20vh 10vw;
     min-height: 60vh;
 }
-#home h1{
+#home-page h1{
     margin: 2rem 1rem;
     font-size: 2rem;
 }
 #home-img{
     margin: auto;
 }
-#nav, #footer{
-    /* font-family: "Handjet"; */
-    font-family: "PP NeueBit";
-    background-color: var(--main);
-    display: flex;
-    justify-content: space-between;
-    width: 100vw
-}
-#nav{
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    position: fixed;
-    /* outline: 1px solid var(--text); */
-}
-#footer{
-    font-size: 1.3rem;
-}
 
-#work{
+
+#work-page{
     font-family: "PP NeueBit";
     font-size: 1.8rem;
     text-transform: uppercase;
@@ -81,15 +100,16 @@ a:hover{
 #work-root{
     width: 100%;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 31% 31% 31%;
     gap: 2rem;
 }
-.work-preview img{
-    width: 100%;
-}
+/* .work-preview img{
+    
+} */
 .work-tags{
     display: flex;
     justify-content: flex-start;
+    font-size: 1.5rem;
 }
 
 /* #about{
@@ -97,15 +117,39 @@ a:hover{
     grid-template-columns: 50% 50%;
     gap: 1rem;
 } */
-#about h1{
-    font-family: "PP NeueBit";
-    font-size: 3.5rem;
-    text-transform: uppercase;
-}
 #about figure{
     margin: 0 auto auto auto;
 }
 
+
+#work{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    gap: 2rem;
+    padding: 2.8rem 0vw;
+    min-height: 80vh;
+    /* position: relative; */
+}
+#description{
+    padding-top: 2.8rem;
+}
+#content h1{
+    padding-top: 2.8rem;
+}
+#toc{
+    height: 100%;
+}
+#toc ul{
+    padding-top: 2.8rem;
+    text-align: right;
+    position: sticky;
+    top: 2.8rem;
+}
+
+::selection{
+    background-color: gold;
+    color: #262626;
+}
 
 @media (prefers-color-scheme: dark){
     :root{
@@ -119,7 +163,7 @@ a:hover{
     :root{
         --background: #F1F0E7;
         --main: #F1F0E7;
-        --text: black;
-        --accent: gold;
+        --text: #262626;
+        --accent: #283077;
     }
 }
