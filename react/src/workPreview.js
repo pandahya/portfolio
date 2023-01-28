@@ -1,73 +1,86 @@
-// function WorkPreview(props){
-//     return(
-//         <figure className="work-preview">
-//             <img src="../imgs/frogspreview.png"/>
-//             <figcaption>project name</figcaption>
-//             <ul className="work-tags">
-//                 <li>uiux</li>
-//                 <li>branding</li>
-//             </ul>
-//         </figure>
-        
-//     );
-// };
-function WorkPreview(props){
+function WorkPreviews(props){
+    const projectData = props.projectData;
     return(
-        <figure className="work-preview">
-            <img src={props.img}/>
-            <figcaption>{props.project}</figcaption>
+        projectData.map((item)=>
+        <figure key={item.project}className="work-preview">
+            <a href={item.link}><img src={item.img}/></a>
+            <figcaption><a href={item.link}>{item.project}</a></figcaption>
             <ul className="work-tags">
-                {props.tags.map(tag =>(
+                {item.tags.map(tag =>(
                     <li key={tag}>{tag}</li>
                 ))}
             </ul>
         </figure>
-        
+        )
     );
 };
 
-function AllPreviews(props){
-    return(
-        <React.Fragment>
-            <WorkPreview img={props.img.a} project={props.project.a} tags={props.tags.a}/>
-            <WorkPreview img={props.img.b} project={props.project.b} tags={props.tags.b}/>
-            {/* <WorkPreview/>
-            <WorkPreview/>
-            <WorkPreview/>
-            <WorkPreview/>
-            <WorkPreview/>
-            <WorkPreview/>
-            <WorkPreview/> */}
-        </React.Fragment>
-    )
-};
-
-const previewData = {
-    img:{
-        a: "../imgs/frogspreview.png",
-        b: "../imgs/dreammakerspreview.jpg"
+const projectData = [
+    {
+        img: "./assets/imgs/dodampreview.jpg",
+        project: "Dodam: Design Your Baby",
+        tags: ['UIUX', 'speculative'],
+        link: "./work/dodam.html",
     },
-    project:{
-        a: 'click for frogs',
-        b: 'dream makers'
+    {
+        img: "./assets/imgs/house.gif",
+        project: "house",
+        tags: ['play'],
+        link: "./work/dodam.html",
     },
-    tags:{
-        a: ['code', 'play'],
-        b: ['uiux', 'branding']
-    }
-}
+    {
+        img: "../imgs/dreammakerspreview.jpg",
+        project: "83.333% Cooking",
+        tags: ['graphic design', 'print'],
+        link: "./work/83cooking.html",
+    },
+    {
+        img: "./assets/imgs/rocketpreview.jpg",
+        project: "Rocket",
+        tags: ['UIUX', 'branding'],
+        link: "./work/rocket.html",
+    },
+    {
+        img: "./assets/imgs/olympics_icehockey_1.png",
+        project: "Olympics Infographics",
+        tags: ['graphic design'],
+        link: "./work/olympicsinfographics.html",
+    },
+    {
+        img: "./assets/imgs/posepreview.jpg",
+        project: "POSE",
+        tags: ['branding', 'graphic design'],
+        link: "./work/pose.html",
+    },
+    {
+        img: "./assets/imgs/forest_ins_6.gif",
+        project: "Forest Clearing",
+        tags: ['code','play'],
+        link: "./work/forestclearing.html",
+    },
+    {
+        img: "./assets/imgs/dreammakerspreview.jpg",
+        project: "Dream Makers",
+        tags: ['code','play'],
+        link: "./work/dreammakers.html",
+    },
+    {
+        img: "./assets/imgs/qpreview.png",
+        project: "Q-Sweeper",
+        tags: ['code', 'play'],
+        link: "./work/qsweeper.html",
+    },
+    {
+        img: "./assets/imgs/ecampreview.png",
+        project: "Experimental Camera",
+        tags: ['code'],
+        link: "./work/experimentalcamera.html",
+    },
+    
+];
 
-const workPreview = <AllPreviews 
-    img={previewData.img}
-    project={previewData.project}
-    tags={previewData.tags}
-    />;
 const workRoot = ReactDOM.createRoot(document.getElementById('work-root'));
 
 workRoot.render(
-    <AllPreviews 
-    img={previewData.img}
-    project={previewData.project}
-    tags={previewData.tags}
-    />
+    <WorkPreviews projectData = {projectData}/>
 );
