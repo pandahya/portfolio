@@ -17,7 +17,7 @@ main{
     margin: 0 auto;
 }
 li{
-    margin: 1rem;
+    margin: 0.5rem 0;
 }
 hr{
     margin: 20px 2px;
@@ -35,11 +35,14 @@ h2{
     font-size: 1.5rem;
     margin: 1rem 0;
 }
+p{
+    margin: 1rem 0;
+}
 .circle-list li{
     list-style: circle;
 }
 a:link,a:visited{
-    color: var(--text);
+    color: var(--accent);
     text-decoration: none;
 }
 a:hover{
@@ -69,6 +72,12 @@ a:hover{
 #footer{
     font-size: 1.3rem;
 }
+#nav a:link, #nav a:visited{
+    color: var(--text);
+}
+#nav a:hover{
+    color: var(--accent);
+}
 
 
 #home-page, #about-page{
@@ -93,9 +102,17 @@ a:hover{
     font-size: 1.8rem;
     text-transform: uppercase;
 }
-#tags-container{
+.tags-container{
     display: flex;
     justify-content: flex-start;
+    gap: 1rem;
+}
+.tag{
+    border: 2px dotted var(--accent);
+    border-radius: 10px;
+    display: inline;
+    padding: 0.2em 0.3em;
+    margin-right: 0.5rem;
 }
 #work-root{
     width: 100%;
@@ -122,7 +139,7 @@ a:hover{
 }
 
 
-#work{
+.work{
     display: grid;
     grid-template-columns: 25% 75%;
     gap: 2rem;
@@ -144,6 +161,19 @@ a:hover{
     text-align: right;
     position: sticky;
     top: 2.8rem;
+}
+#toc li{
+    padding: 0.2rem 0;
+}
+
+.flex{
+    display: flex;
+
+}
+.gallery{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
 }
 
 ::selection{

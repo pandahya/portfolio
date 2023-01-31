@@ -7,7 +7,7 @@ function WorkPreviews(props){
             <figcaption><a href={item.link}>{item.project}</a></figcaption>
             <ul className="work-tags">
                 {item.tags.map(tag =>(
-                    <li key={tag}>{tag}</li>
+                    <li className="tag" key={tag}>{tag}</li>
                 ))}
             </ul>
         </figure>
@@ -26,7 +26,7 @@ const projectData = [
         img: "./assets/imgs/house.gif",
         project: "house",
         tags: ['play'],
-        link: "./work/dodam.html",
+        link: "./work/house.html",
     },
     {
         img: "../imgs/dreammakerspreview.jpg",

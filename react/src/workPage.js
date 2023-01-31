@@ -12,18 +12,43 @@ function TOC(props){
 
 function Header(props){
     return(
-        <section id="description">
+        // <section id="description">
+        <React.Fragment>
             <figure>
                 <img id="header-img" src={props.header.img}/>
             </figure>
             <h1>{props.header.project}</h1>
             <h2>{props.header.year}</h2>
-            <h2>{props.header.tags}</h2>
+            <div className="tags-container">
+                {props.header.tags.map(tag =>(
+                    <h2 className="tag" key={tag}>{tag}</h2>
+                ))}         
+            </div>
             <p>{props.header.description}</p>
-        </section>
+        </React.Fragment>
+        // </section>
     );
 };
-function Process(props){
+// function Process(props){
+//     // for(let i=0;i<props.process.length;i++){
+//     //     props.process[i]        
+//     // }
+//     return(
+//         <React.Fragment>
+//             {props.process.map(item =>(
+//                 <section id={item.title} key={item.title}>
+//                     <h1>{item.title}</h1>
+//                     <p>{item.t1}</p>
+//                     <figure>
+//                         <img src={item.img1}/>
+//                     </figure>
+//                 </section>
+//             ))}
+//         </React.Fragment>
+//     );
+// };
+
+function fakeProcess(props){
     return(
         <section id="process">
             <h1>Process</h1>
@@ -46,41 +71,111 @@ function Process(props){
     )
 };
 
-function Content(props){
-    return(
-        <section id="content">
-            <Header header={props.header}/>
-            <hr></hr>
-            <Process/>
-        </section>
-    );
+// function Content(props){
+//     // const items = [];
+//     // for(let i=0;i<props.process.length;i++){
+//     //     items.push(<Process process={props.process[i]}/>);
+//     // }
+//     return(
+//         <section id="content">
+//             <Header header={props.header}/>
+//             <hr></hr>
+//             {/* <Process process={props.process}/> */}
+//             {/* <React.Fragment>{items}</React.Fragment> */}
+//         </section>
+//     );
+// };
+
+
+// function Work(props){
+//     return(
+//         <React.Fragment>
+//             <TOC toc={props.toc}/>
+//             <Content header={props.header}/>
+//             {/* <Process process={props.process}/> */}
+//         </React.Fragment>
+//     );
+// };
+
+const workData=[
+    {
+        toc:["#description", "#moodboard-gestural", "#user-flow-chart", "#hero-flow", "#key-screens", "#user-interviews-testing", "#design-system", "#wireframes", "#final-contents"],
+        header:{
+            img: "../assets/imgs/dodam_header.jpg",
+            project: "dodam",
+            year: "2022",
+            tags: ['UIUX', 'speculative'],
+            description: "What would a dystopian future look like where gene editing becomes common place, specifically the pregnancy process? Dodam is an app that imagines a more streamlined process to gene editing in this dystopian future for healthier and more special babies, being designed within the possibilities of one’s genome.",
+            team: "Jennie Hong, Hyacinth Weng, Jonghee Jung",
+            time: "7 Weeks",
+        },
+    },
+    {
+        toc:["#description", "#images"],
+        header:{
+            img: "../assets/imgs/house_header.gif",
+            project: "house",
+            year: "2022",
+            tags: ['play'],
+            description: "A hyperlink text adventure made with ASCII art. Littered with funny friends, playful interactions, and interesting discoveries.",
+        },
+    },
+    {
+        toc:["#description", "#process"],
+        header:{
+            img: "../assets/imgs/pose_presentation21.jpg",
+            project: "rocket",
+            year: "2022",
+            tags: ['words', 'words'],
+            description: "this is a description"
+        },
+    },
+    {
+        toc:["#description", "#process"],
+        header:{
+            img: "../assets/imgs/pose_presentation21.jpg",
+            project: "olympics infographics",
+            year: "2022",
+            tags: ['words', 'words'],
+            description: "this is a description"
+        },
+    },
+    {
+        toc:["#description", "#process"],
+        header:{
+            img: "../assets/imgs/pose_presentation21.jpg",
+            project: "pose",
+            year: "2022",
+            tags: ['words', 'words'],
+            description: "this is a description"
+        },
+    },
+]
+
+const dodam = document.getElementById("dodam");
+const house = document.getElementById("house");
+const rocket = document.getElementById("rocket");
+const olympics = document.getElementById("olympics");
+const pose = document.getElementById("pose");
+
+const projs = [dodam, house, rocket, olympics, pose];
+const projNames = ["dodam", "house", "rocket", "olympics", "pose"];
+
+for(let i=0;i<projs.length;i++){
+    if(projs[i]){
+        const tocRoot = ReactDOM.createRoot(document.getElementById(`toc`));
+        const headerRoot = ReactDOM.createRoot(document.getElementById(`description`));
+
+        tocRoot.render(
+            <TOC
+            toc = {workData[i].toc}
+            />
+        );
+        headerRoot.render(
+            <Header
+            header={workData[i].header}
+            />
+        );
+        
+    };
 };
-
-
-function Work(props){
-    return(
-        <React.Fragment>
-            <TOC toc={props.toc}/>
-            <Content header={props.header}/>
-        </React.Fragment>
-    );
-};
-
-const workData={
-    toc:["#description", "#process"],
-    header:{
-        img: "../assets/imgs/pose_presentation21.jpg",
-        project: "pose",
-        year: "2022",
-        tags: "words, words",
-        description: "this is a description"
-    }
-}
-
-const workRoot = ReactDOM.createRoot(document.getElementById("work"));
-workRoot.render(
-    <Work
-    toc = {workData.toc}
-    header={workData.header}
-    />
-);
