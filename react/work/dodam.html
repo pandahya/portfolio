@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../assets/imgs/favicon.png" type="image/x-icon">
+    <title>Dodam: Design Your Baby</title>
+</head>
+<!-- change to production when ready to push -->
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+<body>
+    <ul id="nav"></ul>
+    <main class="work" id="dodam">
+        <div id="toc"></div>
+        <section id="content">
+            <section id="description"></section>
+            <hr></hr>
+            <section id="moodboard-gestural">
+                <h1>moodboard + gestural design</h1>
+                <p>
+                    Each team member compiled a distinctive moodboard to start off the visual design direction and made corresponding gestural designs to imagine how the moodboards might translate to an interface.
+                </p>
+                <div class="flex">
+                    <figure>
+                        <img src="../assets/imgs/dodam_moodboard_jennie.jpg"/>
+                    </figure>
+                    <figure>
+                        <img src="../assets/imgs/dodam_gestural_jennie.png"/>
+                    </figure>
+                </div>
+                <div class="flex">
+                    <figure>
+                        <img src="../assets/imgs/dodam_moodboard_hyacinth.jpg"/>
+                    </figure>
+                    <figure>
+                        <img src="../assets/imgs/dodam_gestural_hyacinth.png"/>
+                    </figure>
+                </div>
+                <div class="flex">
+                    <figure>
+                        <img src="../assets/imgs/dodam_moodboard_jonghee.jpg"/>
+                    </figure>
+                    <figure>
+                        <img src="../assets/imgs/dodam_gestural_jonghee.png"/>
+                    </figure>
+                </div>
+            </section>
+            <section id="user-flow-chart">
+                <h1>user flow chart</h1>
+                <p>
+                    We laid out a user flow chart of basic steps and actions we determined were important to the core concept and value of our app.
+                </p>
+                <figure>
+                    <img src="../assets/imgs/dodam_userflow.png"/>
+                </figure>
+            </section>
+            <section id="hero-flow">
+                <h1>hero flow</h1>
+                <p>
+                    From the user flow chart, we extracted a hero flow that would be the base of our wireframes.
+                </p>
+                <figure>
+                    <img src="../assets/imgs/dodam_heroflow.png"/>
+                </figure>
+            </section>
+        </section>
+    </main>
+    
+    <ul id="footer"></ul>
+</body>
+
+<script type="text/babel" src="../src/navFromWork.js"></script>
+<script type="text/babel" src="../src/workPage.js"></script>
+</html>
