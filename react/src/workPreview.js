@@ -5,7 +5,7 @@ function WorkPreviews(props){
         <figure key={item.project}className="work-preview">
             <a href={item.link}><img src={item.img}/></a>
             <figcaption><a href={item.link}>{item.project}</a></figcaption>
-            <ul className="work-tags">
+            <ul className="tags-container">
                 {item.tags.map(tag =>(
                     <li className="tag" key={tag}>{tag}</li>
                 ))}
@@ -28,12 +28,12 @@ const projectData = [
         tags: ['play'],
         link: "./work/house.html",
     },
-    {
-        img: "../imgs/dreammakerspreview.jpg",
-        project: "83.333% Cooking",
-        tags: ['graphic design', 'print'],
-        link: "./work/83cooking.html",
-    },
+    // {
+    //     img: "../imgs/dreammakerspreview.jpg",
+    //     project: "83.333% Cooking",
+    //     tags: ['graphic design', 'print'],
+    //     link: "./work/83cooking.html",
+    // },
     {
         img: "./assets/imgs/rocketpreview.jpg",
         project: "Rocket",

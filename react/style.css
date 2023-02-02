@@ -26,6 +26,9 @@ hr{
 img{
     width: 100%;
 }
+figure{
+    margin-bottom: 1rem;
+}
 h1{
     font-family: "PP NeueBit";
     font-size: 3.5rem;
@@ -48,6 +51,15 @@ a:link,a:visited{
 a:hover{
     color: var(--accent);
     text-decoration: underline wavy;
+}
+a:hover img{
+    outline: 2px dashed var(--accent);
+    border-radius: 10px;
+    /* -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    transform: rotate(10deg); */
+    /* transition: 0.5s; */
 }
 
 
@@ -82,7 +94,7 @@ a:hover{
 
 #home-page, #about-page{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid: 1fr / 1fr 1fr;
     gap: 2rem;
     /* background-color: red; */
     padding: 20vh 10vw;
@@ -99,49 +111,45 @@ a:hover{
 
 #work-page{
     font-family: "PP NeueBit";
-    font-size: 1.8rem;
+    font-size: 2rem;
     text-transform: uppercase;
+}
+#work-root{
+    width: 100%;
+    display: grid;
+    grid: 1fr / 1fr 1fr 1fr;
+    gap: 2rem;
 }
 .tags-container{
     display: flex;
     justify-content: flex-start;
     gap: 1rem;
+    padding-inline-start: 0.2rem;
 }
 .tag{
-    border: 2px dotted var(--accent);
-    border-radius: 10px;
-    display: inline;
-    padding: 0.2em 0.3em;
-    margin-right: 0.5rem;
-}
-#work-root{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 31% 31% 31%;
-    gap: 2rem;
-}
-/* .work-preview img{
-    
-} */
-.work-tags{
-    display: flex;
-    justify-content: flex-start;
+    font-family: "PP NeueBit";
     font-size: 1.5rem;
+    text-transform: uppercase;
+    border: 1.6px dashed var(--accent);
+    border-radius: 5px;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.3rem 0.4rem 0.1rem 0.4rem;
+    margin: 0.2rem;
 }
-
-/* #about{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    gap: 1rem;
-} */
 #about figure{
     margin: 0 auto auto auto;
 }
-
+.tag-icon{
+    /* background-color: lightskyblue; */
+    width: 20px;
+    height: 20px;
+    display: inline;
+}
 
 .work{
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid: 1fr / 0.25fr 0.75fr;
     gap: 2rem;
     padding: 2.8rem 0vw;
     min-height: 80vh;
@@ -168,12 +176,21 @@ a:hover{
 
 .flex{
     display: flex;
-
+    /* margin: 1rem 0; */
+}
+figcaption{
+    margin: 0.2rem;
+    /* opacity: 75%; */
 }
 .gallery{
     display: grid;
-    grid-template-columns: auto auto;
     gap: 1rem;
+}
+.two{
+    grid: 1fr / 1fr 1fr;
+}
+.three{
+    grid: 1fr / 1fr 1fr 1fr;
 }
 
 ::selection{
@@ -194,6 +211,6 @@ a:hover{
         --background: #F1F0E7;
         --main: #F1F0E7;
         --text: #262626;
-        --accent: #283077;
+        --accent: cornflowerblue;
     }
 }

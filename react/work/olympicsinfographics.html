@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../assets/imgs/favicon.png" type="image/x-icon">
+    <title>Olympics Infographics</title>
+</head>
+<!-- change to production when ready to push -->
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+<body>
+    <ul id="nav"></ul>
+    <main class="work" id="olympics">
+        <div id="toc"></div>
+        <section id="content">
+            <section id="description"></section>
+            <hr></hr>
+            <section id="moodboard-concept">
+                <h1>moodboard & concept</h1>
+                <p>
+                    The goal was to first create an almost complete set of graphics that would act like a "template" so I'd be able to easily & quickly input new data, simulating a live coverage situation.
+                </p>
+                <p>
+                    I started with three moodboards to work out a visual style I liked. I ended up combining the first and last for a scientific feel with tactile/scrapbook-y visuals not traditionally seen in data viz. I wanted to make my infographics feel fun and approachable but also informative and accurate.
+                </p>
+                <div class="gallery three">
+                    <figure>
+                        <img src="../assets/imgs/olympics_mb_1.jpg"/>
+                    </figure>
+                    <figure>
+                        <img src="../assets/imgs/olympics_mb_2.jpg"/>
+                    </figure>
+                    <figure>
+                        <img src="../assets/imgs/olympics_mb_3.jpg"/>
+                    </figure>
+                </div>
+            </section>
+        </section>
+    </main>
+    <ul id="footer"></ul>
+</body>
+
+<script type="text/babel" src="../src/navFromWork.js"></script>
+<script type="text/babel" src="../src/workPage.js"></script>
+</html>
