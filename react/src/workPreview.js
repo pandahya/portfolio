@@ -34,14 +34,14 @@ const projectData = [
     //     tags: ['graphic design', 'print'],
     //     link: "./work/83cooking.html",
     // },
+    // {
+    //     img: "./assets/imgs/rocketpreview.jpg",
+    //     project: "Rocket",
+    //     tags: ['UIUX', 'branding'],
+    //     link: "./work/rocket.html",
+    // },
     {
-        img: "./assets/imgs/rocketpreview.jpg",
-        project: "Rocket",
-        tags: ['UIUX', 'branding'],
-        link: "./work/rocket.html",
-    },
-    {
-        img: "./assets/imgs/olympics_icehockey_1.png",
+        img: "./assets/imgs/olympics_figureskate_1.png",
         project: "Olympics Infographics",
         tags: ['graphic design'],
         link: "./work/olympicsinfographics.html",
@@ -53,29 +53,29 @@ const projectData = [
         link: "./work/pose.html",
     },
     {
-        img: "./assets/imgs/forest_ins_6.gif",
-        project: "Forest Clearing",
+        img: "./assets/imgs/forest_preview.gif",
+        project: "A Forest Clearing",
         tags: ['code','play'],
         link: "./work/forestclearing.html",
     },
-    {
-        img: "./assets/imgs/dreammakerspreview.jpg",
-        project: "Dream Makers",
-        tags: ['code','play'],
-        link: "./work/dreammakers.html",
-    },
-    {
-        img: "./assets/imgs/qpreview.png",
-        project: "Q-Sweeper",
-        tags: ['code', 'play'],
-        link: "./work/qsweeper.html",
-    },
-    {
-        img: "./assets/imgs/ecampreview.png",
-        project: "Experimental Camera",
-        tags: ['code'],
-        link: "./work/experimentalcamera.html",
-    },
+    // {
+    //     img: "./assets/imgs/dreammakerspreview.jpg",
+    //     project: "Dream Makers",
+    //     tags: ['code','play'],
+    //     link: "./work/dreammakers.html",
+    // },
+    // {
+    //     img: "./assets/imgs/qpreview.png",
+    //     project: "Q-Sweeper",
+    //     tags: ['code', 'play'],
+    //     link: "./work/qsweeper.html",
+    // },
+    // {
+    //     img: "./assets/imgs/ecampreview.png",
+    //     project: "Experimental Camera",
+    //     tags: ['code'],
+    //     link: "./work/experimentalcamera.html",
+    // },
     
 ];
 

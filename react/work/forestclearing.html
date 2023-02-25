@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../assets/imgs/favicon.png" type="image/x-icon">
+    <title>Forest Clearing</title>
+</head>
+<!-- change to production when ready to push -->
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+<body>
+    <ul id="nav"></ul>
+    <main class="work" id="forest">
+        <div id="toc"></div>
+        <section id="content">
+            <section id="description"></section>
+            <section id="links">
+                <p>Team: Hyacinth Weng (concept, visual design, code), Tanvi Mishra (concept, code, visual design), Apurv Rayate (code)</p>
+                <p><a href="https://studio-degen.github.io/deforestation/" target="_blank" rel="noopener noreferrer">link to game &nearr;</a></p>
+                <p>made with <a href="https://p5party.netlify.app/" target="_blank" rel="noopener noreferrer">p5.party &nearr;</a></p>
+            </section>
+            <hr></hr>
+            <section id="concept">
+                <h1>concept</h1>
+                <p>
+                    The theme of the game jam was OUT OF CONTROL. We took the angle of <span class="italics">lack of control/power</span> and correlated that to the issue of deforestation: people can cut down trees faster than they can grow, and there's really nothing trees can do to stop us. The game is played from the perspective of the trees with human NPCs as the enemies. The number of humans coming to cut the trees down increases faster than you can plant new ones. Your goal is to last as long as you can, but all games inevitably end in failure, conveying our interpretation of the theme.
+                </p>
+                <div class="gallery three">
+                    <img style="background-color: rgba(255,255,255,0.1);" src="../assets/imgs/forest_logger_axe.gif"/>
+                    <img style="background-color: rgba(255,255,255,0.1);" src="../assets/imgs/forest_logger_wood.gif"/>
+                </div>
+            </section>
+            <section id="rules-instructions">
+                <h1>rules & instructions</h1>
+                <h2>Rules</h2>
+                <ul class="numbered">
+                    <li>
+                        Players play as a parent apple tree whose apples can be used to plant more trees. Players periodically receive more apples to plant.
+                    </li>
+                    <li>
+                        Humans move about the screen, cutting down a tree when they get close to it. The game ends when all of the trees planted by all the players have been cut down.
+                    </li>
+                    <li>
+                        The tree planting area and the number + speed of lumberjacks increases over time.
+                    </li>
+                </ul>
+                <br>
+                <h2>Instructions</h2>
+                <div class="gallery three">
+                    <img src="../assets/imgs/forest_ins_1.gif"/>
+                    <img src="../assets/imgs/forest_ins_2.gif"/>
+                    <img src="../assets/imgs/forest_ins_3.gif"/>
+                    <img src="../assets/imgs/forest_ins_4.gif"/>
+                    <img src="../assets/imgs/forest_ins_5.gif"/>
+                    <img src="../assets/imgs/forest_ins_6.gif"/>
+                </div>
+            </section>
+            <section id="images">
+                <h1>images</h1>
+                <div class="gallery">
+                    <video controls>
+                        <source src="../assets/imgs/forest_p1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <figcaption>Player 1 Perspective</figcaption>
+                    <video controls>
+                        <source src="../assets/imgs/forest_p2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <figcaption>Player 2 Perspective</figcaption>
+                    <img src="../assets/imgs/forest_0.png"/>
+                    <img src="../assets/imgs/forest_1.png"/>
+                    <img src="../assets/imgs/forest_2.png"/>
+                    <img src="../assets/imgs/forest_3.png"/>
+                    <img src="../assets/imgs/forest_5.png"/>
+                    <img src="../assets/imgs/forest_4.png"/>
+                </div>
+            </section>
+        </section>
+    </main>
+    
+    <ul id="footer"></ul>
+</body>
+
+<script type="text/babel" src="../src/navFromWork.js"></script>
+<script type="text/babel" src="../src/workPage.js"></script>
+</html>

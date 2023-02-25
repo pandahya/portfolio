@@ -10,7 +10,7 @@ function WorkNav(props){
 function Footer(){
     return(
         <React.Fragment>
-            <li>Last updated: 31 Jan 2023</li>
+            <li>Last updated: 22 Feb 2023</li>
             <li>NYC based (UTC-04:00)</li>
         </React.Fragment>
     );

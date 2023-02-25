@@ -16,6 +16,10 @@ main{
     /* background-color: cornflowerblue; */
     margin: 0 auto;
 }
+ul{
+    font-size: 1.1rem;
+    /* line-height: 1.6rem; */
+}
 li{
     margin: 0.5rem 0;
 }
@@ -25,9 +29,13 @@ hr{
 }
 img{
     width: 100%;
+    border-radius: 2px;
 }
 figure{
     margin-bottom: 1rem;
+}
+video{
+    width: 100%;
 }
 h1{
     font-family: "PP NeueBit";
@@ -40,9 +48,19 @@ h2{
 }
 p{
     margin: 1rem 0;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+}
+.italics{
+    font-style: italic;
 }
 .circle-list li{
     list-style: circle;
+}
+.numbered li{
+    list-style: decimal;
+    margin-left: 2rem;
+    line-height: 1.6rem;
 }
 a:link,a:visited{
     color: var(--accent);
@@ -52,6 +70,9 @@ a:hover{
     color: var(--accent);
     text-decoration: underline wavy;
 }
+/* a:hover::after{
+    content:" ↗";
+} */
 a:hover img{
     outline: 2px dashed var(--accent);
     border-radius: 10px;
@@ -130,7 +151,7 @@ a:hover img{
     font-family: "PP NeueBit";
     font-size: 1.5rem;
     text-transform: uppercase;
-    border: 1.6px dashed var(--accent);
+    border: 1px dashed var(--accent);
     border-radius: 5px;
     display: flex;
     gap: 0.5rem;
@@ -149,7 +170,7 @@ a:hover img{
 
 .work{
     display: grid;
-    grid: 1fr / 0.25fr 0.75fr;
+    grid: 1fr / 0.22fr 0.78fr;
     gap: 2rem;
     padding: 2.8rem 0vw;
     min-height: 80vh;
@@ -163,16 +184,30 @@ a:hover img{
 }
 #toc{
     height: 100%;
+    margin-top: 2.8rem;
+    text-align: right;
 }
 #toc ul{
-    padding-top: 2.8rem;
-    text-align: right;
-    position: sticky;
     top: 2.8rem;
+    position: sticky;
 }
 #toc li{
     padding: 0.2rem 0;
 }
+#toc a:hover{
+    text-decoration: none;
+}
+/* #toc a:hover::before{
+    content: "→ ";
+} */
+#toc a:hover::after{
+    content: "←";
+    color: var(--background);
+}
+#header-img:hover{
+    transform: rotate(5deg);
+}
+
 
 .flex{
     display: flex;
@@ -185,6 +220,7 @@ figcaption{
 .gallery{
     display: grid;
     gap: 1rem;
+    margin-bottom: 1rem;
 }
 .two{
     grid: 1fr / 1fr 1fr;
