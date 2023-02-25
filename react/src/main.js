@@ -10,27 +10,11 @@ function Nav(props){
 function Footer(){
     return(
         <React.Fragment>
-            <li>Last updated: 22 Feb 2023</li>
+            <li>Last updated: 24 Feb 2023</li>
             <li>NYC based (UTC-04:00)</li>
         </React.Fragment>
     );
 };
-
-// const navUrls = {
-//     homeUrl:{
-//         fromHome: "./index.html",
-//         fromWork: "../index.html"
-//     },
-//     workUrl:{
-//         fromHome: "./work.html",
-//         fromWork: "../work.html"
-//     },
-//     aboutUrl:{
-//         fromHome: "./about.html",
-//         fromWork: "../about.html"
-//     }
-// }
-    
 
 const navRoot = ReactDOM.createRoot(document.getElementById('nav'));
 const footerRoot = ReactDOM.createRoot(document.getElementById('footer'));
