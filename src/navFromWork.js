@@ -1,9 +1,12 @@
-function Nav(props){
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+
+function WorkNav(props){
     return (
         <React.Fragment>
-            <li><a href="./index.html">weng, hyacinth</a></li>
-            <li><a href="./work.html">work</a></li>
-            <li><a href="./about.html">about</a></li>
+            <li><a href="../index.html">weng, hyacinth</a></li>
+            <li><a href="../work.html">work</a></li>
+            <li><a href="../about.html">about</a></li>
         </React.Fragment>
     );
 };
@@ -19,5 +22,5 @@ function Footer(){
 const navRoot = ReactDOM.createRoot(document.getElementById('nav'));
 const footerRoot = ReactDOM.createRoot(document.getElementById('footer'));
 
-navRoot.render(<Nav/>);
+navRoot.render(<WorkNav/>);
 footerRoot.render(<Footer/>);

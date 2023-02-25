@@ -1,3 +1,6 @@
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+
 function WorkPreviews(props){
     const projectData = props.projectData;
     return(

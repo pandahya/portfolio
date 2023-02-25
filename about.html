@@ -1,303 +1,66 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 <head>
-<meta charset="utf-8>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link href="./css/reset.css" rel="stylesheet">
-<link href="./css/portfolio-style.css" rel="stylesheet">
-<link href="./imgs/favicon.png" rel="icon" type="image/x-icon">
-<title>ABOUT - HWENG</title>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="shortcut icon" href="./assets/imgs/favicon.png" type="image/x-icon">
+    <title>about</title>
 </head>
+<!-- change to production when ready to push -->
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
 <body>
-<nav id="nav">
-    <div id="menu">
-        <ul>
-            <li>
-                <a href="./index.html">weng, hyacinth</a>
-            </li>
-            <li id="portfolio-menu">
-                <a href="./portfolio.html">work</a>
-            </li>
-            <li id="about-menu">
-                <a href="./about.html">about</a>
-            </li>
-        </ul>
-    </div>	
-    <div id="menu-list">
-        <div id="portfolio-list">
-            <h1>current</h1>
-            <ol>
-                <li><a href="https://studio-degen.github.io/studio-degen/projects/q-sweeper.html" target="_blank" rel="noopener noreferrer">quantum arcade</a></li>
-            </ol>
-            <h1>brand/identity</h1>
-            <ol>
-                <li><a href="./work/pose.html">POSE</a></li>
-                <li><a href="./work/blob.html">blob logo</a></li>
-                <!-- <li><a href="./work/design-for-change.html">design for change</a></li> -->
-            </ol>
-            <h1>web</h1>
-            <ol>
-                <li><a href="./work/studio-degen.html">Studio Degen</a></li>
-                <li><a href="./work/mikea.html">MIKEA</a></li>
-                <!-- <li><a href="./work/clarence.html">Clarence City</a></li> -->
-            </ol>
-            <h1>graphic design</h1>
-            <ol>
-                <li><a href="./work/olympics.html">olympics infographics</a></li>
-                <li><a href="./work/eggs-zine.html">eggs zine</a></li>
-                <!-- <li><a href="./work/manifesto-poster.html">manifesto poster</a></li> -->
-                <li><a href="./work/let-me-speak.html">let me speak</a></li>
-                <!-- <li><a href="./work/ducks.html">life, death, ducks</a></li> -->
-                <!-- <li><a href="./work/contemporary-type-poster.html">contemporary type posters</a></li> -->
-                <!-- <li><a href="./work/shanghai-chicago.html">shanghai in chicago</a></li> --> 
-            </ol>
-            <h1>code</h1>
-            <ol>
-                <li><a href="./work/experimental-camera.html">experimental camera</a></li>
-                <li><a href="./work/interactive-type.html">interactive type</a></li>
-                <li><a href="./work/click-for-frogs.html">click for frogs</a></li>
-                <li><a href="./work/itchy.html">itchy</a></li>
-            </ol>
-            <h1>play</h1>
-            <ol>
-                <li><a href="./work/forest-clearing.html">forest clearing</a></li>
-                <li><a href="./work/dream-makers.html">dream makers</a></li>
-                <li><a href="./work/beetle-beetle.html">beetle beetle</a></li>
-                <!-- <li><a href="./work/plant-monarchy.html">a plant monarchy</a></li> -->
-                <!-- <li><a href="./work/pies.html">pies</a></li> -->
-            </ol>
-            <!-- <h1>build</h1>
-            <ol>
-                <li><a href="./work/happy-machine.html">small happiness machine</a></li>
-                <li><a href="./work/baby-beach.html">baby at the beach</a></li>
-                <li><a href="./work/toy-polyhedron.html">toy polyhedron</a></li>
-            </ol> -->
-            <!-- <h1>art</h1>
-            <ol>
-                <li><a href="./work/paper-cut.html">paper cut</a></li>
-                <li><a href="./work/pixel-me.html">pixel me</a></li>
-            </ol> -->
-            <!-- <h1>other</h1>
-            <ol>
-                <li><a href="./work/acnh-data.html">ACNH data viz</a></li>
-            </ol>	 -->
-        </div>
-        <div id='archive-list'>
-            <ol>
-                <li><a href="https://code-1-portfolio-hyacinth.glitch.me/" target="_blank" rel="noopener noreferrer">Code 1 Portfolio</a></li>
-                <li><a href="https://code-2-portfolio-hyacinth.glitch.me/" target="_blank" rel="noopener noreferrer">Code 2 Portfolio</a></li>
-                <li><a href="https://critical-code-portfolio-hyacinth.glitch.me/index.html" target="_blank" rel="noopener noreferrer">Critical Code Portfolio</a></li>
-                <li><a href="https://pandahya.github.io/lab-systems-2021/index.html" target="_blank" rel="noopener noreferrer">Lab Systems</a></li>
-            </ol>
-        </div>
-    </div>		
-</nav>
-<main id="abt-page">
-    <section>
-        <header id="abt">
-            <figure>
-                <img src="./imgs/phone_face.png" alt="a picture of hyacinth" title="it me"/>
-            </figure>
-            <div id="abt-txt">
-                <h1>Hyacinth Weng</h1>
-                <h3>artist, designer, and creative technologist</h3>
+    <ul id="nav"></ul>
+    <main id="about-page">
+        <figure>
+            <img src="./assets/imgs/ecampreview.png"/>
+        </figure>
+        <section>
+            <section id="about-bio">
+                <h1>hyacinth weng</h1>
                 <p>
-                    I am a fourth year student at Parsons School of Design pursuing a major in Design & Technology and a minor in Communication Design. I am curious, diligent, detail-oriented, and eager to learn.
+                    I'm a 4th year student at Parsons School of Design pursuing a major in Design & Technology and a minor in Communication Design. I am curious, diligent, detail-oriented, and eager to learn.
                     <br>
                     I enjoy creating intruiging interactive experiences and telling interesting stories. I work primarily in web design, UI/UX, and graphic design. In my free time, I like to play games and explore the absurd.
                 </p>
-                <p>
-                    <a href="./imgs/hyacinth_weng_resume.pdf" download>download resume pdf &darr;</a>
-                </p>
-            </div>
-        </header>
-        <article class="resume">
-            <h1>Experience</h1>
-            <ul>
-                <li>
-                    <h2>CAMPUS CLIPPER DESIGN INTERN</h2>
-                    <h3>SUMMER 2022</h3>
-                    <p>
-                        I worked on various digital advertisements and TikToks, learning the structure and working process of the company.
-                    </p>
-                </li>
-                <li>
-                    <h2>THE NEW SCHOOL: RESEARCH ASSISTANT</h2>
-                    <h3>SPRING SEMESTER 2022</h3>
-                </li>
-                <li>
-                    <h2>STUDIO DEGEN: MEMBER</h2>
-                    <h3>2021 - NOW</h3>
-                    <p>
-                        A group of friends creating unique and playful experiences that engage with emerging technologies. I’m responsible for UIUX design & implementation, game design & development, and visual graphics.
-                    </p>
-                </li>
-                <li>
-                    <h2>AGS: ART INTERN</h2>
-                    <h3>SUMMER 2019</h3>
-                    <p>
-                        I held a summer internship at AGS, a slot machine company. I redesigned the interface of an older game to apply Chinese aesthetics and iconography to appeal to the target audience.
-                    </p>
-                </li>
-            </ul>
-        </article>
-        <article class="resume">
-            <h1>Education</h1>
-            <ul>
-                <li>
-                    <h2>PARSONS SCHOOL OF DESIGN</h2>
-                    <p>
-                        Dean’s BFA Scholarship & 3.96 GPA
-                        <br>
-                        Design & Technology Major
-                        <br>
-                        Communication Design Minor
-                        <br>
-                        Class of 2023
-                    </p>
-                </li>
-                <li>
-                    <h2>GEORGIA GOVERNOR HONOR’S PROGRAM</h2>
-                    <p>
-                        Visual Arts Major, Math Minor
-                        <br>
-                        June - July 2018
-                    </p>
-                </li>
-                <li>
-                    <h2>SCHOOL OF THE ART INSTITUTE OF CHICAGO</h2>
-                    <p>
-                        Early College Program Summer Institute - Visual Communication Design
-                        <br>
-                        July 2017
-                    </p>
-                </li>
-                <li>
-                    <h2>SAVANNAH COLLEGE OF ART AND DESIGN</h2>
-                    <p>
-                        Summer Seminars - Graphic Design, Design Thinking, Color Theory, Sequential Art
-                        <br>
-                        June - July 2016
-                    </p>
-                </li>
-            </ul>
-        </article>
-        <article class="resume">
-            <h1>Skillset</h1>
-            <div class="gallery" id="skillset">
-                <div>
-                    <h2>Software</h2>
-                    <ul>
-                        <li class="skillbar" id="indesign">
-                            <div class="level"></div>
-                            <div class="max"></div>
-                            <p>InDesign</p>
-                        </li>
-                        <li class="skillbar" id="photoshop">
-                            <div class="level"></div>
-                            <div class="max"></div>
-                            <p>Photoshop</p>
-                        </li>
-                        <li class="skillbar" id="illustrator">
-                            <div class="level"></div>
-                            <div class="max"></div>
-                            <p>Illustrator</p>
-                        </li>
-                        <li class="skillbar" id="premiere">
-                            <div class="level"></div>
-                            <div class="max"></div>
-                            <p>Premiere Pro</p>
-                        </li>
-                        <li class="skillbar" id="unity">
-                            <div class="level"></div>
-                            <div class="max"></div>
-                            <p>Unity 2019.4</p>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>Code</h2>
-                    <ul>
-                        <li class="skillbar" id="htmlcss">
-                            <div class="level"></div>
-                            <div class="max"></div>
-                            <p>HTML/CSS</p>
-                        </li>
-                        <li class="skillbar" id="javascript">
-                            <div class="level"></div>
-                            <div class="max"></div>
-                            <p>JavaScript</p>
-                        </li>
-                        <li class="skillbar" id="csharp">
-                            <div class="level"></div>
-                            <div class="max"></div>
-                            <p>C# (Unity)</p>
-                        </li>
-                        <li class="skillbar" id="cplus">
-                            <div class="level"></div>
-                            <div class="max"></div>
-                            <p>C++ (Arduino)</p>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>Design</h2>
-                    <ul>
-                        <li>design thinking & analysis</li>
-                        <li>prototyping and iteration</li>
-                        <li>ideaiton & documentation</li>
-                        <li>creative problem solving</li>
-                    </ul>
-                </div>
-            </div>
-        </article>
-        <article class="resume">
-            <h1>Achievements</h1>
-            <h2>2021</h2>
-            <ul>
-                <li>
-                    <h3>2021 THE NEW SCHOOL X IBM QUANTUM
-                        DESIGN JAM</h3>
+                <h3>download resume pdf &darr;</h3>
+            </section>
+            <hr>
+            <section id="about-stats">
+                <h2>skills</h2>
+                <ul class="circle-list">
+                    <li>design thinking & analysis</li>
+                    <li>prototyping and iteration</li>
+                    <li>ideation & documentation</li>
+                    <li>creative problem solving</li>
+                </ul>
+                <h2>software</h2>
+                <h2>experience</h2>
+                <ul class="circle-list">
+                    <li>2023 DT End Of Year Show Website Lead</li>
+                </ul>
+                <h2>education</h2>
+                <ul class="circle-list">
+                    <li>Parsons School of Design August 2019-May 2023</li>
+                    <p>BFA Design & Technology Major, Communication Design Minor</p>
+                    <li>Georgia Governor Honor's Program June-July 2018</li>
+                    <p>Visual Arts Major, Math Minor</p>
+                </ul>
+                <h2>achievements</h2>
+                <ul class="circle-list">
+                    <li>2021 The New School x IBM Quantum Design Jam</li>
                     <p>Honorable Mention in Visual Arts & Design Category</p>
-                </li>
-            </ul>
-            <h2>2019</h2>
-            <ul>
-                <li>
-                    <h3>2019 SCHOLASTIC ART & WRITING
-                        COMPETITION</h3>
-                    <p>3 Regional Gold Keys, 6 Honorable Mentions</p>
-                </li>
-                <li>
-                    <h3>2019 GEORGIA WATERCOLOR SOCIETY</h3>
-                    <p>1st Place Judy Greenberg Scholarship</p>
-                </li>
-            </ul>
-            <h2>2018</h2>
-            <ul>
-                <li>
-                    <h3>2018 SCHOLASTIC ART & WRITING
-                        COMPETITION</h3>
-                    <p>National Silver Medal, 2 Regional Gold Keys, 2 Silver Keys, 3 Honorable Mentions</p>
-                </li>
-            </ul>
-        </article>
-    </section>
-    <section>
-        
-    </section>
-    <canvas id="draw" width="2880" height="800"></canvas>
-</main>
-<footer>
-    <p>wengh952@newschool.edu</p>
-    <div id="socials">
-        <a href="https://github.com/pandahya" target="_blank" rel="noopener noreferrer"><img class="social" src="./imgs/github.svg"></a>
-        <a href="https://www.instagram.com/pandahya/"  target="_blank" rel="noopener noreferrer"><img class="social" src="./imgs/instagram.svg"></a>
-        <a href="https://www.linkedin.com/in/hyacinth-weng-37515b1a1/"  target="_blank" rel="noopener noreferrer"><img class="social" src="./imgs/linkedin.png"></a>
-    </div>
-</footer>
+                </ul>
+            </section>
+        </section>
+    </main>
+    <ul id="footer"></ul>
 </body>
-<script src="main.js"></script>
-<script src="draw.js"></script>
+
+<script type="text/babel" src="src/main.js"></script>
 </html>

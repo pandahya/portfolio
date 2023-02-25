@@ -1,158 +1,38 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>ROCKET - HWENG</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link href="../css/reset.css" rel="stylesheet">
-<link href="../css/portfolio-style.css" rel="stylesheet">
-<link href="../imgs/favicon.png" rel="icon" type="image/x-icon">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="shortcut icon" href="../assets/imgs/favicon.png" type="image/x-icon">
+    <title>Rocket</title>
 </head>
+<!-- change to production when ready to push -->
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
 <body>
-<nav id="nav">
-    <div id="menu">
-        <ul>
-            <li>
-                <a href="../index.html">weng, hyacinth</a>
-            </li>
-            <li id="portfolio-menu">
-                <a href="../portfolio.html">work</a>
-            </li>
-            <li id="about-menu">
-                <a href="../about.html">about</a>
-            </li>
-        </ul>
-    </div>	
-    <div id="menu-list">
-        <div id="portfolio-list">
-            <h1>current</h1>
-            <ol>
-                <li><a href="https://studio-degen.github.io/studio-degen/projects/q-sweeper.html" target="_blank" rel="noopener noreferrer">quantum arcade</a></li>
-            </ol>
-            <h1>uiux & branding</h1>
-            <ol>
-                <li><a href="../work/rocket.html">Rocket</a></li>
-                <li><a href="../work/pose.html">POSE</a></li>
-                <li><a href="../work/blob.html">blob logo</a></li>
-                <!-- <li><a href="./work/design-for-change.html">design for change</a></li> -->
-            </ol>
-            <h1>web</h1>
-            <ol>
-                <li><a href="../work/studio-degen.html">Studio Degen</a></li>
-                <li><a href="../work/mikea.html">MIKEA</a></li>
-                <!-- <li><a href="../work/clarence.html">Clarence City</a></li> -->
-            </ol>
-            <h1>graphic design</h1>
-            <ol>
-                <li><a href="../work/olympics.html">olympics infographics</a></li>
-                <li><a href="../work/eggs-zine.html">eggs zine</a></li>
-                <!-- <li><a href="../work/manifesto-poster.html">manifesto poster</a></li> -->
-                <li><a href="../work/let-me-speak.html">let me speak</a></li>
-                <!-- <li><a href="../work/ducks.html">life, death, ducks</a></li> -->
-                <!-- <li><a href="../work/contemporary-type-poster.html">contemporary type posters</a></li> -->
-                <!-- <li><a href="../work/shanghai-chicago.html">shanghai in chicago</a></li> --> 
-            </ol>
-            <h1>code</h1>
-            <ol>
-                <li><a href="../work/experimental-camera.html">experimental camera</a></li>
-                <li><a href="../work/interactive-type.html">interactive type</a></li>
-                <li><a href="../work/click-for-frogs.html">click for frogs</a></li>
-                <li><a href="../work/itchy.html">itchy</a></li>
-            </ol>
-            <h1>play</h1>
-            <ol>
-                <li><a href="../work/forest-clearing.html">forest clearing</a></li>
-                <li><a href="../work/dream-makers.html">dream makers</a></li>
-                <li><a href="../work/beetle-beetle.html">beetle beetle</a></li>
-                <!-- <li><a href="../work/plant-monarchy.html">a plant monarchy</a></li> -->
-                <!-- <li><a href="../work/pies.html">pies</a></li> -->
-            </ol>
-            <!-- <h1>build</h1>
-            <ol>
-                <li><a href="../work/happy-machine.html">small happiness machine</a></li>
-                <li><a href="../work/baby-beach.html">baby at the beach</a></li>
-                <li><a href="../work/toy-polyhedron.html">toy polyhedron</a></li>
-            </ol> -->
-            <!-- <h1>art</h1>
-            <ol>
-                <li><a href="../work/paper-cut.html">paper cut</a></li>
-                <li><a href="../work/pixel-me.html">pixel me</a></li>
-            </ol> -->
-            <!-- <h1>other</h1>
-            <ol>
-                <li><a href="../work/acnh-data.html">ACNH data viz</a></li>
-            </ol>	 -->
-        </div>
-        <div id='archive-list'>
-            <ol>
-                <li><a href="https://code-1-portfolio-hyacinth.glitch.me/" target="_blank" rel="noopener noreferrer">Code 1 Portfolio</a></li>
-                <li><a href="https://code-2-portfolio-hyacinth.glitch.me/" target="_blank" rel="noopener noreferrer">Code 2 Portfolio</a></li>
-                <li><a href="https://critical-code-portfolio-hyacinth.glitch.me/index.html" target="_blank" rel="noopener noreferrer">Critical Code Portfolio</a></li>
-                <li><a href="https://pandahya.github.io/lab-systems-2021/index.html" target="_blank" rel="noopener noreferrer">Lab Systems</a></li>
-            </ol>
-        </div>
-    </div>		
-</nav>
-<main>
-<section class="work-page">
-	<header>
-        <h1>ROCKET</h1>
-        <h2>2022</h2>
-        <p>
-            Designing an app that allows you to find, build, and get any ice cream by flavor from anywhere in the country. Based on the prompt "design a build your own ice cream app".
-            <br>
-            Group Members: Hyacinth Weng & Yiping Dong
-            <br>
-            Time: 7 weeks
-            <br>
-            <a href="../imgs/rocket_presentation.pdf" download> Download Presentation Deck &darr;</a>
-        </p>
-        <figure class="topbar_three">
-            <img src="../imgs/rocket_2.png">
-            <img src="../imgs/rocket_4.png">
-            <img src="../imgs/rocket_5.png">
-        </figure>
-	</header>
-    <article>
-        <h2>section</h2>
-        <p>
-            words
-        </p>
-        <figure class="two">
-            <img src="../imgs/rocket_hw_mb.jpg">
-            <img src="../imgs/rocket_yd_mb.jpg">
-        </figure>
-        <figure>
-            <img src="../imgs/rocket_mb.jpg">
-        </figure>
-        <figure class="two">
-            <img src="../imgs/rocket_primary_persona.jpg">
-            <img src="../imgs/rocket_secondary_persona.jpg">
-        </figure>
-        <figure>
-            <img src="../imgs/rocket_appmap.jpg">
-        </figure>
-    </article>
-	<article>
-		<h2>Reflection</h2>
-		<p>
-			words
-		</p>
-	</article>
-    <div class='gallery'>
-        
-    </div>
-</section>
-</main>
-<footer>
-    <p>wengh952@newschool.edu</p>
-    <div id="socials">
-        <a href="https://github.com/pandahya" target="_blank" rel="noopener noreferrer"><img class="social" src="../imgs/github.svg"></a>
-        <a href="https://www.instagram.com/pandahya/"  target="_blank" rel="noopener noreferrer"><img class="social" src="../imgs/instagram.svg"></a>
-        <a href="https://www.linkedin.com/in/hyacinth-weng-37515b1a1/"  target="_blank" rel="noopener noreferrer"><img class="social" src="../imgs/linkedin.png"></a>
-    </div>
-</footer>
+    <ul id="nav"></ul>
+    <main class="work" id="rocket">
+        <div id="toc"></div>
+        <section id="content">
+            <section id="description"></section>
+            <hr></hr>
+            <section id="process">
+                <h1>process</h1>
+                <p>
+                    words
+                </p>
+                <img src="../assets/imgs/dodam_moodboard_jennie.jpg"/>
+            </section>
+        </section>
+    </main>
+    <ul id="footer"></ul>
 </body>
-<script src="../main.js"></script>
+
+<script type="text/babel" src="../../src/navFromWork.js"></script>
+<script type="text/babel" src="../../src/workPage.js"></script>
 </html>
