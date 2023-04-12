@@ -7,7 +7,7 @@ function TOC(props){
             <ul>
                 <li><h2>Contents</h2></li>
                 {props.toc.map(toc =>(
-                    <li id={toc} key={toc}><a href={toc}>{toc}</a></li>
+                    <li id={"#"+toc} key={toc}><a href={"#"+toc}>{toc}</a></li>
                 ))}
             </ul>
         </div>
@@ -35,7 +35,7 @@ function Header(props){
 
 const workData=[
     {
-        toc:["#description", "#research-concept", "#moodboard-gestural", "#user-flow-chart", "#hero-flow", "#key-screens", "#user-interviews", "#design-system", "#wireframes", "#final-contents"],
+        toc:["description", "research-concept", "moodboard-gestural", "user-flow-chart", "hero-flow", "key-screens", "user-interviews", "design-system", "wireframes", "final-contents"],
         header:{
             img: "../assets/imgs/dodam_header.jpg",
             project: "dodam",
@@ -46,7 +46,7 @@ const workData=[
         },
     },
     {
-        toc:["#description", "#images"],
+        toc:["description", "images"],
         header:{
             img: "../assets/imgs/house_header.gif",
             project: "house",
@@ -57,7 +57,7 @@ const workData=[
         },
     },
     {
-        toc:["#description", "#process"],
+        toc:["#escription", "process"],
         header:{
             img: "../assets/imgs/pose_presentation21.jpg",
             project: "rocket",
@@ -69,7 +69,7 @@ const workData=[
         },
     },
     {
-        toc:["#description", "#moodboard-concept", "#final-images"],
+        toc:["description", "moodboard-concept", "final-images"],
         header:{
             img: "../assets/imgs/olympics_header.png",
             project: "olympics infographics",
@@ -81,7 +81,7 @@ const workData=[
         },
     },
     {
-        toc:["#description", "#research", "#concept", "#brand-strategy", "#visual-identity", "#verbal-identity", "#style-frames", "#applications",],
+        toc:["description", "research", "concept", "brand-strategy", "visual-identity", "verbal-identity", "style-frames", "applications",],
         header:{
             img: "../assets/imgs/pose_presentation21.jpg",
             project: "pose",
@@ -92,7 +92,7 @@ const workData=[
         },
     },
     {
-        toc:["#description", "#concept", "#rules-instructions", "#images",],
+        toc:["description", "concept", "rules-instructions", "images",],
         header:{
             img: "../assets/imgs/forest_header.png",
             project: "a forest clearing",
@@ -100,6 +100,17 @@ const workData=[
             tags: ['code', 'play'],
             description: "A FOREST CLEARING is a collaborative multiplayer experience played online in the broswer. You play by working with others to grow and maintain as large a forest as you can while lumberjack NPCs cut your trees down. Created for a game jam with the theme OUT OF CONTROL.",
             time: "2 weeks",
+        },
+    },
+    {
+        toc:["description", "images",],
+        header:{
+            img: "../assets/imgs/expcam_header.gif",
+            project: "experimental camera",
+            year: "2021",
+            tags: ['code'],
+            description: "Playing with the webcam and face tracking to make an experimental camera. This project allows the user to draw on the canvas by placing different colored objects in front of the camera, and even with their own face. The camera works best on desktop.",
+            time: "2 weeks ✿",
         },
     },
 ]
@@ -110,9 +121,10 @@ const rocket = document.getElementById("rocket");
 const olympics = document.getElementById("olympics");
 const pose = document.getElementById("pose");
 const forest = document.getElementById("forest");
+const expcam = document.getElementById("expcam");
 
-const projs = [dodam, house, rocket, olympics, pose, forest];
-const projNames = ["dodam", "house", "rocket", "olympics", "pose", "forest"];
+const projs = [dodam, house, rocket, olympics, pose, forest, expcam];
+const projNames = ["dodam", "house", "rocket", "olympics", "pose", "forest", "expcam"];
 
 for(let i=0;i<projs.length;i++){
     if(projs[i]){

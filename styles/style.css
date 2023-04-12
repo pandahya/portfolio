@@ -8,6 +8,8 @@ body{
     color: var(--text);
     background-color: var(--background);
     line-height: normal;
+    background-image: var(--backgroundImg);
+    background-blend-mode: luminosity;
 }
 main{
     padding: 4rem;
@@ -21,7 +23,7 @@ ul{
     /* line-height: 1.6rem; */
 }
 li{
-    margin: 0.5rem 0;
+    margin: 0.5rem 1em;
 }
 hr{
     margin: 20px 2px;
@@ -38,13 +40,19 @@ video{
     width: 100%;
 }
 h1{
-    font-family: "PP NeueBit";
-    font-size: 3.5rem;
+    font-family: var(--pixelFont);
+    font-size: var(--h1Size);
+    font-weight: var(--pixelFontWeight);
     text-transform: uppercase;
 }
 h2{
     font-size: 1.5rem;
     margin: 1rem 0;
+}
+h3{
+    font-family: var(--pixelFont);
+    font-size: 2rem;
+    text-transform: uppercase;
 }
 p{
     margin: 1rem 0;
@@ -55,7 +63,8 @@ p{
     font-style: italic;
 }
 .circle-list li{
-    list-style: circle;
+    /* list-style: circle; */
+    list-style-type: "✿ " ;
 }
 .numbered li{
     list-style: decimal;
@@ -68,7 +77,7 @@ a:link,a:visited{
 }
 a:hover{
     color: var(--accent);
-    text-decoration: underline wavy;
+    /* text-decoration: underline wavy; */
 }
 /* a:hover::after{
     content:" ↗";
@@ -82,15 +91,28 @@ a:hover img{
     transform: rotate(10deg); */
     /* transition: 0.5s; */
 }
-
+button{
+    background-color: var(--background);
+    border: none;
+    color: var(--text);
+    padding: none;
+    margin: none;
+    font-size: inherit;
+    font-family: inherit;
+}
+button:hover{
+    cursor: pointer;
+}
 
 #nav, #footer{
     /* font-family: "Handjet"; */
-    font-family: "PP NeueBit";
+    font-family: var(--pixelFont);
     background-color: var(--main);
     display: flex;
     justify-content: space-between;
     width: 100vw;
+    position: fixed;
+    z-index: 2;
 }
 #nav li, #footer li{
     margin: 0.5rem 1.5rem;
@@ -98,17 +120,25 @@ a:hover img{
 #nav{
     font-size: 1.8rem;
     text-transform: uppercase;
-    position: fixed;
+    /* position: fixed; */
+    top: 0;
     height: 2.75rem;
     /* outline: 1px solid var(--text); */
 }
+/* #nav a:hover::after{
+    content: " ✿";
+    color: var(--text);
+    font-size: 1.3rem;
+} */
 #footer{
     font-size: 1.3rem;
+    bottom: 0;
+    /* background-color: red; */
 }
 #nav a:link, #nav a:visited{
     color: var(--text);
 }
-#nav a:hover{
+#nav a:hover, #nav a:hover .flower{
     color: var(--accent);
 }
 
@@ -125,13 +155,21 @@ a:hover img{
     margin: 2rem 1rem;
     font-size: 2rem;
 }
-#home-img{
-    margin: auto;
+#home-text{
+    grid-area: 1 / 2;
+}
+#playground .draggable{
+    width: 200px;
+    position: fixed;
+    opacity: 75%;
+}
+#playground .draggable:hover{
+    cursor: move;
+    opacity: 100%;
 }
 
-
 #work-page{
-    font-family: "PP NeueBit";
+    font-family: var(--pixelFont);
     font-size: 2rem;
     text-transform: uppercase;
 }
@@ -148,7 +186,7 @@ a:hover img{
     padding-inline-start: 0.2rem;
 }
 .tag{
-    font-family: "PP NeueBit";
+    font-family: var(--pixelFont);
     font-size: 1.5rem;
     text-transform: uppercase;
     border: 1px dashed var(--accent);
@@ -159,8 +197,37 @@ a:hover img{
     margin: 0.2rem;
 }
 #about figure{
-    margin: 0 auto auto auto;
+    margin: 0 auto 0 auto;
 }
+.profile-pic{
+    width: 100%;
+    height: 100%;
+}
+.profile-pic img{
+    position: sticky;
+    top:2.8rem;
+}
+.profile-pic img:hover{
+    content: url('../assets/imgs/expcam_preview_pixel.png');
+    border-radius: 2px;
+}
+#about-bio span, .flower{
+    font-size: 0.75em;
+}
+.flower{
+    color: var(--background);
+}
+.proficiencyList{
+    display: grid;
+    grid: 1fr / 1fr 0.4fr;
+}
+.proficiencyList :nth-child(even){
+    text-align: right;
+}
+.proficiencyList span{
+    color: grey;
+}
+
 .tag-icon{
     /* background-color: lightskyblue; */
     width: 20px;
@@ -197,12 +264,9 @@ a:hover img{
 #toc a:hover{
     text-decoration: none;
 }
-/* #toc a:hover::before{
-    content: "→ ";
-} */
 #toc a:hover::after{
-    content: "←";
-    color: var(--background);
+    content: " ✿";
+    color: var(--accent);
 }
 #header-img:hover{
     transform: rotate(5deg);
@@ -234,19 +298,24 @@ figcaption{
     color: #262626;
 }
 
-@media (prefers-color-scheme: dark){
-    :root{
-        --background: #283077;
-        --main: #283077;
-        --text: white;
-        --accent: gold;
-    }
+:root{
+    --pixelFont: "PP NeueBit";
+    --h1Size: 3.5rem;
+    --pixelFontWeight: 400;
 }
-@media (prefers-color-scheme: light){
-    :root{
-        --background: #F1F0E7;
-        --main: #F1F0E7;
-        --text: #262626;
-        --accent: cornflowerblue;
-    }
+
+:root[color-mode="pixel"]{
+    --background: #283077;
+    --main: #283077;
+    --text: white;
+    --accent: gold;
+    --backgroundImg: none;
+
+}
+:root[color-mode="paper"]{
+    --background: #F1F0E7;
+    --main: #F1F0E7;
+    --text: #262626;
+    --accent: cornflowerblue;
+    --backgroundImg: url(../assets/imgs/paperbg2.png);
 }

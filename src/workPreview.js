@@ -73,12 +73,12 @@ const projectData = [
     //     tags: ['code', 'play'],
     //     link: "./work/qsweeper.html",
     // },
-    // {
-    //     img: "./assets/imgs/ecampreview.png",
-    //     project: "Experimental Camera",
-    //     tags: ['code'],
-    //     link: "./work/experimentalcamera.html",
-    // },
+    {
+        img: "./assets/imgs/expcam_preview.png",
+        project: "Experimental Camera",
+        tags: ['code'],
+        link: "./work/experimentalcamera.html",
+    },
     
 ];
 
