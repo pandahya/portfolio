@@ -9,7 +9,7 @@ body{
     background-color: var(--background);
     line-height: normal;
     background-image: var(--backgroundImg);
-    background-blend-mode: luminosity;
+    /* background-blend-mode: luminosity; */
 }
 main{
     padding: 4rem;
@@ -32,6 +32,7 @@ hr{
 img{
     width: 100%;
     border-radius: 2px;
+    box-shadow: var(--shadow);
 }
 figure{
     margin-bottom: 1rem;
@@ -83,16 +84,17 @@ a:hover{
     content:" ↗";
 } */
 a:hover img{
-    outline: 2px dashed var(--accent);
-    border-radius: 10px;
-    /* -webkit-transform: rotate(10deg);
-    -moz-transform: rotate(10deg);
-    -o-transform: rotate(10deg);
-    transform: rotate(10deg); */
-    /* transition: 0.5s; */
+    /* outline: 2px dashed var(--accent);
+    border-radius: 10px; */
+    transform: var(--imgHover);
+    -webkit-transform: var(--imgHover);
+    -moz-transform: var(--imgHover);
+    -o-transform: var(--imgHover);
+    filter: var(--imgHover);
 }
 button{
-    background-color: var(--background);
+    /* background-color: var(--background); */
+    background-color: rgba(0,0,0,0);
     border: none;
     color: var(--text);
     padding: none;
@@ -102,6 +104,8 @@ button{
 }
 button:hover{
     cursor: pointer;
+    background-color: var(--oppositeBg);
+    color: var(--oppositeText);
 }
 
 #nav, #footer{
@@ -113,6 +117,8 @@ button:hover{
     width: 100vw;
     position: fixed;
     z-index: 2;
+    background-image: var(--backgroundImg);
+    /* background-blend-mode: luminosity; */
 }
 #nav li, #footer li{
     margin: 0.5rem 1.5rem;
@@ -125,11 +131,6 @@ button:hover{
     height: 2.75rem;
     /* outline: 1px solid var(--text); */
 }
-/* #nav a:hover::after{
-    content: " ✿";
-    color: var(--text);
-    font-size: 1.3rem;
-} */
 #footer{
     font-size: 1.3rem;
     bottom: 0;
@@ -155,12 +156,30 @@ button:hover{
     margin: 2rem 1rem;
     font-size: 2rem;
 }
-#home-text{
-    grid-area: 1 / 2;
+#playground{
+    width: 100%;
+    height: 100%;
+}
+#playgroundText{
+    text-align: right;
+}
+#playgroundText span{
+    position: absolute;
+    animation-name: bobbing;
+    animation-duration: 0.5s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+@keyframes bobbing {
+    0% {transform: translateY(-2px)}
+    100% {transform: translateY(2px)}
 }
 #playground .draggable{
-    width: 200px;
+    /* width: 200px; */
     position: fixed;
+    right: 10vw;
     opacity: 75%;
 }
 #playground .draggable:hover{
@@ -189,12 +208,14 @@ button:hover{
     font-family: var(--pixelFont);
     font-size: 1.5rem;
     text-transform: uppercase;
-    border: 1px dashed var(--accent);
+    border: var(--tagOutline);
     border-radius: 5px;
     display: flex;
     gap: 0.5rem;
     padding: 0.3rem 0.4rem 0.1rem 0.4rem;
     margin: 0.2rem;
+    background-color: var(--tagBg);
+    box-shadow: var(--shadow);
 }
 #about figure{
     margin: 0 auto 0 auto;
@@ -210,6 +231,9 @@ button:hover{
 .profile-pic img:hover{
     content: url('../assets/imgs/expcam_preview_pixel.png');
     border-radius: 2px;
+}
+#defaultCanvas0{
+    grid-area: 1 / 2;
 }
 #about-bio span, .flower{
     font-size: 0.75em;
@@ -233,6 +257,7 @@ button:hover{
     width: 20px;
     height: 20px;
     display: inline;
+    box-shadow: none;
 }
 
 .work{
@@ -293,8 +318,20 @@ figcaption{
     grid: 1fr / 1fr 1fr 1fr;
 }
 
+.wiggling{
+    animation-name: wiggle;
+    animation-duration: 0.2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes wiggle {
+    0% {transform: rotate(0deg)}
+    50% {transform: rotate(1deg)}
+    100% {transform: rotate(-1deg)}
+}
+
 ::selection{
-    background-color: gold;
+    background-color: var(--selection);
     color: #262626;
 }
 
@@ -309,13 +346,28 @@ figcaption{
     --main: #283077;
     --text: white;
     --accent: gold;
+    --selection: var(--accent);
     --backgroundImg: none;
-
+    --oppositeBg: #F1F0E7;
+    --oppositeText: #262626;
+    --tagOutline: 1px dashed var(--accent);
+    /* --tagTransform: none; */
+    --imgHover: blur(4px);
+    --blendMode: normal;
 }
 :root[color-mode="paper"]{
     --background: #F1F0E7;
     --main: #F1F0E7;
     --text: #262626;
-    --accent: cornflowerblue;
+    --accent: slategrey;
+    --selection: silver;
     --backgroundImg: url(../assets/imgs/paperbg2.png);
+    --oppositeBg: #283077;
+    --oppositeText: white;
+    --tagBg: white;
+    --tagOutline: 1px solid var(--tagBg);
+    --shadow: 1px 1px 1px rgba(38,38,38,0.25);
+    /* --tagTransform: transform() */
+    --imgHover: rotate(5deg);
+    --blendMode: luminosity;
 }

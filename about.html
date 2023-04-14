@@ -13,13 +13,14 @@
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
 
 <body>
     <ul id="nav"></ul>
     <main id="about-page">
-        <figure class="profile-pic">
+        <!-- <figure class="profile-pic">
             <img src="./assets/imgs/expcam_preview.png"/>
-        </figure>
+        </figure> -->
         <section>
             <section id="about-bio">
                 <h1>hyacinth weng <span>✿</span></h1>
@@ -48,16 +49,16 @@
                     <li>★★★★<span>☆</span></li>
                     <li>JavaScript</li>
                     <li>★★★★<span>☆</span></li>
-                    <li>React JS</li>
-                    <li>learning</li>
+                    <!-- <li>React JS</li> -->
+                    <!-- <li>learning</li> -->
                     <li>HTML/CSS</li>
                     <li>★★★★★</li>
                     <li>Unity + C#</li>
                     <li>★★<span>☆☆☆</span></li>
                     <li>Arduino + C++</li>
                     <li>★<span>☆☆☆☆</span></li>
-                    <li>Blender</li>
-                    <li>learning</li>
+                    <!-- <li>Blender</li> -->
+                    <!-- <li>learning</li> -->
                     
                 </ul>
                 <h2>experience</h2>
@@ -93,4 +94,65 @@
 </body>
 
 <script type="text/babel" src="src/main.js"></script>
+<script>
+    const newSection = document.createElement("section");
+    const mainDiv = document.querySelector("#about-page");
+
+    let colorPicker;
+    let btnCol = 255;
+    mainDiv.appendChild(newSection);
+    let sectionLeft = newSection.offsetLeft;
+    let sectionWidth = newSection.offsetWidth;
+    let sectionTop = newSection.offsetTop;
+
+    let hyaFace;
+    function preload(){
+        hyaFace = loadImage('./assets/imgs/myFaceSticker.png');
+    }
+    function setup() {
+        createCanvas(sectionWidth, sectionWidth);
+        rectMode(CENTER);
+        textAlign(CENTER,CENTER);
+        imageMode(CENTER);
+        background(255);
+        image(hyaFace, sectionWidth/2, sectionWidth/2)
+        colorPicker = createColorPicker('#283077');
+        colorPicker.position(sectionLeft + 10, sectionTop + 10);
+    }
+
+    function draw() {
+    if(mouseIsPressed){
+        push();
+        strokeWeight(0);
+        fill(colorPicker.color());
+        rect(mouseX, mouseY, 5, 5);
+        pop();
+    }
+    if(mouseX>15 && mouseX<75 && mouseY>55 && mouseY<75){
+        btnCol = 200;
+    }else{
+        btnCol = 255;
+    }
+    ui();
+    }
+
+    function ui(){
+    push();
+    stroke(0)
+    strokeWeight(1);
+    fill(btnCol);
+    rect(40,65,50,20);
+    pop();
+    text('CLEAR', 40,66);
+    
+    }
+
+    function mouseClicked(){
+    if(mouseX>15 && mouseX<75 && mouseY>55 && mouseY<75){
+        clear();
+        background(255);
+        image(hyaFace, sectionWidth/2, sectionWidth/2)
+    }
+    }
+</script>
 </html>

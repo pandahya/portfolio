@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="/styles/reset.css">
     <link rel="stylesheet" type="text/css" href="/styles/style.css">
     <link rel="shortcut icon" href="./assets/imgs/favicon.png" type="image/x-icon">
-    <title>weng,hyacinth</title>
+    <title>hyacinth weng</title>
 </head>
 <style>
     /* .container {
@@ -31,17 +31,16 @@
     border-radius: 50%;
     content: " ";
     } */
-    .wiggling{
-    animation-name: wiggle;
-    animation-duration: 0.2s;
-    animation-iteration-count: infinite;
+    .small{
+        width: 50px;
     }
-
-    @keyframes wiggle {
-    0% {transform: rotate(0deg)}
-    50% {transform: rotate(1deg)}
-    100% {transform: rotate(-1deg)}
+    .medium{
+        width: 100px;
     }
+    .large{
+        width: 200px;
+    }
+    
 </style>
 <!-- change to production when ready to push -->
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
@@ -53,36 +52,7 @@
 <body>
     <ul id="nav"></ul>
     <main id="home-page">
-        <section id="playground">
-            <p>you can drag these! &darr;</p>
-            <figure class="draggable">
-                <img src="./assets/imgs/expcam_preview.png"/>
-            </figure>
-            <figure class="draggable">
-                <img src="./assets/imgs/house.gif"/>
-            </figure>
-            <figure class="draggable">
-                <img src="./assets/imgs/hweng_walk.gif"/>
-            </figure>
-            <figure class="draggable">
-                <img src="./assets/imgs/busCardBack3.jpg"/>
-            </figure>
-            <figure class="draggable">
-                <img src="./assets/imgs/phone_face.png"/>
-            </figure>
-            <figure class="draggable">
-                <img src="./assets/imgs/frogpfp.png"/>
-            </figure>
-            <figure class="draggable">
-                <img src="./assets/imgs/eggykun.png"/>
-            </figure>
-            <figure class="draggable">
-                <img src="./assets/imgs/garbage.png"/>
-            </figure>
-            <figure class="draggable">
-                <img src="./assets/imgs/myFaceSticker.png"/>
-            </figure>
-        </section>
+        
         <div id="home-text">
             <h2>
                 Hi, I’m Hyacinth Weng ✿
@@ -98,6 +68,53 @@
                 <div class='eye'></div>
             </div> -->
         </div>
+        <div>
+            <p id="playgroundText">you can drag these!<span>&darr;</span></p>
+            <section id="playground">
+                <figure class="draggable large">
+                    <img src="./assets/imgs/pie_stockphoto.jpg"/>
+                </figure>
+                <figure class="draggable large">
+                    <img src="./assets/imgs/paperbg1.png"/>
+                </figure>
+                <figure class="draggable large">
+                    <img src="./assets/imgs/house.gif"/>
+                </figure>
+                <figure class="draggable large">
+                    <img src="./assets/imgs/phone_face.png"/>
+                </figure>
+                <figure class="draggable large">
+                    <img src="./assets/imgs/eggykun.png"/>
+                </figure>
+                <figure class="draggable large">
+                    <img src="./assets/imgs/hweng_walk.gif"/>
+                </figure>
+                <figure class="draggable medium">
+                    <img src="./assets/imgs/frogpfp.png"/>
+                </figure>
+                <figure class="draggable medium">
+                    <img src="./assets/imgs/garbage.png"/>
+                </figure>
+                <figure class="draggable medium">
+                    <img src="./assets/imgs/judgy_hya.png"/>
+                </figure>
+                <figure class="draggable large">
+                    <img src="./assets/imgs/myFaceSticker.png"/>
+                </figure>
+                <figure class="draggable medium">
+                    <img src="./assets/imgs/poop_large_pixelated.png"/>
+                </figure>
+                <figure class="draggable small">
+                    <img src="./assets/imgs/codeFolder.png"/>
+                </figure>
+                <figure class="draggable small">
+                    <img src="./assets/imgs/gamesFolder.png"/>
+                </figure>
+                <figure class="draggable small">
+                    <img src="https://help.apple.com/assets/63BCA927AAE78C58DD7FBE35/63BCA92EAAE78C58DD7FBE76/en_US/a0d5e859e5f2b01dbbf81dfc38a3a92f.png"/>
+                </figure>
+            </section>
+        </div>
     </main>
     
     <ul id="footer" style="position:fixed; bottom:0;"></ul>
@@ -106,8 +123,20 @@
 <script type="text/babel" src="./src/main.js"></script>
 <script>
     //code taken from: https://www.w3schools.com/howto/howto_js_draggable.asp
-    draggables = document.querySelectorAll(".draggable");
+    let draggables = document.querySelectorAll(".draggable");
+    const playground = document.querySelector("#playground");
+    let width = playground.offsetWidth;
+    let height = playground.offsetHeight - 200;
+    draggables.forEach(randomPos);
     draggables.forEach(dragElement);
+    
+
+    function randomPos(elmnt){
+        let randomX = Math.floor(Math.random()*width) - 75;
+        let randomY = Math.floor(Math.random()*height);
+        elmnt.style.top = (playground.offsetTop + randomY) + "px";
+        elmnt.style.left = (playground.offsetLeft + randomX) + "px";
+    }
 
     function dragElement(elmnt) {
         var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -139,7 +168,7 @@
             document.onmousemove = null;
             elmnt.classList.remove("wiggling");
         }
-        }
+    }
 </script>
 <!-- <script type="text/babel" src="index.bundle.js"></script> -->
 <!-- <script>

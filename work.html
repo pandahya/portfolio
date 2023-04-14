@@ -38,5 +38,14 @@
 
     <script type="text/babel" src="src/main.js"></script>
     <script type="text/babel" src="src/workPreview.js"></script>
+    <script>
+        let tags = document.querySelectorAll(".tag");
+        tags.forEach(randomRotate);
+
+        function randomRotate(elmnt){
+            let randDeg = Math.random();
+            elmnt.style.transform = `rotate(${randDeg}deg)`;
+        }
+    </script>
 </body>
 </html>
