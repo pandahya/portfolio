@@ -1,5 +1,14 @@
 // import React from 'react';
 // import ReactDOM from 'react-dom';
+let currentMode = sessionStorage.getItem("color-mode");
+let modeText;
+if(document.documentElement.getAttribute("color-mode")=="paper" || currentMode == "paper"){
+    document.documentElement.setAttribute("color-mode", "paper");
+    modeText = "you are in paper mode → switch to pixel mode";
+}else if (document.documentElement.getAttribute("color-mode")=="pixel" || currentMode == "pixel"){
+    document.documentElement.setAttribute("color-mode", "pixel");
+    modeText = "you are in pixel mode → switch to paper mode";
+}
 
 function Nav(props){
     return (
@@ -12,8 +21,6 @@ function Nav(props){
 };
 //https://ryanfeigenbaum.com/dark-mode/
 function Footer(){
-    let modeText;
-    let currentMode = sessionStorage.getItem("color-mode");
     const switchModes=()=>{
         if(document.documentElement.getAttribute("color-mode")=="paper"){
             document.documentElement.setAttribute("color-mode", "pixel");
@@ -25,17 +32,10 @@ function Footer(){
             sessionStorage.setItem("color-mode", "paper");
         }
     }
-    if(document.documentElement.getAttribute("color-mode")=="paper" || currentMode == "paper"){
-        document.documentElement.setAttribute("color-mode", "paper");
-        modeText = "you are in paper mode → switch to pixel mode";
-    }else if (document.documentElement.getAttribute("color-mode")=="pixel" || currentMode == "pixel"){
-        document.documentElement.setAttribute("color-mode", "pixel");
-        modeText = "you are in pixel mode → switch to paper mode";
-    }
     return(
         <React.Fragment>
             <li><button id="screenMode" onClick={()=>switchModes()}>{modeText}</button></li>
-            <li>Last updated: 16 April 2023</li>
+            <li>Last updated: 17 April 2023</li>
             {/* <li>NYC based (UTC-04:00)</li> */}
         </React.Fragment>
     );

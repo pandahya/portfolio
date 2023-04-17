@@ -78,7 +78,7 @@ a:link,a:visited{
 }
 a:hover{
     color: var(--accent);
-    /* text-decoration: underline wavy; */
+    text-decoration: underline wavy;
 }
 /* a:hover::after{
     content:" ↗";
@@ -138,9 +138,11 @@ button:hover{
 }
 #nav a:link, #nav a:visited{
     color: var(--text);
+    text-decoration: none;
 }
 #nav a:hover, #nav a:hover .flower{
     color: var(--accent);
+    visibility: visible;
 }
 
 
@@ -241,7 +243,10 @@ button:hover{
     font-size: 0.75em;
 }
 .flower{
-    color: var(--background);
+    visibility: hidden;
+    color: var(--accent);
+
+    /* color: var(--background); */
 }
 .proficiencyList{
     display: grid;

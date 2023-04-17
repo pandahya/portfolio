@@ -1,11 +1,14 @@
 // import React from 'react';
 // import ReactDOM from 'react-dom';
 
+let allProjects = document.querySelectorAll(".work-preview");
+console.log(allProjects);
+
 function WorkPreviews(props){
     const projectData = props.projectData;
     return(
         projectData.map((item)=>
-        <figure key={item.project}className="work-preview">
+        <figure key={item.project} className="work-preview">
             <a href={item.link}><img src={item.img}/></a>
             <figcaption><a href={item.link}>{item.project}</a></figcaption>
             <ul className="tags-container">

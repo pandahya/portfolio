@@ -34,7 +34,7 @@ function Footer(){
     return(
         <React.Fragment>
             <li><button id="screenMode" onClick={()=>switchModes()}>{modeText}</button></li>
-            <li>Last updated: 16 April 2023</li>
+            <li>Last updated: 17 April 2023</li>
             {/* <li>NYC based (UTC-04:00)</li> */}
         </React.Fragment>
     );
