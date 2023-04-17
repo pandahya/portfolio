@@ -233,6 +233,8 @@ button:hover{
     border-radius: 2px;
 }
 #defaultCanvas0{
+    /* top: 20vh;
+    position: sticky; */
     grid-area: 1 / 2;
 }
 #about-bio span, .flower{

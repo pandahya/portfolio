@@ -26,11 +26,9 @@
                 <h1>hyacinth weng <span>✿</span></h1>
                 <h3>design | code | play</h3>
                 <p>
-                    I'm a 4th year student at Parsons School of Design pursuing a major in Design & Technology and a minor in Communication Design. I am curious, diligent, detail-oriented, and eager to learn.
-                    <br>
-                    I enjoy creating intruiging interactive experiences and telling interesting stories. I work primarily in web design, UI/UX, and graphic design. In my free time, I like to play games and explore the absurd.
+                    Hi! I am a Chinese-American artist/designer who is creating playful experiences and loves trash. I’m interested in how objects, like trash, can act a medium for storytelling—both physical and digital. I work primarily in web design, UI/UX, graphic design, and sometimes make games. I am curious, logical, and detail-oriented. In my free time, I like to play games, ponder the universe, and explore the absurd. 
                 </p>
-                <h3>download resume pdf &darr;</h3>
+                <h3><a href="./assets/docs/hyacinthweng_resume.pdf" download>download resume pdf &darr;</a></h3>
             </section>
             <hr>
             <section id="about-stats">
@@ -41,24 +39,20 @@
                     <li>ideation & documentation</li>
                     <li>creative problem solving</li>
                 </ul> -->
-                <h2>software</h2>
+                <!-- <h2>software</h2>
                 <ul class="proficiencyList"">
                     <li>Adobe Photoshop, Illustrator, Indesign</li>
-                    <li>★★★★★</li>
+                    <li>✿✿✿✿✿</li>
                     <li>Figma</li>
-                    <li>★★★★<span>☆</span></li>
+                    <li>✿✿✿✿<span>✿</span></li>
                     <li>JavaScript</li>
-                    <li>★★★★<span>☆</span></li>
-                    <!-- <li>React JS</li> -->
-                    <!-- <li>learning</li> -->
+                    <li>✿✿✿✿<span>✿</span></li>
                     <li>HTML/CSS</li>
-                    <li>★★★★★</li>
+                    <li>✿✿✿✿✿</li>
                     <li>Unity + C#</li>
-                    <li>★★<span>☆☆☆</span></li>
+                    <li>✿✿<span>✿✿✿</span></li>
                     <li>Arduino + C++</li>
-                    <li>★<span>☆☆☆☆</span></li>
-                    <!-- <li>Blender</li> -->
-                    <!-- <li>learning</li> -->
+                    <li>✿<span>✿✿✿✿</span></li>
                     
                 </ul>
                 <h2>experience</h2>
@@ -86,7 +80,7 @@
                 </ul>
                 <ul>
                     <li>Honorable Mention in Visual Arts & Design Category</li>
-                </ul>
+                </ul> -->
             </section>
         </section>
     </main>
@@ -116,6 +110,7 @@
         imageMode(CENTER);
         background(255);
         image(hyaFace, sectionWidth/2, sectionWidth/2)
+        text("Click to draw on my face!",width/2, 20);
         colorPicker = createColorPicker('#283077');
         colorPicker.position(sectionLeft + 10, sectionTop + 10);
     }
@@ -144,7 +139,6 @@
     rect(40,65,50,20);
     pop();
     text('CLEAR', 40,66);
-    
     }
 
     function mouseClicked(){
@@ -152,6 +146,7 @@
         clear();
         background(255);
         image(hyaFace, sectionWidth/2, sectionWidth/2)
+        text("Click to draw on my face!",width/2, 20);
     }
     }
 </script>
