@@ -9,14 +9,22 @@
     <link rel="shortcut icon" href="../assets/imgs/favicon.png" type="image/x-icon">
     <title>Thesis Paper</title>
 </head>
+<style>
+    span{
+        font-style: italic;
+    }
+</style>
 <body>
     <main>
         <h1>The Artifex: How Did I Even Get Here</h1>
-        <h2>Thesis Paper, Hyacinth Weng 2023</h2>
+        <h2>Hyacinth Weng, 2023</h2>
         <article>
             <h3>Introduction</h3>
             <p>
                 The Artifex is a game about discovery, exploration, and mystery, exploring how objects, specifically trash, can be used to tell a story. You play as a researcher working for a professor at a university, tasked with inspecting waste and artifacts from ruined lands. The player’s goal is to uncover lost or obscured narratives through the examination of these discovered artifacts, things that have been left behind.
+            </p>
+            <p>
+                <a href="">Download and play the game here &nearr;</a>
             </p>
         </article>
         <article>
@@ -24,15 +32,105 @@
             <p>
                 Often overlooked and considered as something gross, trash, waste, garbage, remains, leftovers—whatever you want to call it—is actually a lot more interesting than one would think. Rather than a type of object, “trash” can be more accurately thought of as a description of the state of an object. Before becoming “trash”, things always embody a different identity. And so instead of thinking about trash as just “trash”, trash becomes something that’s no longer wanted or needed, something that’s been left behind, discarded or removed. In telling a story, whats’s not there is just as important as what is. This isn’t a new concept or perspective. Garbage and remains are key components in the work of archaeologists, acting as important tools for understanding how people lived and how societies functioned.
             </p>
-            <p>I started off with just one thought. “I like trash”. My first goal was to figure out what to do with that. Throughout the entirety of the the first semester, I dedicated myself to finding a resolution for this. I ended up meandering around quite a bit.</p>
+            <p>I started off with just one thought. “I like trash”. My first goal was to figure out what to do with that. Throughout the entirety of the the first semester, I dedicated myself to finding a resolution for this. I ended up meandering around quite a bit testing possibilities with my prototypes.</p>
+            <!-- <figure>
+                <img src="../assets/imgs/artifex_brainstorm.jpeg"/>
+            </figure> -->
             <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FcqBd6jpygH7HFdxpO6ROvO%2Fthesis-concept-map%3Ftype%3Dwhiteboard%26node-id%3D0%253A1%26t%3DTSNyUjbgRTEBeK1h-1" ></iframe>
         </article>
         <article>
-            <h3>Since when did I know Unity?</h3>
-            <p>With little substantial Unity game dev experience under my belt, I'm not sure what gave me the confidence to take on this project.</p>
+            <h3>Prototypes</h3>
+            <div class="gallery two">
+                <p>
+                    Prototpye 1: What is trash?
+                    <br>
+                    I set up different types of "leftovers" and asked classmates to sort them however they saw fit. I deliberately included vague items. I wanted to get a sense of how different people might percieve "trash", and what factors influenced whether or not something would be considered "trash". Almost everyone determined a division between "trash" and "not trash" based on usefulness of the item, both immediate and future usefulness.
+                </p>
+                <figure>
+                    <img src="../assets/imgs/artifex_sortingproto.jpeg"/>
+                </figure>
+            </div>
+            <div class="gallery two">
+                <p>
+                    Prototype 2: Trash in Context
+                    <br>
+                    In my second prototype I wanted to test how "trash" might be understood in the context of a space or scene, in comparison my first prototype where the items were isolated. I constructed a small room filled with "trash" items and asked classmates to come up with a story of who lived here and what may have happened.
+                    <br>
+                    Lots of discourse came up around what actually happened in the space. (did this person have a dog or were they eating dog food? is the plant in the window real or fake?)
+                    <br>
+                    Spacial context turned out to be a major factor in how the objects are percieved.
+                </p>
+                <figure>
+                    <img src="../assets/imgs/artifex_houseproto.jpeg"/>
+                </figure>
+            </div>
+            <div class="gallery two">
+                <p>
+                    Prototype 3: interactions
+                    <br>
+                    For my final prototype of the semester, I wanted to finally make a decision on what medium I was actually going to move forward with. I was doing a lot of back and forth between physical and digital experiences as I didn't want to sacrifice the tangible qualities of "waste" items. I eventually decided on making a Unity game to be able to more realistically create a participatory experience, rather than an observatory experience. I attempted to translate ideas from my previous prototypes into a digital game space through this iteration as well.
+                </p>
+                <figure>
+                    <img src="../assets/imgs/artifex_streetproto.gif"/>
+                </figure>
+            </div>
+        </article>
+        <article>
+            <h3>An Assignment In Worldbuilding</h3>
+            <p>
+                I started the game by worldbuilding. To tell a story, a story must exist. 
+                <br>
+                <a href="">Link to Reader Piece &nearr;</a>
+                <br>
+                I may have a wild imagination, but I don't consider myself a great writer. Writing was hard, but better with friends. 
+                <br>
+                <!-- <a href="">Link to full lore &nearr;</a> -->
+                <br>
+                I initially wanted the narrative to be set in our reality, addressing our society and exploring how objects might paint a picture of how we live our lives. But the story devolved into something more speculative, and eventually becoming an alternate reality entirely.
+            </p>
+        </article>
+        <article>
+            <h3>Gameplay Development</h3>
+            <figure>
+                <img src="../assets/imgs/artifex_instructions.gif"/>
+                <figcaption>instructions</figcaption>
+            </figure>
+            <p>
+                One thing I struggled with was the balance between expository storytelling and environmental storytelling. Because I started off with a narrative in writing, I was inclined to include the text in the game directly.
+            </p>
+            <figure>
+                <img src="../assets/imgs/artifex_notebook.gif"/>
+                <figcaption>notebook interactions</figcaption>
+            </figure>
+            <p>
+                To emphasize the importance of the artifacts and hint at the conspiracy, I wanted my game to involve discovery, learning, and putting a story together, specifically through interacting with objects. In gameplay, that translated to collecting information via collecting artifacts.
+            </p>
+            <div class="gallery two">
+                <figure>
+                    <img src="../assets/imgs/artifex_myroom.gif"/>
+                    <figcaption>Your Room</figcaption>
+                </figure>
+                <figure>
+                    <img src="../assets/imgs/artifex_factoryroom.gif"/>
+                    <figcaption>Factory Explosion Site</figcaption>
+                </figure>
+                <figure>
+                    <img src="../assets/imgs/artifex_apothecary.gif"/>
+                    <figcaption>Aria's Apothecary</figcaption>
+                </figure>
+                <figure>
+                    <img src="../assets/imgs/artifex_office.gif"/>
+                    <figcaption>TabCorp Administrative Office</figcaption>
+                </figure>
+            </div>
         </article>
         <article>
             <h3>Reflection</h3>
+            <p>
+                
+                <br>
+                I think what I have complete now is just the start of this project. I spent a big chunk of the year developing <span>what</span> my project was actually going to be, leaving me with not as much time to actually make the thing. I see what I have now as the real proof of concept for more to come in the future. There's still a lof of this story I haven't been able to flesh out yet.
+            </p>
         </article>
     </main>
 </body>
