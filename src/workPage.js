@@ -35,6 +35,17 @@ function Header(props){
 
 const workData=[
     {
+        toc:["description",],
+        header:{
+            img: "../assets/imgs/dodam_header.jpg",
+            project: "the artifex",
+            year: "2023",
+            tags: ['play', 'narrative'],
+            description: "My senior thesis project. A narrative game about trash as a storytelling medium.",
+            time:" 7.5 months",
+        }
+    },
+    {
         toc:["description", "research-concept", "moodboard-gestural", "user-flow-chart", "hero-flow", "key-screens", "user-interviews", "design-system", "wireframes", "final-contents"],
         header:{
             img: "../assets/imgs/dodam_header.jpg",
@@ -115,6 +126,7 @@ const workData=[
     },
 ]
 
+const artifex = document.getElementById("artifex");
 const dodam = document.getElementById("dodam");
 const house = document.getElementById("house");
 const rocket = document.getElementById("rocket");
@@ -123,8 +135,8 @@ const pose = document.getElementById("pose");
 const forest = document.getElementById("forest");
 const expcam = document.getElementById("expcam");
 
-const projs = [dodam, house, rocket, olympics, pose, forest, expcam];
-const projNames = ["dodam", "house", "rocket", "olympics", "pose", "forest", "expcam"];
+const projs = [artifex, dodam, house, rocket, olympics, pose, forest, expcam];
+const projNames = ["artifex", "dodam", "house", "rocket", "olympics", "pose", "forest", "expcam"];
 
 for(let i=0;i<projs.length;i++){
     if(projs[i]){

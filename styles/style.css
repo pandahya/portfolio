@@ -18,6 +18,10 @@ main{
     /* background-color: cornflowerblue; */
     margin: 0 auto;
 }
+article{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 ul{
     font-size: 1.1rem;
     /* line-height: 1.6rem; */
