@@ -1,6 +1,6 @@
 @font-face {
     font-family: PP NeueBit;
-    src: url("../assets/fonts/PPNeueBit-Bold.otf");
+    src: url(../assets/fonts/PPNeueBit-Bold.otf);
 }
 
 body{
@@ -10,6 +10,7 @@ body{
     line-height: normal;
     background-image: var(--backgroundImg);
     /* background-blend-mode: luminosity; */
+    cursor: var(--defaultCursor);
 }
 main{
     padding: 4rem;
@@ -83,11 +84,12 @@ a:link,a:visited{
 a:hover{
     color: var(--accent);
     text-decoration: underline wavy;
+    cursor: var(--pointerCursor);
 }
 /* a:hover::after{
     content:" ↗";
 } */
-a:hover img{
+.preview-img:hover{
     /* outline: 2px dashed var(--accent);
     border-radius: 10px; */
     transform: var(--imgHover);
@@ -95,6 +97,7 @@ a:hover img{
     -moz-transform: var(--imgHover);
     -o-transform: var(--imgHover);
     filter: var(--imgHover);
+    box-shadow: var(--imgBoxShadow);
 }
 button{
     /* background-color: var(--background); */
@@ -155,8 +158,9 @@ button:hover{
     grid: 1fr / 1fr 1fr;
     gap: 2rem;
     /* background-color: red; */
-    padding: 20vh 10vw;
+    padding: 20vh 10vw 0vh 10vw;
     min-height: 60vh;
+    overflow: hidden;
 }
 #home-page h1{
     margin: 2rem 1rem;
@@ -235,7 +239,7 @@ button:hover{
     top:2.8rem;
 }
 .profile-pic img:hover{
-    content: url('../assets/imgs/expcam_preview_pixel.png');
+    content: url(../assets/imgs/expcam_preview_pixel.png);
     border-radius: 2px;
 }
 #defaultCanvas0{
@@ -245,6 +249,20 @@ button:hover{
 }
 #about-bio span, .flower{
     font-size: 0.75em;
+}
+#socials{
+    display: flex;
+    gap: 16px;
+    margin: 8px 0px;
+}
+#socials svg{
+    width: 32px;
+}
+#socials path{
+    fill: var(--text)
+}
+#socials svg:hover path{
+    fill: var(--accent);
 }
 .flower{
     visibility: hidden;
@@ -364,7 +382,10 @@ figcaption{
     --tagOutline: 1px dashed var(--accent);
     /* --tagTransform: none; */
     --imgHover: blur(4px);
+    --imgBoxShadow: none;
     --blendMode: normal;
+    --defaultCursor: auto;
+    --pointerCursor: pointer;
 }
 :root[color-mode="paper"]{
     --background: #F1F0E7;
@@ -380,5 +401,8 @@ figcaption{
     --shadow: 1px 1px 1px rgba(38,38,38,0.25);
     /* --tagTransform: transform() */
     --imgHover: rotate(5deg);
+    --imgBoxShadow: 4px 4px 4px;
     --blendMode: luminosity;
+    --defaultCursor: url(../assets/imgs/pencilcursor.png), auto;
+    --pointerCursor: url(../assets/imgs/inspectCursor.png), auto;
 }

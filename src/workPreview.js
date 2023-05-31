@@ -9,7 +9,7 @@ function WorkPreviews(props){
     return(
         projectData.map((item)=>
         <figure key={item.project} className="work-preview">
-            <a href={item.link}><img src={item.img}/></a>
+            <a href={item.link}><img class="preview-img" src={item.img}/></a>
             <figcaption><a href={item.link}>{item.project}</a></figcaption>
             <ul className="tags-container">
                 {item.tags.map(tag =>(
