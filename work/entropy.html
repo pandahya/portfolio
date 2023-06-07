@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" color-mode="pixel">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="shortcut icon" href="../assets/imgs/favicon.png" type="image/x-icon">
+    <title>entropy</title>
+</head>
+<!-- change to production when ready to push -->
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+<body>
+    <ul id="nav"></ul>
+    <main class="work" id="entropy">
+        <div id="toc"></div>
+        <section id="content">
+            <section id="description"></section>
+            <section id="links">
+                <p>
+                    Team: 
+                    <br>
+                    Hyacinth Weng (Landing+Home Page, Reader Page, Acknowledgement Page, Microinteractions, Decoratives/Aesthetics)
+                    <br>
+                    Yuyan Jin (Project Page, Font Sizing, Spacing, Accessibility, Microinteractions),
+                    <br>
+                    Lynette Huang (Home Page, Events Page, Spacing),
+                    <br>
+                    Gonçalo Monte & Peilin Chen (People Page)
+                </p>
+                <p><a href="https://parsons.edu/dt-2023/" target="_blank" rel="noopener noreferrer">link to website &nearr; </a> &emsp; <a href="https://www.figma.com/file/ZLlhZPew8lo3IYZyJ45lpO/EOY-Website?type=design&node-id=421%3A1683&t=qRHFnaM3fRaOS8jv-1" target="_blank" rel="noopener noreferrer">link to Figma &nearr;</a></p>
+            </section>
+            <hr></hr>
+            <section id="assignment">
+                <h1>assignment</h1>
+                <p>
+                    Every year, the Design & Technology department at Parsons organizes a series of events to celebrate and showcase the graduating students and thesis projects of that year (BFA + MFA). The events are organized by comittees made up of students in the graduating class and a faculty advisor, and include a pop up show, screening, symposium, reader/publication, and website.
+                    <br>
+                    I participated as a lead member of the website comittee, responsible for designing the website that would showcase all graduating students & projects based on brand guidelines the branding comittee created. The website copy was written by the promotion comittee and publication comittee. I was in charge of the landing+home, reader, and acknowledgement pages, as well as detailing microinteractions and decorative elements.
+                </p>
+            </section>
+            <section id="process">
+                <h1>process</h1>
+                <p>
+                    The website needed to include
+                    The first step we took was to look at the <a href="https://parsons.edu/dt-2020/" target="_blank" rel="noopener noreferrer">2020</a>, <a href="https://parsons.edu/dt-2021/" target="_blank" rel="noopener noreferrer">2021</a>, and <a href="https://parsons.edu/dt-2022/" target="_blank" rel="noopener noreferrer">2022</a> Parsons DT websites to further understand what this content would look like and how it was displayed in the past. From these past years' websites, we worked out what we felt worked and didn't work, and in turn how we might want to organize the information.
+                </p>
+                <figure>
+                    <img src="../assets/imgs/entropy_Previous-Years.png"/>
+                    <figcaption>Previous Years Websites</figcaption>
+                </figure>
+                <figure>
+                    <img src="../assets/imgs/entropy_Page-Structure.png"/>
+                    <figcaption>Page Structure</figcaption>
+                </figure>
+                <p>
+                    We recieved a very simple brand sheet and a poster design from the brand team. We interpreted the poster composition as the intended arrangement and use of the design elements and tried not to deviate too far from it in our website design.
+                </p>
+                <div class="gallery two">
+                    <figure>
+                        <img src="../assets/imgs/entropy_FINAL-BRAND-SHEET.png"/>
+                        <figcaption>Brand Sheet from Branding Team</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/imgs/entropy_poster.png"/>
+                        <figcaption>Original Poster Reference</figcaption>
+                    </figure>
+                </div>
+                <p>
+                    We further detailed some style and use guidelines for the website team to refer to in order to establish even clearer consistency between designs. The final version included detailed components and microinteractions for the developer as well.
+                </p>
+                <figure>
+                    <img src="../assets/imgs/entropy_COMPONENT-SHEET.png"/>
+                    <figcaption>Website Component Sheet</figcaption>
+                </figure>
+            </section>
+            <section id="wireframes">
+                <h1>wireframes</h1>
+                <h2>Pre-Launch Landing + Home Pages</h2>
+                <p>
+                    <a href="https://parsons.edu/dt-2023/" target="_blank" rel="noopener noreferrer">link to Home page &nearr;</a> 
+                    &emsp; 
+                    <a href="https://www.figma.com/file/ZLlhZPew8lo3IYZyJ45lpO/EOY-Website?type=design&node-id=468%3A867&t=lW4yFjTYtVbv4aEq-1" target="_blank" rel="noopener noreferrer">link to Figma &nearr;</a>
+                    <br>
+                    The pre-launch landing page would be a single page that would be available to view before the website officially launched. Only event information needed to be included. We wanted to minimize unnecessary work, so we maintained the same design for both the pre-launch landing and (post-launch) home page, only adding the nav bar to the latter.
+                </p>
+                <figure>
+                    <img src="../assets/imgs/entropy_PRE-LAUNCH-LANDING-PAGE.png"/>
+                    <figcaption>Pre-launch Landing Page</figcaption>
+                </figure>
+                <figure>
+                    <img src="../assets/imgs/entropy_HOME-PAGE.png"/>
+                    <figcaption>Home Page</figcaption>
+                </figure>
+                <p>
+                    I tried to mimic the composition of the poster on the home page and added unique interactions to each element to convey the idea of 'entropy'. The 'entropy' letters would be draggable, the circles would change border type on hover, and the sticks would rotate when moused over.
+                    <br>
+                    <a href="https://codepen.io/pandahya/pen/PodxjPr" target="_blank" rel="noopener noreferrer">link to interactions CodePen &nearr;</a>
+                </p>
+                <figure>
+                    <img src="../assets/imgs/entropy_interactionssample.gif"/>
+                </figure>
+                <br>
+                <h2>Reader Page</h2>
+                <p>
+                    <a href="https://parsons.edu/dt-2023/reader/" target="_blank" rel="noopener noreferrer">link to Reader &nearr;</a> 
+                    &emsp; 
+                    <a href="https://www.figma.com/file/ZLlhZPew8lo3IYZyJ45lpO/EOY-Website?type=design&node-id=1034%3A2218&t=lW4yFjTYtVbv4aEq-1" target="_blank" rel="noopener noreferrer">link to Figma &nearr;</a>
+                    <br>
+                    The Entropy Reader, a collection of all publication pieces written by students, would live on the website as a separate section. I worked closely with the publication comittee to determine how information would be best laid out. The publication comittee expressed that they really liked the <a href="https://parsons.edu/dt-2020/publication/" target="_blank" rel="noopener noreferrer">2020 website</a> and requested I do something similar. They also asked for a white background for text legibility since the rest of the website is black.
+                </p>
+                <figure>
+                    <img src="../assets/imgs/entropy_READER-PAGE.png"/>
+                    <figcaption>Reader Page</figcaption>
+                </figure>
+                <p>
+                    I used a gaussian blur + dissolve effect in Photoshop that was applied to the 'entropy' display letters to create a more natural transition between the black and white. And instead of pure white, I used a mix of the neon green and white to create a slight tint that would be easier on the eyes. I also used an alternate arrangement of the 'entropy' letters to better fit the space and signal a separate section.
+                </p>
+                <figure>
+                    <img src="../assets/imgs/entropy_readerdetail.png"/>
+                </figure>
+                <p>
+                    I found that that the page text and nav bar text overlapping when scrolled was quite unattractive, and decided to include a slight gradient under the nav bar. I added this to every page design, and the color of the gradient would be the same color as that page's background. I additionally made a CodePen with a possible JS solution to applying this gradient as it was not supposed to cover any of the header sections on each page.
+                    <br>
+                    <a href="https://codepen.io/pandahya/pen/PoyGKWQ" target="_blank" rel="noopener noreferrer">link to nav gradient CodePen &nearr;</a>
+                </p>
+                <div class="gallery two">
+                    <figure>
+                        <img src="../assets/imgs/entropy_navgradfigma.gif"/>
+                        <figcaption>Nav Gradient Figma Sample</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/imgs/entropy_navgradcodepen.gif"/>
+                        <figcaption>Nav Gradient CodePen Sample</figcaption>
+                    </figure>
+                </div>
+                <br>
+                <h2>Acknowledgement Page</h2>
+                <p>
+                    <a href="https://parsons.edu/dt-2023/about/" target="_blank" rel="noopener noreferrer">link to Acknowledgement page &nearr;</a> 
+                    &emsp; 
+                    <a href="https://www.figma.com/file/ZLlhZPew8lo3IYZyJ45lpO/EOY-Website?type=design&node-id=1876%3A3768&t=lW4yFjTYtVbv4aEq-1" target="_blank" rel="noopener noreferrer">link to Figma &nearr;</a>
+                    <br>
+                    I wanted the page to be simple and straightforward, including an acknowledgement statement and a list of all End of Year contributors.
+                </p>
+                <figure>
+                    <img src="../assets/imgs/entropy_ACKNOWLEDGEMENT-PAGE.png"/>
+                    <figcaption>Acknowledgement Page</figcaption>
+                </figure>
+            </section>
+        </section>
+    </main>
+    <ul id="footer"></ul>
+</body>
+
+<script type="text/babel" src="../../src/navFromWork.js"></script>
+<script type="text/babel" src="../../src/workPage.js"></script>
+</html>

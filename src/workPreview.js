@@ -23,6 +23,12 @@ function WorkPreviews(props){
 
 const projectData = [
     {
+        img: "./assets/imgs/entropy_preview.png",
+        project: "Entropy: DT Class of 2023 Showcase",
+        tags: ['UIUX', 'web design'],
+        link: "./work/entropy.html",
+    },
+    {
         img: "./assets/imgs/dodampreview.jpg",
         project: "Dodam: Design Your Baby",
         tags: ['UIUX', 'speculative'],

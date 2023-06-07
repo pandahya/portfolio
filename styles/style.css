@@ -42,6 +42,9 @@ img{
 figure{
     margin-bottom: 1rem;
 }
+iframe{
+    width: 100%;
+}
 video{
     width: 100%;
 }
@@ -323,7 +326,12 @@ button:hover{
     color: var(--accent);
 }
 #header-img:hover{
-    transform: rotate(5deg);
+    transform: var(--imgHover);
+    -webkit-transform: var(--imgHover);
+    -moz-transform: var(--imgHover);
+    -o-transform: var(--imgHover);
+    filter: var(--imgHover);
+    box-shadow: var(--imgBoxShadow);
 }
 
 
