@@ -24,7 +24,7 @@ function Header(props){
             <h2>{props.header.year}</h2>
             <div className="tags-container">
                 {props.header.tags.map(tag =>(
-                    <h2 className="tag" key={tag}>{tag}</h2>
+                    <h2 className={"tag " + tag} key={tag}>{tag}</h2>
                 ))}         
             </div>
             <p>{props.header.description}</p>
@@ -40,7 +40,7 @@ const workData=[
             img: "../assets/imgs/entropy_header.png",
             project: "Entropy: DT Class of 2023 Showcase",
             year: "2023",
-            tags: ['UIUX', 'web design'],
+            tags: ['uiux', 'webdesign'],
             description: "Creating the complete layout and interface of the Parsons Design & Technology Class of 2023 Thesis Showcase website. Designed in Figma to be development ready and for handing off to the web developer.",
             time:" 2 months",
         }
@@ -62,7 +62,7 @@ const workData=[
             img: "../assets/imgs/dodam_header.jpg",
             project: "dodam",
             year: "2022",
-            tags: ['UIUX', 'speculative'],
+            tags: ['uiux', 'speculative'],
             description: "What would a dystopian future look like where gene editing becomes common place, specifically in the pregnancy process? Dodam is a (speculative) app that imagines a more streamlined process to gene editing in this dystopian future for healthier and more special babies, being designed within the possibilities of one’s genome.",
             time: "7 weeks",
         },
@@ -96,7 +96,7 @@ const workData=[
             img: "../assets/imgs/olympics_header.png",
             project: "olympics infographics",
             year: "2022",
-            tags: ['graphic design',],
+            tags: ['graphic',],
             description: "Documenting and visualizing Champions at the Beijing 2022 Winter Olympics with Instagram-style square panels. Covers Ice Hockey: Women's Gold Medal Game, Figure Skaing: Mixed Pairs, Snowboard: Men's Big Air, and Biathalon: Men's 15km Mass Start.",
             time: "2 weeks",
 
@@ -108,7 +108,7 @@ const workData=[
             img: "../assets/imgs/pose_presentation21.jpg",
             project: "pose",
             year: "2021",
-            tags: ['branding', 'graphic design'],
+            tags: ['branding', 'graphic'],
             description: "POSE is a fictional brand creating an inviting culture around photography for those swept up by the fast-paced modern society by offering affordable and accessible film and cameras. POSE allows you to slow down, take a break, and appreciate the smaller moments in life. Developed as a competitor to Kodak.",
             time: "10 weeks",
         },

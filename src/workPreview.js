@@ -8,12 +8,12 @@ function WorkPreviews(props){
     const projectData = props.projectData;
     return(
         projectData.map((item)=>
-        <figure key={item.project} className="work-preview">
-            <a href={item.link}><img class="preview-img" src={item.img}/></a>
+        <figure key={item.project} className={"work-preview " + item.tags[0] + " " + item.tags[1]}>
+            <a href={item.link}><img className="preview-img" src={item.img}/></a>
             <figcaption><a href={item.link}>{item.project}</a></figcaption>
             <ul className="tags-container">
                 {item.tags.map(tag =>(
-                    <li className="tag" key={tag}>{tag}</li>
+                    <li className={"tag " + tag} key={tag}>{tag}</li>
                 ))}
             </ul>
         </figure>
@@ -25,13 +25,13 @@ const projectData = [
     {
         img: "./assets/imgs/entropy_preview.png",
         project: "Entropy: DT Class of 2023 Showcase",
-        tags: ['UIUX', 'web design'],
+        tags: ['uiux', 'webdesign'],
         link: "./work/entropy.html",
     },
     {
         img: "./assets/imgs/dodampreview.jpg",
         project: "Dodam: Design Your Baby",
-        tags: ['UIUX', 'speculative'],
+        tags: ['uiux', 'speculative'],
         link: "./work/dodam.html",
     },
     {
@@ -49,19 +49,19 @@ const projectData = [
     // {
     //     img: "./assets/imgs/rocketpreview.jpg",
     //     project: "Rocket",
-    //     tags: ['UIUX', 'branding'],
+    //     tags: ['uiux', 'branding'],
     //     link: "./work/rocket.html",
     // },
     {
         img: "./assets/imgs/olympics_figureskate_1.png",
         project: "Olympics Infographics",
-        tags: ['graphic design'],
+        tags: ['graphic'],
         link: "./work/olympicsinfographics.html",
     },
     {
         img: "./assets/imgs/posepreview.jpg",
         project: "POSE",
-        tags: ['branding', 'graphic design'],
+        tags: ['branding', 'graphic'],
         link: "./work/pose.html",
     },
     {

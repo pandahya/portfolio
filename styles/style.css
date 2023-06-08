@@ -217,6 +217,31 @@ button:hover{
     gap: 1rem;
     padding-inline-start: 0.2rem;
 }
+.tags-container .uiux::before{
+    content: url(../assets/imgs/tag_uiux.svg);
+    width: 20px;
+    height: 20px;
+}
+.tags-container .branding::before{
+    content: url(../assets/imgs/tag_branding.svg);
+    width: 20px;
+    height: 20px;
+}
+.tags-container .graphic::before{
+    content: url(../assets/imgs/tag_graphicdesign.svg);
+    width: 20px;
+    height: 20px;
+}
+.tags-container .code::before{
+    content: url(../assets/imgs/tag_code.svg);
+    width: 20px;
+    height: 20px;
+}
+.tags-container .play::before{
+    content: url(../assets/imgs/tag_play.svg);
+    width: 20px;
+    height: 20px;
+}
 .tag{
     font-family: var(--pixelFont);
     font-size: 1.5rem;
@@ -230,6 +255,15 @@ button:hover{
     background-color: var(--tagBg);
     box-shadow: var(--shadow);
 }
+.tag-icon{
+    /* background-color: lightskyblue; */
+    width: 20px;
+    height: 20px;
+    display: inline;
+    box-shadow: none;
+    border-radius: 0px;
+}
+
 #about figure{
     margin: 0 auto 0 auto;
 }
@@ -284,13 +318,8 @@ button:hover{
     color: grey;
 }
 
-.tag-icon{
-    /* background-color: lightskyblue; */
-    width: 20px;
-    height: 20px;
-    display: inline;
-    box-shadow: none;
-}
+
+
 
 .work{
     display: grid;
@@ -387,7 +416,7 @@ figcaption{
     --backgroundImg: none;
     --oppositeBg: #F1F0E7;
     --oppositeText: #262626;
-    --tagOutline: 1px dashed var(--accent);
+    --tagOutline: 1px solid var(--text);
     /* --tagTransform: none; */
     --imgHover: blur(4px);
     --imgBoxShadow: none;
@@ -405,7 +434,7 @@ figcaption{
     --oppositeBg: #283077;
     --oppositeText: white;
     --tagBg: white;
-    --tagOutline: 1px solid var(--tagBg);
+    --tagOutline: 1px dashed var(--accent);
     --shadow: 1px 1px 1px rgba(38,38,38,0.25);
     /* --tagTransform: transform() */
     --imgHover: rotate(5deg);

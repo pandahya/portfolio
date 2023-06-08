@@ -13,17 +13,27 @@
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-
+<style>
+    .work-preview{
+        display: block;
+    }
+    .hide{
+    display: none;
+}
+</style>
 <body>
     <ul id="nav"></ul>
     <main id="work-page">
-        <!-- <div class="tags-container">
-            <div class="tag"><img class="tag-icon" src="./assets/imgs/tag_uiux.svg"/>uiux</div>
-            <div class="tag"><img class="tag-icon" src="./assets/imgs/tag_branding.svg"/>branding</div>
-            <div class="tag"><img class="tag-icon" src="./assets/imgs/tag_graphicdesign.svg"/>graphic design</div>
-            <div class="tag"><img class="tag-icon" src="./assets/imgs/tag_code.svg"/>code</div>
-            <div class="tag"><img class="tag-icon" src="./assets/imgs/tag_play.svg"/>play</div>
-        </div> -->
+        <div id="filter-btn-container" class="tags-container">
+            <button class="tag filter-btn active" onclick="filterSelection('all')">
+                <!-- <img class="tag-icon" src="./assets/imgs/tag_uiux.svg"/> -->
+                all</button>
+            <button class="tag filter-btn" onclick="filterSelection('uiux')"><img class="tag-icon" src="./assets/imgs/tag_uiux.svg"/>uiux</button>
+            <button class="tag filter-btn" onclick="filterSelection('branding')"><img class="tag-icon" src="./assets/imgs/tag_branding.svg"/>branding</button>
+            <button class="tag filter-btn" onclick="filterSelection('graphic')"><img class="tag-icon" src="./assets/imgs/tag_graphicdesign.svg"/>graphic</button>
+            <button class="tag filter-btn" onclick="filterSelection('code')"><img class="tag-icon" src="./assets/imgs/tag_code.svg"/>code</button>
+            <button class="tag filter-btn" onclick="filterSelection('play')"><img class="tag-icon" src="./assets/imgs/tag_play.svg"/>play</button>
+        </div>
         <!-- <ul class="tags-container">
             <li class="tag">uiux</li>
             <li class="tag">branding</li>
@@ -39,22 +49,46 @@
     <script type="text/babel" src="src/main.js"></script>
     <script type="text/babel" src="src/workPreview.js"></script>
     <script>
-        // let tags = document.querySelectorAll(".tag");
-        // tags.forEach(randomRotate);
-
-        // function randomRotate(elmnt){
-        //     let randDeg = Math.random();
-        //     elmnt.style.transform = `rotate(${randDeg}deg)`;
-        // }
-
-        // let allProjects = document.querySelectorAll(".work-preview");
-        // console.log(allProjects);
-        // // allProjects.forEach(addTags);
-
-        // function addTags(elmnt){
-        //     // elmnt.classList.add("test");
-        //     console.log("test");
-        // }
+        filterSelection('all');
+        function filterSelection(c) {
+        let x, i;
+        x = document.getElementsByClassName("work-preview");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+            addClass(x[i], "hide");
+            if (x[i].className.indexOf(c) > -1) removeClass(x[i], "hide");
+        }
+        }
+        function addClass(element, name){
+            let i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for(i = 0; i < arr2.length; i++){
+                if(arr1.indexOf(arr2[i]) == -1){
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+        function removeClass(element, name){
+            let i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+        let btnContainer = document.getElementById("filter-btn-container");
+        let btns = btnContainer.getElementsByClassName("filter-btn");
+        for (let i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                let current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
     </script>
 </body>
 </html>
