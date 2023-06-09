@@ -25,22 +25,16 @@
     <ul id="nav"></ul>
     <main id="work-page">
         <div id="filter-btn-container" class="tags-container">
-            <button class="tag filter-btn active" onclick="filterSelection('all')">
-                <!-- <img class="tag-icon" src="./assets/imgs/tag_uiux.svg"/> -->
-                all</button>
-            <button class="tag filter-btn" onclick="filterSelection('uiux')"><img class="tag-icon" src="./assets/imgs/tag_uiux.svg"/>uiux</button>
-            <button class="tag filter-btn" onclick="filterSelection('branding')"><img class="tag-icon" src="./assets/imgs/tag_branding.svg"/>branding</button>
-            <button class="tag filter-btn" onclick="filterSelection('graphic')"><img class="tag-icon" src="./assets/imgs/tag_graphicdesign.svg"/>graphic</button>
-            <button class="tag filter-btn" onclick="filterSelection('code')"><img class="tag-icon" src="./assets/imgs/tag_code.svg"/>code</button>
-            <button class="tag filter-btn" onclick="filterSelection('play')"><img class="tag-icon" src="./assets/imgs/tag_play.svg"/>play</button>
+            <button class="tag filter-btn active" onclick="filterSelection('all')">all</button>
+            <button class="tag uiux filter-btn" onclick="filterSelection('uiux')">uiux</button>
+            <button class="tag webdesign filter-btn" onclick="filterSelection('webdesign')">webdesign</button>
+            <button class="tag branding filter-btn" onclick="filterSelection('branding')">branding</button>
+            <button class="tag graphic filter-btn" onclick="filterSelection('graphic')">graphic</button>
+            <button class="tag code filter-btn" onclick="filterSelection('code')">code</button>
+            <button class="tag play filter-btn" onclick="filterSelection('play')">play</button>
+            <!-- <button class="tag speculative filter-btn" onclick="filterSelection('speculative')">speculative</button> -->
+            <!-- <button class="tag narrative filter-btn" onclick="filterSelection('narrative')">narrative</button> -->
         </div>
-        <!-- <ul class="tags-container">
-            <li class="tag">uiux</li>
-            <li class="tag">branding</li>
-            <li class="tag">graphic design</li>
-            <li class="tag">code</li>
-            <li class="tag">play</li>
-        </ul> -->
         <hr>
         <section id="work-root"></section>
     </main>

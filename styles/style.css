@@ -214,11 +214,18 @@ button:hover{
 .tags-container{
     display: flex;
     justify-content: flex-start;
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     padding-inline-start: 0.2rem;
+    /* background-color: red; */
 }
 .tags-container .uiux::before{
     content: url(../assets/imgs/tag_uiux.svg);
+    width: 20px;
+    height: 20px;
+}
+.tags-container .webdesign::before{
+    content: url(../assets/imgs/tag_web.svg);
     width: 20px;
     height: 20px;
 }
@@ -239,6 +246,16 @@ button:hover{
 }
 .tags-container .play::before{
     content: url(../assets/imgs/tag_play.svg);
+    width: 20px;
+    height: 20px;
+}
+.tags-container .speculative::before{
+    content: url(../assets/imgs/tag_speculative.svg);
+    width: 20px;
+    height: 20px;
+}
+.tags-container .narrative::before{
+    content: url(../assets/imgs/tag_narrative.svg);
     width: 20px;
     height: 20px;
 }

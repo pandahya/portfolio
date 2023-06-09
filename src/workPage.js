@@ -35,6 +35,18 @@ function Header(props){
 
 const workData=[
     {
+        toc:["description", "images"],
+        header:{
+            img: "../assets/imgs/house_header.gif",
+            project: "hungry",
+            year: "2022-",
+            tags: ['play'],
+            description: "A web journey through how I feel hunger, navigating through choices, options, more options, indecision, and distraction.",
+            time: "ongoing",
+        },
+    },
+    {
+        
         toc:["description", "assignment", "process", "wireframes",],
         header:{
             img: "../assets/imgs/entropy_header.png",
@@ -136,7 +148,7 @@ const workData=[
         },
     },
 ]
-
+const hungry = document.getElementById("hungry");
 const entropy = document.getElementById("entropy");
 const artifex = document.getElementById("artifex");
 const dodam = document.getElementById("dodam");
@@ -147,8 +159,8 @@ const pose = document.getElementById("pose");
 const forest = document.getElementById("forest");
 const expcam = document.getElementById("expcam");
 
-const projs = [entropy, artifex, dodam, house, rocket, olympics, pose, forest, expcam];
-const projNames = ["entropy", "artifex", "dodam", "house", "rocket", "olympics", "pose", "forest", "expcam"];
+const projs = [hungry, entropy, artifex, dodam, house, rocket, olympics, pose, forest, expcam];
+const projNames = ["hungry", "entropy", "artifex", "dodam", "house", "rocket", "olympics", "pose", "forest", "expcam"];
 
 for(let i=0;i<projs.length;i++){
     if(projs[i]){
