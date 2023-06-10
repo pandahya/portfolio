@@ -2,6 +2,10 @@
     font-family: PP NeueBit;
     src: url(../assets/fonts/PPNeueBit-Bold.otf);
 }
+@font-face {
+    font-family: PP Mori;
+    src: url(../assets/fonts/PPMori-Regular.otf);
+}
 
 body{
     font-family: "PP Mori";
