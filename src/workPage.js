@@ -3,7 +3,7 @@
 
 function TOC(props){
     return(
-        <div id="toc">
+        <div id="toc" className="mobile-hide">
             <ul>
                 <li><h2>Contents</h2></li>
                 {props.toc.map(toc =>(

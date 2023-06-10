@@ -122,8 +122,7 @@ button:hover{
     color: var(--oppositeText);
 }
 
-#nav, #footer{
-    /* font-family: "Handjet"; */
+#navbar, #footer{
     font-family: var(--pixelFont);
     background-color: var(--main);
     display: flex;
@@ -134,10 +133,10 @@ button:hover{
     background-image: var(--backgroundImg);
     /* background-blend-mode: luminosity; */
 }
-#nav li, #footer li{
+#navbar li, #footer li{
     margin: 0.5rem 1.5rem;
 }
-#nav{
+#navbar{
     font-size: 1.8rem;
     text-transform: uppercase;
     /* position: fixed; */
@@ -145,18 +144,42 @@ button:hover{
     height: 2.75rem;
     /* outline: 1px solid var(--text); */
 }
+#side-menu{
+    display: none;
+}
+#side-menu a:link, #side-menu a:visited{
+    color: var(--background);
+}
+.navbar{
+    display: block;
+}
+.hamburger{
+    display: none;
+}
 #footer{
     font-size: 1.3rem;
     bottom: 0;
     /* background-color: red; */
 }
-#nav a:link, #nav a:visited{
+#screenMode{
+    text-align:left;
+}
+#timestamp{
+    text-align: right;
+}
+#navbar a:link, #navbar a:visited{
     color: var(--text);
     text-decoration: none;
 }
-#nav a:hover, #nav a:hover .flower{
+#navbar a:hover, #navbar a:hover .flower{
     color: var(--accent);
     visibility: visible;
+}
+.mobile-show{
+    display: none;
+}
+.mobile-hide{
+    display: block;
 }
 
 
@@ -391,7 +414,14 @@ button:hover{
 }
 figcaption{
     margin: 0.2rem;
-    /* opacity: 75%; */
+    font-size: 0.8rem;
+    opacity: 75%;
+    text-align: center;
+}
+.work-preview figcaption{
+    opacity: 100%;
+    font-size: 2rem;
+    text-align: left;
 }
 .gallery{
     display: grid;
@@ -463,4 +493,95 @@ figcaption{
     --blendMode: luminosity;
     --defaultCursor: url(../assets/imgs/pencilcursor.png), auto;
     --pointerCursor: url(../assets/imgs/inspectCursor.png), auto;
+}
+
+@media only screen and (max-width: 450px){
+    main, #home-page, #about-page, .work{
+        max-width: 450px;
+        padding: 4rem 2rem;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 1.5rem;
+        margin: 0.5rem 0;
+    }
+    h3{
+        font-size: 2rem;
+    }
+    p{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    figcaption{
+        font-size: 0.75rem;
+    }
+    .mobile-hide{
+        display: none;
+    }
+    .mobile-show{
+        display: block;
+    }
+    .mobile-flower{
+        font-size: 1.5rem;
+        display: inline;
+    }
+    #defaultCanvas0{
+        display: none;
+    }
+    #about-page{
+        grid: 1fr / 1fr;
+    }
+    #home-page{
+        grid: 1fr 1fr / 1fr;
+        max-height: 100vh;
+    }
+    #work-root{
+        grid: 1fr / 1fr;
+    }
+    .navbar{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+    .hamburger svg path{
+        fill: var(--text);
+    }
+    #navbar li, #footer li{
+        margin: 0.5rem 0.75rem;
+    }
+    #side-menu{
+        display: block;
+        font-family: "PP NeueBit";
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        text-align: right;
+        position: fixed;
+        right: -150px;
+        top: 44px;
+        z-index: 2;
+        background-color: var(--text);
+    }
+    .tags-container{
+        padding-inline-start: 0rem;
+    }
+
+    .work{
+        display: block;
+        padding-bottom: 96px;
+    }
+    .work-preview figcaption{
+        line-height: normal;
+    }
+    #description, #content h1{
+        padding-top: 1rem;
+    }
+    .two{
+        grid: 1fr / 1fr;
+    }
+    .three{
+        grid: 1fr / 1fr 1fr;
+    }
 }

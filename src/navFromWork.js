@@ -1,15 +1,46 @@
 // import React from 'react';
 // import ReactDOM from 'react-dom';
 
+// function WorkNav(props){
+//     return (
+//         <React.Fragment>
+//             <li><a href="../index.html">hyacinth weng <span className="flower">✿</span></a></li>
+//             <li><a href="../work.html">work <span className="flower">✿</span></a></li>
+//             <li><a href="../about.html">about <span className="flower">✿</span></a></li>
+//         </React.Fragment>
+//     );
+// };
+let menuOpen = false;
 function WorkNav(props){
-    return (
+    const openMenu=()=>{
+        let menu = document.getElementById("side-menu");
+        if(menuOpen){
+            menu.style.right = "-150px";
+        }else if(!menuOpen){
+            menu.style.right = "0px";
+        }
+        menuOpen = !menuOpen;
+    }
+    return(
         <React.Fragment>
-            <li><a href="../index.html">hyacinth weng <span className="flower">✿</span></a></li>
-            <li><a href="../work.html">work <span className="flower">✿</span></a></li>
-            <li><a href="../about.html">about <span className="flower">✿</span></a></li>
+            <ul id="navbar">
+                <li><a href="../index.html">hyacinth weng <span className="mobile-show mobile-flower">✿</span><span className="flower">✿</span></a></li>
+                <li className="navbar"><a href="../work.html">work <span className="flower">✿</span></a></li>
+                <li className="navbar"><a href="../about.html">about <span className="flower">✿</span></a></li>
+                <button className="hamburger" onClick={()=>openMenu()}>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0H20V3.33333H0V0ZM0 8.33333H20V11.6667H0V8.33333ZM20 16.6667H0V20H20V16.6667Z" fill="white"/>
+                    </svg>
+                </button>
+            </ul>
+            <ul id="side-menu">
+                <li><a href="../index.html">home</a></li>
+                <li className="hamburger"><a href="../work.html">work</a></li>
+                <li className="hamburger"><a href="../about.html">about</a></li>
+            </ul>
         </React.Fragment>
-    );
-};
+    )
+}
 function Footer(){
     let modeText;
     let currentMode = sessionStorage.getItem("color-mode");
