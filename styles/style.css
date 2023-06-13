@@ -491,7 +491,7 @@ figcaption{
     --imgHover: rotate(5deg);
     --imgBoxShadow: 4px 4px 4px;
     --blendMode: luminosity;
-    --defaultCursor: url(../assets/imgs/pencilcursor.png), auto;
+    --defaultCursor: url(../assets/imgs/pencilCursor.png), auto;
     --pointerCursor: url(../assets/imgs/inspectCursor.png), auto;
 }
 
