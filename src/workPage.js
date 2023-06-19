@@ -80,6 +80,17 @@ const workData=[
         },
     },
     {
+        toc:["description", "83%cooking", "recipe", "colophon"],
+        header:{
+            img: "../assets/imgs/recipebook_header.png",
+            project: "recipe book",
+            year: "2022",
+            tags: ['graphic'],
+            description: "Designing, printing, and binding pages for a class recipe book. The book is ~8in x 8in, printed on cover weight paper and bound with drum leaf binding. Each member of the class created a spread for a recipe of their choice and used a Vandercook letterpress.",
+            time: "3 weeks",
+        },
+    },
+    {
         toc:["description", "images"],
         header:{
             img: "../assets/imgs/house_header.gif",
@@ -152,6 +163,7 @@ const hungry = document.getElementById("hungry");
 const entropy = document.getElementById("entropy");
 const artifex = document.getElementById("artifex");
 const dodam = document.getElementById("dodam");
+const recipebook = document.getElementById("recipebook");
 const house = document.getElementById("house");
 const rocket = document.getElementById("rocket");
 const olympics = document.getElementById("olympics");
@@ -159,8 +171,8 @@ const pose = document.getElementById("pose");
 const forest = document.getElementById("forest");
 const expcam = document.getElementById("expcam");
 
-const projs = [hungry, entropy, artifex, dodam, house, rocket, olympics, pose, forest, expcam];
-const projNames = ["hungry", "entropy", "artifex", "dodam", "house", "rocket", "olympics", "pose", "forest", "expcam"];
+const projs = [hungry, entropy, artifex, dodam, recipebook, house, rocket, olympics, pose, forest, expcam];
+const projNames = ["hungry", "entropy", "artifex", "dodam", "recipebook", "house", "rocket", "olympics", "pose", "forest", "expcam"];
 
 for(let i=0;i<projs.length;i++){
     if(projs[i]){

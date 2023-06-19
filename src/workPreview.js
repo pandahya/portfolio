@@ -35,6 +35,12 @@ const projectData = [
         link: "./work/dodam.html",
     },
     {
+        img: "./assets/imgs/recipebook_preview.png",
+        project: "Recipe Book",
+        tags: ['graphic'],
+        link: "./work/recipebook.html",
+    },
+    {
         img: "./assets/imgs/house.gif",
         project: "house",
         tags: ['play'],

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" color-mode="pixel">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="shortcut icon" href="../assets/imgs/favicon.png" type="image/x-icon">
+    <title>recipe book</title>
+</head>
+<!-- change to production when ready to push -->
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+<body>
+    <nav id="nav"></nav>
+    <main class="work" id="recipebook">
+        <div id="toc" class="mobile-hide"></div>
+        <section id="content">
+            <section id="description"></section>
+            <section id="links">
+            </section>
+            <hr></hr>
+            <section id="83%cooking">
+                <h1>83.333% cooking</h1>
+                <p>
+                    While each member of the class designed a spread for the individual recipes, the endsheets, title page, and colophon were also distributed to a couple people. I was in charge of the colophon. The endsheets were created from the handwritten notes of everyone in the class. The team members working on the title page also created the title '83.333% COOKING', representing the amount of actual food recipes in the book.
+                </p>
+                <figure>
+                    <img src="../assets/imgs/recipebook.gif"/>
+                </figure>
+                <p>
+                    A number of people in the class were unable to bring their pages to class due to falling sick so some pages are missing.
+                </p>
+            </section>
+            <section id="recipe">
+                <h1>recipe page</h1>
+                <p>
+                    I chose <span class="italics">Hand Wrapped Wonton Woup</span> for my recipe, a dish I learned from my mom and a Shanghai culture staple. Each family has its own special formula, and I used the recipe my mom wrote down for me.
+                </p>
+                <p>
+                    On the left page of the spread, I printed the recipe text with a regular laser printer on cream colored paper. I also added a soup-like texture in the background to mirror the design I wanted on the right page.
+                </p>
+                <div class="gallery">
+                    <img src="../assets/imgs/recipebook_recipe.jpg"/>
+                    <img src="../assets/imgs/recipebook_1.jpeg"/>
+                </div>
+                <p>
+                    On the right page I made linoleum print blocks in the shape of soup (yellow) and seaweed garnish (green) and printed on the page with a Vandercook letterpress.
+                    <br>
+                    I used wonton graphics I created for <a href="https://editor.p5js.org/pandahya/full/fZrGlYh4E" target="_blank" rel="noopener noreferrer">this previous project</a> to make a pattern of wontons being wrapped. Each graphic depicts a step in wrapping a wonton. I printed the wonton pattern on vellum paper to overlay it onto the lino print underneath.
+                </p>
+                <div class="gallery two">
+                    <img src="../assets/imgs/recipebook_2.jpeg"/>
+                    <img src="../assets/imgs/recipebook_3.jpeg"/>
+                    <img src="../assets/imgs/recipebook_4.jpeg"/>
+                    <img src="../assets/imgs/recipebook_linocut.jpeg"/>
+                    <img src="../assets/imgs/recipebook_wontons.jpg"/>
+                    <img src="../assets/imgs/recipebook_wontonsprint.jpeg"/>
+                </div>
+            </section>
+            <section id="colophon">
+                <h1>colophon</h1>
+                <p>
+                    I wanted the colophon to be on theme with the rest of the book's contents while also being adequately informative and easy to understand. I formatted the text to follow a recipe format with "ingredients" being class members, "methods" being materials/methods used to make each page, and "result" being the name of each recipe. The pages are ordered by first name, and I additionally included paper weight, letterpress, binding method, and class for documentation.
+                </p>
+                <div class="gallery">
+                    <img src="../assets/imgs/recipebook_colophon.jpg"/>
+                    <img src="../assets/imgs/recipebook_colophonprint.jpg"/>
+                </div>
+            </section>
+        </section>
+    </main>
+    <ul id="footer"></ul>
+</body>
+
+<script type="text/babel" src="../../src/navFromWork.js"></script>
+<script type="text/babel" src="../../src/workPage.js"></script>
+</html>
