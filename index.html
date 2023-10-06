@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" color-mode="pixel">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/styles/reset.css">
-    <link rel="stylesheet" type="text/css" href="/styles/style.css">
-    <link rel="shortcut icon" href="./assets/imgs/favicon.png" type="image/x-icon">
-    <title>hyacinth weng</title>
-</head>
-<style>
-    /* .container {
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="/styles/reset.css" />
+        <link rel="stylesheet" type="text/css" href="/styles/style.css" />
+        <link
+            rel="shortcut icon"
+            href="./assets/imgs/favicon.png"
+            type="image/x-icon"
+        />
+        <title>hyacinth weng</title>
+    </head>
+    <style>
+        /* .container {
     width: 100%;
     }
     .eye {
@@ -31,143 +35,235 @@
     border-radius: 50%;
     content: " ";
     } */
-    .small{
-        width: 50px;
-    }
-    .medium{
-        width: 100px;
-    }
-    .large{
-        width: 150px;
-    }
-    
-</style>
-<!-- change to production when ready to push -->
-<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-<!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script> -->
+        .xsmall {
+            width: 40px;
+        }
+        .small {
+            width: 60px;
+        }
+        .medium {
+            width: 80px;
+        }
+        .large {
+            width: 120px;
+        }
+        .xlarge {
+            width: 240px;
+        }
+        .draggable img {
+            box-shadow: none;
+        }
+    </style>
+    <!-- change to production when ready to push -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script
+        src="https://unpkg.com/react@18/umd/react.development.js"
+        crossorigin
+    ></script>
+    <script
+        src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+        crossorigin
+    ></script>
+    <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script> -->
 
-
-<body>
-    <nav id="nav"></nav>
-    <main id="home-page">
-        <div id="home-text">
-            <h2>
-                Hi, I’m Hyacinth Weng! ✿
-            </h2>
-            <h2>
-                I’m a designer & creative technologist exploring how to tell stories through playful experiences.
-            </h2>
-            <!-- <div class='.container'>
+    <body>
+        <nav id="nav"></nav>
+        <main id="home-page">
+            <div id="home-text">
+                <h2>Hi, I’m Hyacinth Weng! ✿</h2>
+                <h2>
+                    I’m a designer & creative technologist exploring how to tell
+                    stories through playful experiences.
+                </h2>
+                <!-- <div class='.container'>
                 <div class='eye'></div>
                 <div class='eye'></div>
             </div> -->
-        </div>
-        <div id="playground-container">
-            <!-- <p id="playgroundText" class="mobile-hide">you can drag these!<span>&darr;</span></p> -->
-            <section id="playground">
-                <figure class="draggable large">
-                    <img src="./assets/imgs/pie_stockphoto.jpg"/>
-                </figure>
-                <figure class="draggable large">
-                    <img src="./assets/imgs/paperbg1.png"/>
-                </figure>
-                <figure class="draggable large">
-                    <img src="./assets/imgs/house.gif"/>
-                </figure>
-                <figure class="draggable large">
-                    <img src="./assets/imgs/phone_face.png"/>
-                </figure>
-                <figure class="draggable large">
-                    <img src="./assets/imgs/eggykun.png"/>
-                </figure>
-                <figure class="draggable large">
-                    <img src="./assets/imgs/hweng_walk.gif"/>
-                </figure>
-                <figure class="draggable medium">
-                    <img src="./assets/imgs/frogpfp.png"/>
-                </figure>
-                <figure class="draggable medium">
-                    <img src="./assets/imgs/garbage.png"/>
-                </figure>
-                <figure class="draggable medium">
-                    <img src="./assets/imgs/judgy_hya.png"/>
-                </figure>
-                <figure class="draggable large">
-                    <img src="./assets/imgs/myFaceSticker.png"/>
-                </figure>
-                <!-- <figure class="draggable medium">
+            </div>
+            <div id="playground-container">
+                <!-- <p id="playgroundText" class="mobile-hide">you can drag these!<span>&darr;</span></p> -->
+                <section id="playground">
+                    <figure class="draggable large">
+                        <img src="./assets/imgs/paperbg1.png" />
+                    </figure>
+                    <figure class="draggable large">
+                        <img src="./assets/imgs/pie_stockphoto.jpg" />
+                    </figure>
+                    <figure class="draggable large">
+                        <img src="./assets/imgs/house.gif" />
+                    </figure>
+                    <figure class="draggable large">
+                        <img src="./assets/imgs/phone_face.png" />
+                    </figure>
+                    <figure class="draggable large">
+                        <img src="./assets/imgs/eggykun.png" />
+                    </figure>
+                    <figure class="draggable xlarge">
+                        <img src="./assets/imgs/businesscard_back1.png" />
+                    </figure>
+                    <figure class="draggable xlarge">
+                        <img src="./assets/imgs/businesscard_back2.png" />
+                    </figure>
+                    <figure class="draggable xlarge">
+                        <img src="./assets/imgs/businesscard_front.png" />
+                    </figure>
+                    <figure class="draggable large">
+                        <img src="./assets/imgs/hweng_walk.gif" />
+                    </figure>
+                    <figure class="draggable medium">
+                        <img src="./assets/imgs/frogpfp.png" />
+                    </figure>
+                    <figure class="draggable medium">
+                        <img src="./assets/imgs/garbage.png" />
+                    </figure>
+                    <figure class="draggable medium">
+                        <img src="./assets/imgs/judgy_hya.png" />
+                    </figure>
+                    <figure class="draggable large">
+                        <img src="./assets/imgs/myFaceSticker.png" />
+                    </figure>
+
+                    <!-- <figure class="draggable medium">
                     <img src="./assets/imgs/poop_large_pixelated.png"/>
                 </figure> -->
-                <figure class="draggable small">
-                    <img src="./assets/imgs/codeFolder.png"/>
-                </figure>
-                <figure class="draggable small">
-                    <img src="./assets/imgs/gamesFolder.png"/>
-                </figure>
-                <figure class="draggable small">
-                    <img src="https://help.apple.com/assets/63BCA927AAE78C58DD7FBE35/63BCA92EAAE78C58DD7FBE76/en_US/a0d5e859e5f2b01dbbf81dfc38a3a92f.png"/>
-                </figure>
-            </section>
-        </div>
-    </main>
-    
-    <ul id="footer" style="position:fixed; bottom:0;"></ul>
-</body>
+                    <figure class="draggable medium">
+                        <img src="./assets/imgs/paperscrap_1.png" />
+                    </figure>
+                    <figure class="draggable medium">
+                        <img src="./assets/imgs/paperscrap_2.png" />
+                    </figure>
+                    <figure class="draggable large">
+                        <img src="./assets/imgs/largetape1.png" />
+                    </figure>
+                    <figure class="draggable large">
+                        <img src="./assets/imgs/largetape2.png" />
+                    </figure>
+                    <figure class="draggable large">
+                        <img src="./assets/imgs/smalltape1.png" />
+                    </figure>
+                    <figure class="draggable large">
+                        <img src="./assets/imgs/smalltape2.png" />
+                    </figure>
+                    <figure class="draggable small">
+                        <img src="./assets/imgs/codeFolder.png" />
+                    </figure>
+                    <figure class="draggable small">
+                        <img src="./assets/imgs/gamesFolder.png" />
+                    </figure>
+                    <figure class="draggable xsmall">
+                        <img
+                            src="https://help.apple.com/assets/63BCA927AAE78C58DD7FBE35/63BCA92EAAE78C58DD7FBE76/en_US/a0d5e859e5f2b01dbbf81dfc38a3a92f.png"
+                        />
+                    </figure>
+                    <figure class="draggable medium">
+                        <img src="./assets/imgs/sticker_smiley.png" />
+                    </figure>
+                    <figure class="draggable small">
+                        <img src="./assets/imgs/sticker_starsm.png" />
+                    </figure>
+                    <figure class="draggable small">
+                        <img src="./assets/imgs/sticker_starsm.png" />
+                    </figure>
+                    <figure class="draggable small">
+                        <img src="./assets/imgs/sticker_starlg.png" />
+                    </figure>
+                    <figure class="draggable small">
+                        <img src="./assets/imgs/sticker_starlg.png" />
+                    </figure>
+                    <figure class="draggable small">
+                        <img src="./assets/imgs/sticker_musicone.png" />
+                    </figure>
+                    <figure class="draggable small">
+                        <img src="./assets/imgs/sticker_musictwo.png" />
+                    </figure>
+                    <figure class="draggable small">
+                        <img src="./assets/imgs/sticker_leaf.png" />
+                    </figure>
+                    <figure class="draggable xsmall">
+                        <img src="./assets/imgs/favicon.png" />
+                    </figure>
+                    <figure class="draggable small">
+                        <img src="./assets/imgs/fruitsticker_1.png" />
+                    </figure>
+                    <figure class="draggable small">
+                        <img src="./assets/imgs/ant.png" />
+                    </figure>
+                    <figure class="draggable small">
+                        <img src="./assets/imgs/ant.png" />
+                    </figure>
+                    <figure class="draggable small">
+                        <img src="./assets/imgs/paperclip.png" />
+                    </figure>
+                    <figure class="draggable small">
+                        <img src="./assets/imgs/paperclip.png" />
+                    </figure>
+                    <figure class="draggable small">
+                        <img src="./assets/imgs/paperclip2.png" />
+                    </figure>
+                    <figure class="draggable small">
+                        <img src="./assets/imgs/paperclip2.png" />
+                    </figure>
+                </section>
+            </div>
+        </main>
 
-<script type="text/babel" src="./src/main.js"></script>
-<script>
-    //code taken from: https://www.w3schools.com/howto/howto_js_draggable.asp
-    let draggables = document.querySelectorAll(".draggable");
-    const playground = document.querySelector("#playground");
-    let width = playground.offsetWidth;
-    let height = playground.offsetHeight - 200;
-    draggables.forEach(randomPos);
-    draggables.forEach(dragElement);
-    
+        <ul id="footer" style="position: fixed; bottom: 0"></ul>
+    </body>
 
-    function randomPos(elmnt){
-        let randomX = Math.floor(Math.random()*width) - 75;
-        let randomY = Math.floor(Math.random()*height);
-        elmnt.style.top = (playground.offsetTop + randomY) + "px";
-        elmnt.style.left = (playground.offsetLeft + randomX) + "px";
-    }
+    <script type="text/babel" src="./src/main.js"></script>
+    <script>
+        //code taken from: https://www.w3schools.com/howto/howto_js_draggable.asp
+        let draggables = document.querySelectorAll(".draggable");
+        const playground = document.querySelector("#playground");
+        let width = playground.offsetWidth * 2;
+        let height = playground.offsetHeight - 200;
+        draggables.forEach(randomPos);
+        draggables.forEach(dragElement);
 
-    function dragElement(elmnt) {
-        var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+        function randomPos(elmnt) {
+            let randomX = Math.floor(Math.random() * width) - width / 2;
+            let randomY = Math.floor(Math.random() * height) + 75;
+            elmnt.style.top = playground.offsetTop + randomY + "px";
+            elmnt.style.left = playground.offsetLeft + randomX + "px";
+        }
+
+        function dragElement(elmnt) {
+            var pos1 = 0,
+                pos2 = 0,
+                pos3 = 0,
+                pos4 = 0;
             elmnt.onmousedown = dragMouseDown;
 
-        function dragMouseDown(e) {
-            e = e || window.event;
-            e.preventDefault();
-            pos3 = e.clientX;
-            pos4 = e.clientY;
-            document.onmouseup = closeDragElement;
-            document.onmousemove = elementDrag;
-            elmnt.classList.add("wiggling");
-        }
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                document.onmousemove = elementDrag;
+                elmnt.classList.add("wiggling");
+            }
 
-        function elementDrag(e) {
-            e = e || window.event;
-            e.preventDefault();
-            pos1 = pos3 - e.clientX;
-            pos2 = pos4 - e.clientY;
-            pos3 = e.clientX;
-            pos4 = e.clientY;
-            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-        }
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+                elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+            }
 
-        function closeDragElement() {
-            document.onmouseup = null;
-            document.onmousemove = null;
-            elmnt.classList.remove("wiggling");
+            function closeDragElement() {
+                document.onmouseup = null;
+                document.onmousemove = null;
+                elmnt.classList.remove("wiggling");
+            }
         }
-    }
-</script>
-<!-- <script type="text/babel" src="index.bundle.js"></script> -->
-<!-- <script>
+    </script>
+    <!-- <script type="text/babel" src="index.bundle.js"></script> -->
+    <!-- <script>
     $(".move-area").mousemove(function(event) {
         var eye = $(".eye");
         console.log('eye', eye)
