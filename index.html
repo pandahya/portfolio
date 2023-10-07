@@ -53,6 +53,17 @@
         .draggable img {
             box-shadow: none;
         }
+        #home-text h1 {
+            font-family: "PP Mori";
+            text-transform: none;
+            margin: 0px;
+            font-size: 2.5rem;
+        }
+        #mynametext {
+            font-family: "PP Neuebit";
+            /* text-transform: uppercase; */
+            font-size: 3.8rem;
+        }
     </style>
     <!-- change to production when ready to push -->
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
@@ -70,7 +81,7 @@
         <nav id="nav"></nav>
         <main id="home-page">
             <div id="home-text">
-                <h2>Hi, I’m Hyacinth Weng! ✿</h2>
+                <h1>Hi, I’m <span id="mynametext">Hyacinth Weng!</span> ✿</h1>
                 <h2>
                     I’m a designer & creative technologist exploring how to tell
                     stories through playful experiences.
@@ -86,9 +97,9 @@
                     <figure class="draggable large">
                         <img src="./assets/imgs/paperbg1.png" />
                     </figure>
-                    <figure class="draggable large">
+                    <!-- <figure class="draggable large">
                         <img src="./assets/imgs/pie_stockphoto.jpg" />
-                    </figure>
+                    </figure> -->
                     <figure class="draggable large">
                         <img src="./assets/imgs/house.gif" />
                     </figure>
@@ -182,8 +193,17 @@
                     <figure class="draggable xsmall">
                         <img src="./assets/imgs/favicon.png" />
                     </figure>
+                    <figure class="draggable xsmall">
+                        <img src="./assets/imgs/favicon.png" />
+                    </figure>
                     <figure class="draggable small">
                         <img src="./assets/imgs/fruitsticker_1.png" />
+                    </figure>
+                    <figure class="draggable xsmall">
+                        <img src="./assets/imgs/hyacinth_emoji.png" />
+                    </figure>
+                    <figure class="draggable xsmall">
+                        <img src="./assets/imgs/hyacinth_emoji.png" />
                     </figure>
                     <figure class="draggable small">
                         <img src="./assets/imgs/ant.png" />

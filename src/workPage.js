@@ -56,7 +56,7 @@ const workData = [
         toc: ["description", "assignment", "process", "wireframes"],
         header: {
             img: "../assets/imgs/entropy_header.png",
-            project: "Entropy: DT Class of 2023 Showcase",
+            project: "Entropy Website Design",
             year: "2023",
             tags: ["uiux", "webdesign"],
             description:
