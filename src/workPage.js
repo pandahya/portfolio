@@ -65,15 +65,15 @@ const workData = [
         },
     },
     {
-        toc: ["description"],
+        toc: ["description", "ui-design"],
         header: {
             img: "../assets/imgs/dodam_header.jpg",
-            project: "the artifex",
+            project: "the artifex [in progress]",
             year: "2023",
             tags: ["play", "narrative"],
             description:
-                "My senior thesis project. A narrative game about trash as a storytelling medium.",
-            time: " 7.5 months",
+                "My senior thesis project. A narrative game about trash as a storytelling medium, set in a fictional post-apocalyptic world.",
+            time: " 7.5 months, in progress",
         },
     },
     {
