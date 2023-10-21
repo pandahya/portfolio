@@ -64,6 +64,22 @@
             text-transform: uppercase;
             font-size: 3.8rem;
         }
+        .colorletter:hover {
+            cursor: pointer;
+        }
+        h3 a:link,
+        h3 a:visited {
+            color: var(--text);
+        }
+        h3 a:hover,
+        h3 a:active {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        h3 a:hover::before {
+            content: "+ ";
+            visibility: hidden;
+        }
     </style>
     <!-- change to production when ready to push -->
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
@@ -81,11 +97,37 @@
         <nav id="nav"></nav>
         <main id="home-page">
             <div id="home-text">
-                <h1>Hi, I’m <span id="mynametext">Hyacinth Weng</span>! ✿</h1>
+                <h1>
+                    Hi, I’m
+                    <span id="mynametext"
+                        ><span class="colorletter">H</span
+                        ><span class="colorletter">y</span
+                        ><span class="colorletter">a</span
+                        ><span class="colorletter">c</span
+                        ><span class="colorletter">i</span
+                        ><span class="colorletter">n</span
+                        ><span class="colorletter">t</span
+                        ><span class="colorletter">h</span>
+                        <span class="colorletter">W</span
+                        ><span class="colorletter">e</span
+                        ><span class="colorletter">n</span
+                        ><span class="colorletter">g</span></span
+                    >! ✿
+                </h1>
                 <h2>
                     I’m a designer & creative technologist exploring how to tell
                     stories through playful experiences.
                 </h2>
+                <h3><a href="./work.html">Check out my work! &nearr;</a></h3>
+                <h3>
+                    <a
+                        href="https://www.hyacinth.zip/notebook2.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >hyacinth's notebook &nearr;</a
+                    >
+                </h3>
+                <h3><a href="./about.html">the to-do list &nearr;</a></h3>
                 <!-- <div class='.container'>
                 <div class='eye'></div>
                 <div class='eye'></div>
@@ -235,7 +277,7 @@
         //code taken from: https://www.w3schools.com/howto/howto_js_draggable.asp
         let draggables = document.querySelectorAll(".draggable");
         const playground = document.querySelector("#playground");
-        let width = playground.offsetWidth * 2;
+        let width = playground.offsetWidth * 2 - 100;
         let height = playground.offsetHeight - 200;
         draggables.forEach(randomPos);
         draggables.forEach(dragElement);
@@ -243,8 +285,15 @@
         function randomPos(elmnt) {
             let randomX = Math.floor(Math.random() * width) - width / 2;
             let randomY = Math.floor(Math.random() * height) + 75;
-            elmnt.style.top = playground.offsetTop + randomY + "px";
-            elmnt.style.left = playground.offsetLeft + randomX + "px";
+            if (randomX < 545 && randomY < 325) {
+                randomX += 50;
+                randomY += 50;
+                elmnt.style.top = playground.offsetTop + randomY + "px";
+                elmnt.style.left = playground.offsetLeft + randomX + "px";
+            } else {
+                elmnt.style.top = playground.offsetTop + randomY + "px";
+                elmnt.style.left = playground.offsetLeft + randomX + "px";
+            }
         }
 
         function dragElement(elmnt) {
@@ -279,6 +328,93 @@
                 document.onmouseup = null;
                 document.onmousemove = null;
                 elmnt.classList.remove("wiggling");
+            }
+        }
+
+        let randomFun = Math.floor(Math.random() * 2);
+        console.log(randomFun);
+        let letters = document.querySelectorAll(".colorletter");
+        letters.forEach(function (letter) {
+            switch (randomFun) {
+                case 0:
+                    letter.addEventListener("mouseover", function () {
+                        colorChange(letter);
+                    });
+                    break;
+                case 1:
+                    letter.addEventListener("mouseover", function () {
+                        caseChange(letter);
+                    });
+                    let r = document.querySelector(":root");
+                    let accentColor = window
+                        .getComputedStyle(letter)
+                        .getPropertyValue("--accent");
+                    let textColor = window
+                        .getComputedStyle(letter)
+                        .getPropertyValue("--text");
+                    letter.addEventListener("mouseenter", function () {
+                        letter.style.color = accentColor;
+                    });
+                    letter.addEventListener("mouseleave", function () {
+                        letter.style.color = textColor;
+                    });
+                    break;
+            }
+        });
+
+        function colorChange(letter) {
+            let letterColor = window.getComputedStyle(letter).color.toString();
+            let r = document.querySelector(":root");
+            let ogColor = window
+                .getComputedStyle(letter)
+                .getPropertyValue("--text");
+
+            switch (letterColor) {
+                case "rgb(255, 255, 255)":
+                    letter.style.color = "rgb(255, 0, 0)";
+                    break;
+                case "rgb(38, 38, 38)":
+                    letter.style.color = "rgb(255, 0, 0)";
+                    break;
+                case ogColor:
+                    letter.style.color = "rgb(255, 0, 0)";
+                    break;
+                case "rgb(255, 0, 0)":
+                    letter.style.color = "rgb(255, 165, 0)";
+                    break;
+                case "rgb(255, 165, 0)":
+                    letter.style.color = "rgb(255, 255, 0)";
+                    break;
+                case "rgb(255, 255, 0)":
+                    letter.style.color = "rgb(0, 255, 0)";
+                    break;
+                case "rgb(0, 255, 0)":
+                    letter.style.color = "rgb(0, 255, 255)";
+                    break;
+                case "rgb(0, 255, 255)":
+                    letter.style.color = "rgb(0, 0, 255)";
+                    break;
+                case "rgb(0, 0, 255)":
+                    letter.style.color = "rgb(138, 43, 226)";
+                    break;
+                case "rgb(138, 43, 226)":
+                    letter.style.color = "rgb(255, 105, 180)";
+                    break;
+                case "rgb(255, 105, 180)":
+                    letter.style.color = ogColor;
+                    break;
+            }
+        }
+
+        function caseChange(letter) {
+            let letterCase = window.getComputedStyle(letter).textTransform;
+            switch (letterCase) {
+                case "uppercase":
+                    letter.style.textTransform = "lowercase";
+                    break;
+                case "lowercase":
+                    letter.style.textTransform = "uppercase";
+                    break;
             }
         }
     </script>

@@ -199,8 +199,8 @@ button:hover {
 #about-page {
     display: grid;
     /* background-color: red; */
-    padding: 20vh 10vw 0vh 10vw;
-    min-height: 60vh;
+    padding: 15vh 10vw 0vh 10vw;
+    min-height: 75vh;
     overflow: hidden;
 }
 #home-page h1 {
