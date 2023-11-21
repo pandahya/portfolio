@@ -67,6 +67,9 @@
         .colorletter:hover {
             cursor: pointer;
         }
+        .hover-accent:hover {
+            color: var(--accent);
+        }
         h3 a:link,
         h3 a:visited {
             color: var(--text);
@@ -119,7 +122,7 @@
                     stories through playful experiences.
                 </h2>
                 <h3><a href="./work.html">Check out my work! &nearr;</a></h3>
-                <h3>
+                <!-- <h3>
                     <a
                         href="https://www.hyacinth.zip/notebook2.html"
                         target="_blank"
@@ -127,7 +130,7 @@
                         >hyacinth's notebook &nearr;</a
                     >
                 </h3>
-                <h3><a href="./about.html">the to-do list &nearr;</a></h3>
+                <h3><a href="./about.html">the to-do list &nearr;</a></h3> -->
                 <!-- <div class='.container'>
                 <div class='eye'></div>
                 <div class='eye'></div>
@@ -345,19 +348,19 @@
                     letter.addEventListener("mouseover", function () {
                         caseChange(letter);
                     });
-                    let r = document.querySelector(":root");
-                    let accentColor = window
-                        .getComputedStyle(letter)
-                        .getPropertyValue("--accent");
-                    let textColor = window
-                        .getComputedStyle(letter)
-                        .getPropertyValue("--text");
-                    letter.addEventListener("mouseenter", function () {
-                        letter.style.color = accentColor;
-                    });
-                    letter.addEventListener("mouseleave", function () {
-                        letter.style.color = textColor;
-                    });
+                    // let r = document.querySelector(":root");
+                    // let accentColor = window
+                    //     .getComputedStyle(letter)
+                    //     .getPropertyValue("--accent");
+                    // let textColor = window
+                    //     .getComputedStyle(letter)
+                    //     .getPropertyValue("--text");
+                    // letter.addEventListener("mouseenter", function () {
+                    //     letter.style.color = accentColor;
+                    // });
+                    // letter.addEventListener("mouseleave", function () {
+                    //     letter.style.color = textColor;
+                    // });
                     break;
             }
         });
@@ -408,6 +411,7 @@
 
         function caseChange(letter) {
             let letterCase = window.getComputedStyle(letter).textTransform;
+            letter.classList.add("hover-accent");
             switch (letterCase) {
                 case "uppercase":
                     letter.style.textTransform = "lowercase";

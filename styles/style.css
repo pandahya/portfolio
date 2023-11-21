@@ -484,6 +484,7 @@ figcaption {
     --text: white;
     --accent: gold;
     --selection: var(--accent);
+    /* --backgroundImg: url(../assets/imgs/pixelsbg.png); */
     --backgroundImg: none;
     --oppositeBg: #f1f0e7;
     --oppositeText: #262626;

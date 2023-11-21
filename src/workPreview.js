@@ -41,12 +41,12 @@ const projectData = [
         tags: ["uiux", "speculative"],
         link: "./work/dodam.html",
     },
-    {
-        img: "./assets/imgs/recipebook_preview.png",
-        project: "Recipe Book",
-        tags: ["graphic"],
-        link: "./work/recipebook.html",
-    },
+    // {
+    //     img: "./assets/imgs/recipebook_preview.png",
+    //     project: "Recipe Book",
+    //     tags: ["graphic"],
+    //     link: "./work/recipebook.html",
+    // },
     // {
     //     img: "./assets/imgs/house.gif",
     //     project: "house",
