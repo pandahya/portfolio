@@ -108,7 +108,7 @@ function Footer() {
                     {modeText}
                 </button>
             </li>
-            <li>Last updated: 6 Oct 2023</li>
+            <li>Last updated: 5 Dec 2023</li>
             {/* <li>NYC based (UTC-04:00)</li> */}
         </React.Fragment>
     );

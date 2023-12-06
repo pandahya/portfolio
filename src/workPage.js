@@ -28,9 +28,9 @@ function Header(props) {
             <h2>{props.header.year}</h2>
             <div className="tags-container">
                 {props.header.tags.map((tag) => (
-                    <h2 className={"tag " + tag} key={tag}>
+                    <h3 className={"tag " + tag} key={tag}>
                         {tag}
-                    </h2>
+                    </h3>
                 ))}
             </div>
             <p>{props.header.description}</p>
@@ -53,14 +53,14 @@ const workData = [
         },
     },
     {
-        toc: ["description", "assignment", "process", "wireframes"],
+        toc: ["description", "project", "components", "wireframes"],
         header: {
             img: "../assets/imgs/entropy_header.png",
             project: "Entropy Website Design",
             year: "2023",
-            tags: ["uiux", "webdesign"],
+            tags: ["webdesign"],
             description:
-                "Creating the complete layout and interface of the Parsons Design & Technology Class of 2023 Thesis Showcase website. Designed in Figma to be development ready and for handing off to the web developer.",
+                "Designing the website for the Parsons Design & Technology 2023 Thesis showcase.",
             time: " 2 months",
         },
     },
