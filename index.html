@@ -48,7 +48,7 @@
             width: 120px;
         }
         .xlarge {
-            width: 240px;
+            width: 200px;
         }
         .draggable img {
             box-shadow: none;
@@ -57,12 +57,12 @@
             font-family: "PP Mori";
             text-transform: none;
             margin: 0px;
-            font-size: 2.5rem;
+            font-size: 64px;
         }
         #mynametext {
             font-family: "PP Neuebit";
             text-transform: uppercase;
-            font-size: 3.8rem;
+            font-size: 100px;
         }
         .colorletter:hover {
             cursor: pointer;
@@ -72,17 +72,22 @@
         }
         h3 a:link,
         h3 a:visited {
-            color: var(--text);
+            color: var(--main);
+            background-color: var(--text);
+            width: fit-content;
+            padding: 16px 20px;
+            border-radius: 16px;
         }
         h3 a:hover,
         h3 a:active {
-            color: var(--accent);
+            /* color: var(--accent); */
             text-decoration: none;
+            background-color: var(--accent);
         }
-        h3 a:hover::before {
+        /* h3 a:hover::before {
             content: "+ ";
             visibility: hidden;
-        }
+        } */
     </style>
     <!-- change to production when ready to push -->
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
@@ -101,7 +106,8 @@
         <main id="home-page">
             <div id="home-text">
                 <h1>
-                    Hi, I’m
+                    ✿ Hi, I’m
+                    <br />
                     <span id="mynametext"
                         ><span class="colorletter">H</span
                         ><span class="colorletter">y</span
@@ -115,12 +121,13 @@
                         ><span class="colorletter">e</span
                         ><span class="colorletter">n</span
                         ><span class="colorletter">g</span></span
-                    >! ✿
+                    >
                 </h1>
                 <h2>
                     I’m a designer & creative technologist exploring how to tell
                     stories through playful experiences.
                 </h2>
+                <br />
                 <h3><a href="./work.html">Check out my work! &nearr;</a></h3>
                 <!-- <h3>
                     <a
