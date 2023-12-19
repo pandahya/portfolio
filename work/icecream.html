@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" color-mode="pixel">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../styles/reset.css" />
+        <link rel="stylesheet" href="../styles/style.css" />
+        <link
+            rel="shortcut icon"
+            href="../assets/imgs/favicon.png"
+            type="image/x-icon"
+        />
+        <title>Find My Ice Cream</title>
+    </head>
+    <!-- change to production when ready to push -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script
+        src="https://unpkg.com/react@18/umd/react.development.js"
+        crossorigin
+    ></script>
+    <script
+        src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+        crossorigin
+    ></script>
+    <style>
+        video,
+        img {
+            border-radius: 20px;
+        }
+    </style>
+
+    <body>
+        <nav id="nav"></nav>
+        <main class="work" id="icecream">
+            <div id="toc" class="mobile-hide"></div>
+            <section id="content">
+                <section id="description"></section>
+                <hr />
+                <section id="research">
+                    <h1>research</h1>
+                    <img
+                        src="../assets/imgs/icecream_competitiveanalysis.png"
+                    />
+                    <img src="../assets/imgs/icecream_competitionmap.png" />
+                    <img src="../assets/imgs/icecream_surveys.png" />
+                    <img src="../assets/imgs/icecream_problemstatement.png" />
+                </section>
+                <section id="concept">
+                    <h1>concept</h1>
+                    <img src="../assets/imgs/icecream_visualdesign.png" />
+                    <img src="../assets/imgs/icecream_infoarch.png" />
+                </section>
+                <section id="screens">
+                    <h1>screens</h1>
+                    <img src="../assets/imgs/icecream_mockup.jpg" />
+                    <img src="../assets/imgs/icecream_mockup2.jpg" />
+                    <img src="../assets/imgs/icecream_screens01.png" />
+                    <!-- <div> -->
+                    <video autoplay controls loop disablepictureinpicture>
+                        <source
+                            src="../assets/imgs/icecream_vid2.mp4"
+                            type="video/mp4"
+                        />
+                    </video>
+                    <!-- <img src="../assets/imgs/icecream_screens2.png" /> -->
+                    <!-- </div> -->
+                    <img src="../assets/imgs/icecream_screens02.png" />
+                    <!-- <img src="../assets/imgs/icecream_screens3.png" />
+                    <img src="../assets/imgs/icecream_screens4.png" /> -->
+                </section>
+            </section>
+        </main>
+        <ul id="footer"></ul>
+    </body>
+
+    <script type="text/babel" src="../../src/navFromWork.js"></script>
+    <script type="text/babel" src="../../src/workPage.js"></script>
+</html>

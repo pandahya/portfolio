@@ -35,12 +35,12 @@ const projectData = [
         tags: ["uiux", "webdesign"],
         link: "./work/entropy.html",
     },
-    {
-        img: "./assets/imgs/dodampreview.jpg",
-        project: "Dodam: Design Your Baby",
-        tags: ["uiux", "speculative"],
-        link: "./work/dodam.html",
-    },
+    // {
+    //     img: "./assets/imgs/dodampreview.jpg",
+    //     project: "Dodam: Design Your Baby",
+    //     tags: ["uiux", "speculative"],
+    //     link: "./work/dodam.html",
+    // },
     // {
     //     img: "./assets/imgs/recipebook_preview.png",
     //     project: "Recipe Book",
@@ -59,18 +59,18 @@ const projectData = [
     //     tags: ['graphic design', 'print'],
     //     link: "./work/83cooking.html",
     // },
-    // {
-    //     img: "./assets/imgs/rocketpreview.jpg",
-    //     project: "Rocket",
-    //     tags: ['uiux', 'branding'],
-    //     link: "./work/rocket.html",
-    // },
     {
-        img: "./assets/imgs/olympics_figureskate_1.png",
-        project: "Olympics Infographics",
-        tags: ["graphic"],
-        link: "./work/olympicsinfographics.html",
+        img: "./assets/imgs/icecream_preview.png",
+        project: "Find My Ice Cream",
+        tags: ["uiux", "branding"],
+        link: "./work/icecream.html",
     },
+    // {
+    //     img: "./assets/imgs/olympics_figureskate_1.png",
+    //     project: "Olympics Infographics",
+    //     tags: ["graphic"],
+    //     link: "./work/olympicsinfographics.html",
+    // },
     {
         img: "./assets/imgs/posepreview.jpg",
         project: "POSE",

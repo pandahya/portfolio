@@ -124,14 +124,14 @@ const workData = [
         },
     },
     {
-        toc: ["#escription", "process"],
+        toc: ["description", "research", "concept", "screens"],
         header: {
-            img: "../assets/imgs/pose_presentation21.jpg",
-            project: "rocket",
+            img: "../assets/imgs/icecream_mockup.jpg",
+            project: "find my ice cream",
             year: "2022",
             tags: ["uiux", "branding"],
             description:
-                "When craving ice cream, you often search for specific flavorsRocket is a concept app that allows you to find, build, and get any ice cream by flavor from anywhere in the country.",
+                "When craving ice cream, trying to locate specific flavors can be tough. Find My Ice Cream makes hunting for that one specific flavor seamless and easy. The app puts the focus on ice cream flavors rather than brand or store. Search for flavors you crave, discover new tastes, and find exactly where to get it all.",
             time: "7 weeks",
         },
     },
@@ -199,7 +199,7 @@ const artifex = document.getElementById("artifex");
 const dodam = document.getElementById("dodam");
 const recipebook = document.getElementById("recipebook");
 const house = document.getElementById("house");
-const rocket = document.getElementById("rocket");
+const icecream = document.getElementById("icecream");
 const olympics = document.getElementById("olympics");
 const pose = document.getElementById("pose");
 const forest = document.getElementById("forest");
@@ -212,7 +212,7 @@ const projs = [
     dodam,
     recipebook,
     house,
-    rocket,
+    icecream,
     olympics,
     pose,
     forest,
@@ -225,7 +225,7 @@ const projNames = [
     "dodam",
     "recipebook",
     "house",
-    "rocket",
+    "icecream",
     "olympics",
     "pose",
     "forest",
