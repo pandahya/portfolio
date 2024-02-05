@@ -54,21 +54,24 @@
             box-shadow: none;
         }
         #home-text h1 {
-            font-family: "PP Mori";
+            font-family: "PP Neue Montreal";
             text-transform: none;
             margin: 0px;
-            font-size: 64px;
+            font-size: 96px;
         }
         #mynametext {
             font-family: "PP Neuebit";
-            text-transform: uppercase;
-            font-size: 100px;
+            /* text-transform: capitalize; */
+            font-size: 144px;
         }
         .colorletter:hover {
-            cursor: pointer;
+            cursor: var(--pointerCursor);
         }
         .hover-accent:hover {
             color: var(--accent);
+        }
+        h2 {
+            font-size: 48px;
         }
         h3 a:link,
         h3 a:visited {
@@ -83,6 +86,9 @@
             /* color: var(--accent); */
             text-decoration: none;
             background-color: var(--accent);
+        }
+        .work-preview {
+            display: block;
         }
         /* h3 a:hover::before {
             content: "+ ";
@@ -106,8 +112,7 @@
         <main id="home-page">
             <div id="home-text">
                 <h1>
-                    ✿ Hi, I’m
-                    <br />
+                    Hi, I’m
                     <span id="mynametext"
                         ><span class="colorletter">H</span
                         ><span class="colorletter">y</span
@@ -121,14 +126,14 @@
                         ><span class="colorletter">e</span
                         ><span class="colorletter">n</span
                         ><span class="colorletter">g</span></span
-                    >
+                    >! ✿
                 </h1>
                 <h2>
-                    I’m a designer & creative technologist exploring how to tell
-                    stories through playful experiences.
+                    I’m a designer and creative coder with a passion for
+                    creating playful experiences.
                 </h2>
                 <br />
-                <h3><a href="./work.html">Check out my work! &nearr;</a></h3>
+                <!-- <h3><a href="./work.html">Check out my work! &nearr;</a></h3> -->
                 <!-- <h3>
                     <a
                         href="https://www.hyacinth.zip/notebook2.html"
@@ -143,15 +148,11 @@
                 <div class='eye'></div>
             </div> -->
             </div>
-            <div id="playground-container">
-                <!-- <p id="playgroundText" class="mobile-hide">you can drag these!<span>&darr;</span></p> -->
+            <!-- <div id="playground-container">
                 <section id="playground">
                     <figure class="draggable large">
                         <img src="./assets/imgs/paperbg1.png" />
                     </figure>
-                    <!-- <figure class="draggable large">
-                        <img src="./assets/imgs/pie_stockphoto.jpg" />
-                    </figure> -->
                     <figure class="draggable large">
                         <img src="./assets/imgs/house.gif" />
                     </figure>
@@ -185,10 +186,6 @@
                     <figure class="draggable large">
                         <img src="./assets/imgs/myFaceSticker.png" />
                     </figure>
-
-                    <!-- <figure class="draggable medium">
-                    <img src="./assets/imgs/poop_large_pixelated.png"/>
-                </figure> -->
                     <figure class="draggable medium">
                         <img src="./assets/imgs/paperscrap_1.png" />
                     </figure>
@@ -276,73 +273,76 @@
                         <img src="./assets/imgs/paperclip2.png" />
                     </figure>
                 </section>
-            </div>
+            </div> -->
         </main>
-
+        <main id="work-page">
+            <section id="work-root"></section>
+        </main>
         <ul id="footer" style="position: fixed; bottom: 0"></ul>
     </body>
 
     <script type="text/babel" src="./src/main.js"></script>
+    <script type="text/babel" src="src/workPreview.js"></script>
     <script>
         //code taken from: https://www.w3schools.com/howto/howto_js_draggable.asp
-        let draggables = document.querySelectorAll(".draggable");
-        const playground = document.querySelector("#playground");
-        let width = playground.offsetWidth * 2 - 100;
-        let height = playground.offsetHeight - 200;
-        draggables.forEach(randomPos);
-        draggables.forEach(dragElement);
+        // let draggables = document.querySelectorAll(".draggable");
+        // const playground = document.querySelector("#playground");
+        // let width = playground.offsetWidth * 2 - 100;
+        // let height = playground.offsetHeight - 200;
+        // draggables.forEach(randomPos);
+        // draggables.forEach(dragElement);
 
-        function randomPos(elmnt) {
-            let randomX = Math.floor(Math.random() * width) - width / 2;
-            let randomY = Math.floor(Math.random() * height) + 75;
-            if (randomX < 545 && randomY < 325) {
-                randomX += 50;
-                randomY += 50;
-                elmnt.style.top = playground.offsetTop + randomY + "px";
-                elmnt.style.left = playground.offsetLeft + randomX + "px";
-            } else {
-                elmnt.style.top = playground.offsetTop + randomY + "px";
-                elmnt.style.left = playground.offsetLeft + randomX + "px";
-            }
-        }
+        // function randomPos(elmnt) {
+        //     let randomX = Math.floor(Math.random() * width) - width / 2;
+        //     let randomY = Math.floor(Math.random() * height) + 75;
+        //     if (randomX < 545 && randomY < 325) {
+        //         randomX += 50;
+        //         randomY += 50;
+        //         elmnt.style.top = playground.offsetTop + randomY + "px";
+        //         elmnt.style.left = playground.offsetLeft + randomX + "px";
+        //     } else {
+        //         elmnt.style.top = playground.offsetTop + randomY + "px";
+        //         elmnt.style.left = playground.offsetLeft + randomX + "px";
+        //     }
+        // }
 
-        function dragElement(elmnt) {
-            var pos1 = 0,
-                pos2 = 0,
-                pos3 = 0,
-                pos4 = 0;
-            elmnt.onmousedown = dragMouseDown;
+        // function dragElement(elmnt) {
+        //     var pos1 = 0,
+        //         pos2 = 0,
+        //         pos3 = 0,
+        //         pos4 = 0;
+        //     elmnt.onmousedown = dragMouseDown;
 
-            function dragMouseDown(e) {
-                e = e || window.event;
-                e.preventDefault();
-                pos3 = e.clientX;
-                pos4 = e.clientY;
-                document.onmouseup = closeDragElement;
-                document.onmousemove = elementDrag;
-                elmnt.classList.add("wiggling");
-            }
+        //     function dragMouseDown(e) {
+        //         e = e || window.event;
+        //         e.preventDefault();
+        //         pos3 = e.clientX;
+        //         pos4 = e.clientY;
+        //         document.onmouseup = closeDragElement;
+        //         document.onmousemove = elementDrag;
+        //         elmnt.classList.add("wiggling");
+        //     }
 
-            function elementDrag(e) {
-                e = e || window.event;
-                e.preventDefault();
-                pos1 = pos3 - e.clientX;
-                pos2 = pos4 - e.clientY;
-                pos3 = e.clientX;
-                pos4 = e.clientY;
-                elmnt.style.top = elmnt.offsetTop - pos2 + "px";
-                elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
-            }
+        //     function elementDrag(e) {
+        //         e = e || window.event;
+        //         e.preventDefault();
+        //         pos1 = pos3 - e.clientX;
+        //         pos2 = pos4 - e.clientY;
+        //         pos3 = e.clientX;
+        //         pos4 = e.clientY;
+        //         elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+        //         elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+        //     }
 
-            function closeDragElement() {
-                document.onmouseup = null;
-                document.onmousemove = null;
-                elmnt.classList.remove("wiggling");
-            }
-        }
+        //     function closeDragElement() {
+        //         document.onmouseup = null;
+        //         document.onmousemove = null;
+        //         elmnt.classList.remove("wiggling");
+        //     }
+        // }
 
         let randomFun = Math.floor(Math.random() * 2);
-        console.log(randomFun);
+        // console.log(randomFun);
         let letters = document.querySelectorAll(".colorletter");
         letters.forEach(function (letter) {
             switch (randomFun) {
@@ -425,6 +425,19 @@
                     break;
                 case "lowercase":
                     letter.style.textTransform = "uppercase";
+                    break;
+                case "none":
+                    if (
+                        letter.innerHTML.charCodeAt(0) >= 65 &&
+                        letter.innerHTML.charCodeAt(0) <= 90
+                    ) {
+                        letter.style.textTransform = "lowercase";
+                    } else if (
+                        letter.innerHTML.charCodeAt(0) >= 97 &&
+                        letter.innerHTML.charCodeAt(0) <= 122
+                    ) {
+                        letter.style.textTransform = "uppercase";
+                    }
                     break;
             }
         }

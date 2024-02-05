@@ -6,22 +6,28 @@
     font-family: PP Mori;
     src: url(../assets/fonts/PPMori-Regular.otf);
 }
+@font-face {
+    font-family: PP Neue Montreal;
+    src: url(../assets/fonts/PPNeueMontreal-Regular.otf);
+}
 
 body {
-    font-family: "PP Mori";
+    font-family: "PP Neue Montreal";
     color: var(--text);
     background-color: var(--background);
     line-height: normal;
     background-image: var(--backgroundImg);
     /* background-blend-mode: luminosity; */
     cursor: var(--defaultCursor);
+    /* padding-top: 40px; */
 }
 main {
-    padding: 4rem;
-    max-width: 1024px;
+    /* padding: 4rem; */
+    /* max-width: 1024px; */
     /* min-height: calc(100vh - 12rem); */
     /* background-color: cornflowerblue; */
-    margin: 0 auto;
+    padding: 120px 0px;
+    margin: 0px 40px;
 }
 article {
     margin-top: 50px;
@@ -86,7 +92,8 @@ p {
 }
 a:link,
 a:visited {
-    color: var(--accent);
+    /* color: var(--accent); */
+    color: var(--text);
     text-decoration: none;
 }
 a:hover {
@@ -189,13 +196,13 @@ button:hover {
 }
 
 #home-page {
-    grid: 1fr / 0.55fr 0.45fr;
+    /* grid: 1fr / 0.55fr 0.45fr; */
 }
 #about-page {
-    grid: 1fr / 1fr 1fr;
+    grid: 1fr / 0.5fr 0.5fr;
     gap: 2rem;
 }
-#home-page,
+/* #home-page, */
 #about-page {
     display: grid;
     /* background-color: red; */
@@ -251,8 +258,9 @@ button:hover {
 #work-root {
     width: 100%;
     display: grid;
-    grid: 1fr / 1fr 1fr 1fr;
-    gap: 2rem;
+    /* grid: 1fr / 1fr 1fr 1fr; */
+    grid: 1fr / 1fr 1fr;
+    gap: 40px;
 }
 .tags-container {
     display: flex;
@@ -434,7 +442,8 @@ figcaption {
 }
 .work-preview figcaption {
     opacity: 100%;
-    font-size: 2rem;
+    /* font-size: 2rem; */
+    font-size: 48px;
     text-align: left;
 }
 .gallery {

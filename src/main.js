@@ -55,7 +55,7 @@ function Nav(props) {
                     </a>
                 </li>
                 <li className="navbar">
-                    <a href="./work.html">
+                    <a href="#work-page">
                         work <span className="flower">✿</span>
                     </a>
                 </li>
@@ -117,7 +117,7 @@ function Footer() {
                     {modeText}
                 </button>
             </li>
-            <li id="timestamp">Last updated: 18 Dec 2023</li>
+            <li id="timestamp">Last updated: 4 Feb 2024</li>
             {/* <li>NYC based (UTC-04:00)</li> */}
         </React.Fragment>
     );

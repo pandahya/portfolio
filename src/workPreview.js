@@ -72,7 +72,7 @@ const projectData = [
     //     link: "./work/olympicsinfographics.html",
     // },
     {
-        img: "./assets/imgs/posepreview.jpg",
+        img: "./assets/imgs/pose_preview.png",
         project: "POSE",
         tags: ["branding", "graphic"],
         link: "./work/pose.html",
