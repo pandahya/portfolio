@@ -38,7 +38,7 @@ ul {
     /* line-height: 1.6rem; */
 }
 li {
-    margin: 0.5rem 1em;
+    margin: 0.5rem 1rem;
 }
 hr {
     margin: 20px 2px;
@@ -130,29 +130,44 @@ button:hover {
     color: var(--oppositeText);
 }
 
+#nav,
+#footer {
+    width: 100vw;
+    background-color: var(--main);
+    background-image: var(--backgroundImg);
+    position: fixed;
+    z-index: 2;
+    /* background-color: orange; */
+    /* padding: 40px; */
+}
 #navbar,
 #footer {
     font-family: var(--pixelFont);
-    background-color: var(--main);
     display: flex;
     justify-content: space-between;
-    width: 100vw;
-    position: fixed;
-    z-index: 2;
-    background-image: var(--backgroundImg);
+    /* background-color: red; */
+    /* width: 100%; */
     /* background-blend-mode: luminosity; */
 }
-#navbar li,
+#navbar li {
+    margin: 0px;
+}
 #footer li {
-    margin: 0.5rem 1.5rem;
+    margin: 8px 40px;
+}
+#nav {
+    text-transform: capitalize;
+    top: 0;
+    /* height: 2.75rem; */
+    /* outline: 1px solid var(--text); */
 }
 #navbar {
+    margin: 0px 40px;
+    padding: 24px 0px 8px 0px;
+    width: calc(100vw - 80px);
     font-size: 1.8rem;
-    text-transform: uppercase;
-    /* position: fixed; */
-    top: 0;
-    height: 2.75rem;
-    /* outline: 1px solid var(--text); */
+    gap: 16px;
+    border-bottom: 2px dashed var(--oppositeText);
 }
 #side-menu {
     display: none;
@@ -163,6 +178,9 @@ button:hover {
 }
 .navbar {
     display: block;
+}
+#navbar :first-child {
+    margin-right: auto;
 }
 .hamburger {
     display: none;

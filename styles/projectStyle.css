@@ -1,3 +1,13 @@
+.work {
+    display: grid;
+    grid: 1fr / 0.22fr 0.78fr;
+    gap: 2rem;
+    padding: 2.8rem 0vw;
+    margin-bottom: 160px;
+    min-height: 80vh;
+    /* position: relative; */
+}
+
 .sectionTitle {
     display: flex;
     justify-content: space-between;
@@ -19,6 +29,17 @@
     font-size: 1.1rem;
     line-height: 1.6rem;
 }
+h1 {
+    font-family: var(--pixelFont);
+    font-size: var(--h1Size);
+    font-weight: var(--pixelFontWeight);
+    text-transform: uppercase;
+}
+h3 {
+    font-family: var(--pixelFont);
+    font-size: 2rem;
+    text-transform: uppercase;
+}
 h2 {
     font-family: var(--pixelFont);
     text-transform: uppercase;
@@ -32,4 +53,38 @@ p {
 .wireframes-grid {
     display: grid;
     gap: 24px;
+}
+
+#description {
+    padding-top: 2.8rem;
+}
+#content h1 {
+    padding-top: 2.8rem;
+}
+#toc {
+    height: 100%;
+    margin-top: 2.8rem;
+    text-align: right;
+}
+#toc ul {
+    top: 2.8rem;
+    position: sticky;
+}
+#toc li {
+    padding: 0.2rem 0;
+}
+#toc a:hover {
+    text-decoration: none;
+}
+#toc a:hover::after {
+    content: " ✿";
+    color: var(--accent);
+}
+#header-img:hover {
+    transform: var(--imgHover);
+    -webkit-transform: var(--imgHover);
+    -moz-transform: var(--imgHover);
+    -o-transform: var(--imgHover);
+    filter: var(--imgHover);
+    box-shadow: var(--imgBoxShadow);
 }

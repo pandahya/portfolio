@@ -5,7 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="/styles/reset.css" />
-        <link rel="stylesheet" type="text/css" href="/styles/style.css" />
+        <link rel="stylesheet" type="text/css" href="/styles/newstyle.css" />
+        <link rel="stylesheet" type="text/css" href="/styles/indexstyle.css" />
+
         <link
             rel="shortcut icon"
             href="./assets/imgs/favicon.png"
@@ -13,89 +15,6 @@
         />
         <title>hyacinth weng</title>
     </head>
-    <style>
-        /* .container {
-    width: 100%;
-    }
-    .eye {
-    position: relative;
-    display: inline-block;
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
-    background: #CCC;
-    }
-    .eye:after { 
-    position: absolute;
-    bottom: 17px;
-    right: 10px;
-    width: 10px;
-    height: 10px;
-    background: #000;
-    border-radius: 50%;
-    content: " ";
-    } */
-        .xsmall {
-            width: 40px;
-        }
-        .small {
-            width: 60px;
-        }
-        .medium {
-            width: 80px;
-        }
-        .large {
-            width: 120px;
-        }
-        .xlarge {
-            width: 200px;
-        }
-        .draggable img {
-            box-shadow: none;
-        }
-        #home-text h1 {
-            font-family: "PP Neue Montreal";
-            text-transform: none;
-            margin: 0px;
-            font-size: 96px;
-        }
-        #mynametext {
-            font-family: "PP Neuebit";
-            /* text-transform: capitalize; */
-            font-size: 144px;
-        }
-        .colorletter:hover {
-            cursor: var(--pointerCursor);
-        }
-        .hover-accent:hover {
-            color: var(--accent);
-        }
-        h2 {
-            font-size: 48px;
-        }
-        h3 a:link,
-        h3 a:visited {
-            color: var(--main);
-            background-color: var(--text);
-            width: fit-content;
-            padding: 16px 20px;
-            border-radius: 16px;
-        }
-        h3 a:hover,
-        h3 a:active {
-            /* color: var(--accent); */
-            text-decoration: none;
-            background-color: var(--accent);
-        }
-        .work-preview {
-            display: block;
-        }
-        /* h3 a:hover::before {
-            content: "+ ";
-            visibility: hidden;
-        } */
-    </style>
-    <!-- change to production when ready to push -->
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script
         src="https://unpkg.com/react@18/umd/react.development.js"
@@ -105,358 +24,111 @@
         src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
         crossorigin
     ></script>
-    <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
 
     <body>
         <nav id="nav"></nav>
-        <main id="home-page">
-            <div id="home-text">
-                <h1>
-                    Hi, I’m
-                    <span id="mynametext"
-                        ><span class="colorletter">H</span
-                        ><span class="colorletter">y</span
-                        ><span class="colorletter">a</span
-                        ><span class="colorletter">c</span
-                        ><span class="colorletter">i</span
-                        ><span class="colorletter">n</span
-                        ><span class="colorletter">t</span
-                        ><span class="colorletter">h</span>
-                        <span class="colorletter">W</span
-                        ><span class="colorletter">e</span
-                        ><span class="colorletter">n</span
-                        ><span class="colorletter">g</span></span
-                    >! ✿
-                </h1>
-                <h2>
-                    I’m a designer and creative coder with a passion for
-                    creating playful experiences.
-                </h2>
-                <br />
-                <!-- <h3><a href="./work.html">Check out my work! &nearr;</a></h3> -->
-                <!-- <h3>
-                    <a
-                        href="https://www.hyacinth.zip/notebook2.html"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >hyacinth's notebook &nearr;</a
-                    >
-                </h3>
-                <h3><a href="./about.html">the to-do list &nearr;</a></h3> -->
-                <!-- <div class='.container'>
-                <div class='eye'></div>
-                <div class='eye'></div>
-            </div> -->
-            </div>
-            <!-- <div id="playground-container">
-                <section id="playground">
-                    <figure class="draggable large">
-                        <img src="./assets/imgs/paperbg1.png" />
-                    </figure>
-                    <figure class="draggable large">
-                        <img src="./assets/imgs/house.gif" />
-                    </figure>
-                    <figure class="draggable large">
-                        <img src="./assets/imgs/phone_face.png" />
-                    </figure>
-                    <figure class="draggable large">
-                        <img src="./assets/imgs/eggykun.png" />
-                    </figure>
-                    <figure class="draggable xlarge">
-                        <img src="./assets/imgs/businesscard_back1.png" />
-                    </figure>
-                    <figure class="draggable xlarge">
-                        <img src="./assets/imgs/businesscard_back2.png" />
-                    </figure>
-                    <figure class="draggable xlarge">
-                        <img src="./assets/imgs/businesscard_front.png" />
-                    </figure>
-                    <figure class="draggable large">
-                        <img src="./assets/imgs/hweng_walk.gif" />
-                    </figure>
-                    <figure class="draggable medium">
-                        <img src="./assets/imgs/frogpfp.png" />
-                    </figure>
-                    <figure class="draggable medium">
-                        <img src="./assets/imgs/garbage.png" />
-                    </figure>
-                    <figure class="draggable medium">
-                        <img src="./assets/imgs/judgy_hya.png" />
-                    </figure>
-                    <figure class="draggable large">
-                        <img src="./assets/imgs/myFaceSticker.png" />
-                    </figure>
-                    <figure class="draggable medium">
-                        <img src="./assets/imgs/paperscrap_1.png" />
-                    </figure>
-                    <figure class="draggable medium">
-                        <img src="./assets/imgs/paperscrap_2.png" />
-                    </figure>
-                    <figure class="draggable large">
-                        <img src="./assets/imgs/largetape1.png" />
-                    </figure>
-                    <figure class="draggable large">
-                        <img src="./assets/imgs/largetape2.png" />
-                    </figure>
-                    <figure class="draggable large">
-                        <img src="./assets/imgs/smalltape1.png" />
-                    </figure>
-                    <figure class="draggable large">
-                        <img src="./assets/imgs/smalltape2.png" />
-                    </figure>
-                    <figure class="draggable small">
-                        <img src="./assets/imgs/codeFolder.png" />
-                    </figure>
-                    <figure class="draggable small">
-                        <img src="./assets/imgs/gamesFolder.png" />
-                    </figure>
-                    <figure class="draggable xsmall">
-                        <img
-                            src="https://help.apple.com/assets/63BCA927AAE78C58DD7FBE35/63BCA92EAAE78C58DD7FBE76/en_US/a0d5e859e5f2b01dbbf81dfc38a3a92f.png"
-                        />
-                    </figure>
-                    <figure class="draggable medium">
-                        <img src="./assets/imgs/sticker_smiley.png" />
-                    </figure>
-                    <figure class="draggable small">
-                        <img src="./assets/imgs/sticker_starsm.png" />
-                    </figure>
-                    <figure class="draggable small">
-                        <img src="./assets/imgs/sticker_starsm.png" />
-                    </figure>
-                    <figure class="draggable small">
-                        <img src="./assets/imgs/sticker_starlg.png" />
-                    </figure>
-                    <figure class="draggable small">
-                        <img src="./assets/imgs/sticker_starlg.png" />
-                    </figure>
-                    <figure class="draggable small">
-                        <img src="./assets/imgs/sticker_musicone.png" />
-                    </figure>
-                    <figure class="draggable small">
-                        <img src="./assets/imgs/sticker_musictwo.png" />
-                    </figure>
-                    <figure class="draggable small">
-                        <img src="./assets/imgs/sticker_leaf.png" />
-                    </figure>
-                    <figure class="draggable xsmall">
-                        <img src="./assets/imgs/favicon.png" />
-                    </figure>
-                    <figure class="draggable xsmall">
-                        <img src="./assets/imgs/favicon.png" />
-                    </figure>
-                    <figure class="draggable small">
-                        <img src="./assets/imgs/fruitsticker_1.png" />
-                    </figure>
-                    <figure class="draggable xsmall">
-                        <img src="./assets/imgs/hyacinth_emoji.png" />
-                    </figure>
-                    <figure class="draggable xsmall">
-                        <img src="./assets/imgs/hyacinth_emoji.png" />
-                    </figure>
-                    <figure class="draggable small">
-                        <img src="./assets/imgs/ant.png" />
-                    </figure>
-                    <figure class="draggable small">
-                        <img src="./assets/imgs/ant.png" />
-                    </figure>
-                    <figure class="draggable small">
-                        <img src="./assets/imgs/paperclip.png" />
-                    </figure>
-                    <figure class="draggable small">
-                        <img src="./assets/imgs/paperclip.png" />
-                    </figure>
-                    <figure class="draggable small">
-                        <img src="./assets/imgs/paperclip2.png" />
-                    </figure>
-                    <figure class="draggable small">
-                        <img src="./assets/imgs/paperclip2.png" />
-                    </figure>
-                </section>
-            </div> -->
+        <!-- <div id="banner">THIS WEBSITE IS CURRENTLY UNDER CONSTRUCTION!</div> -->
+        <main id="home">
+            <h1>Hi, I'm <span>Hyacinth Weng!</span> ✿</h1>
+            <h2>
+                I'm a designer and creative coder with a passion for bringing
+                playful experiences to life.
+            </h2>
         </main>
         <main id="work-page">
             <section id="work-root"></section>
         </main>
+        <main id="about">
+            <section>
+                <h1>hyacinth weng <span>✿</span></h1>
+                <!-- <h3>
+                    <a href="mailto:hyacinthweng@gmail.com"
+                        >&nearr; hyacinthweng@gmail.com</a
+                    >
+                </h3> -->
+                <p>
+                    I graduated from Parsons School of Design with a BFA in
+                    Design & Technology and a minor in Communication Design. I
+                    excel in creative problem solving and love bridging the gap
+                    between form and function in my work.
+                </p>
+                <br />
+                <p>Currently based in NYC.</p>
+                <p id="note">
+                    This website was made with React + vanilla JS, HTML/CSS, and
+                    love ♥︎ by me. ☺
+                </p>
+            </section>
+        </main>
         <ul id="footer" style="position: fixed; bottom: 0"></ul>
     </body>
-
     <script type="text/babel" src="./src/main.js"></script>
     <script type="text/babel" src="src/workPreview.js"></script>
     <script>
-        //code taken from: https://www.w3schools.com/howto/howto_js_draggable.asp
-        // let draggables = document.querySelectorAll(".draggable");
-        // const playground = document.querySelector("#playground");
-        // let width = playground.offsetWidth * 2 - 100;
-        // let height = playground.offsetHeight - 200;
-        // draggables.forEach(randomPos);
-        // draggables.forEach(dragElement);
+        const newSection = document.createElement("section");
+        newSection.classList.add("mobile-hide");
+        newSection.setAttribute("id", "myFaceCanvas");
+        const mainDiv = document.querySelector("#about");
 
-        // function randomPos(elmnt) {
-        //     let randomX = Math.floor(Math.random() * width) - width / 2;
-        //     let randomY = Math.floor(Math.random() * height) + 75;
-        //     if (randomX < 545 && randomY < 325) {
-        //         randomX += 50;
-        //         randomY += 50;
-        //         elmnt.style.top = playground.offsetTop + randomY + "px";
-        //         elmnt.style.left = playground.offsetLeft + randomX + "px";
-        //     } else {
-        //         elmnt.style.top = playground.offsetTop + randomY + "px";
-        //         elmnt.style.left = playground.offsetLeft + randomX + "px";
-        //     }
-        // }
+        // let colorPicker;
+        // let btnCol = 255;
+        mainDiv.appendChild(newSection);
+        // let sectionLeft = newSection.offsetLeft;
+        let sectionWidth = newSection.offsetWidth;
+        // let sectionTop = newSection.offsetTop;
 
-        // function dragElement(elmnt) {
-        //     var pos1 = 0,
-        //         pos2 = 0,
-        //         pos3 = 0,
-        //         pos4 = 0;
-        //     elmnt.onmousedown = dragMouseDown;
-
-        //     function dragMouseDown(e) {
-        //         e = e || window.event;
-        //         e.preventDefault();
-        //         pos3 = e.clientX;
-        //         pos4 = e.clientY;
-        //         document.onmouseup = closeDragElement;
-        //         document.onmousemove = elementDrag;
-        //         elmnt.classList.add("wiggling");
-        //     }
-
-        //     function elementDrag(e) {
-        //         e = e || window.event;
-        //         e.preventDefault();
-        //         pos1 = pos3 - e.clientX;
-        //         pos2 = pos4 - e.clientY;
-        //         pos3 = e.clientX;
-        //         pos4 = e.clientY;
-        //         elmnt.style.top = elmnt.offsetTop - pos2 + "px";
-        //         elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
-        //     }
-
-        //     function closeDragElement() {
-        //         document.onmouseup = null;
-        //         document.onmousemove = null;
-        //         elmnt.classList.remove("wiggling");
-        //     }
-        // }
-
-        let randomFun = Math.floor(Math.random() * 2);
-        // console.log(randomFun);
-        let letters = document.querySelectorAll(".colorletter");
-        letters.forEach(function (letter) {
-            switch (randomFun) {
-                case 0:
-                    letter.addEventListener("mouseover", function () {
-                        colorChange(letter);
-                    });
-                    break;
-                case 1:
-                    letter.addEventListener("mouseover", function () {
-                        caseChange(letter);
-                    });
-                    // let r = document.querySelector(":root");
-                    // let accentColor = window
-                    //     .getComputedStyle(letter)
-                    //     .getPropertyValue("--accent");
-                    // let textColor = window
-                    //     .getComputedStyle(letter)
-                    //     .getPropertyValue("--text");
-                    // letter.addEventListener("mouseenter", function () {
-                    //     letter.style.color = accentColor;
-                    // });
-                    // letter.addEventListener("mouseleave", function () {
-                    //     letter.style.color = textColor;
-                    // });
-                    break;
-            }
-        });
-
-        function colorChange(letter) {
-            let letterColor = window.getComputedStyle(letter).color.toString();
-            let r = document.querySelector(":root");
-            let ogColor = window
-                .getComputedStyle(letter)
-                .getPropertyValue("--text");
-
-            switch (letterColor) {
-                case "rgb(255, 255, 255)":
-                    letter.style.color = "rgb(255, 0, 0)";
-                    break;
-                case "rgb(38, 38, 38)":
-                    letter.style.color = "rgb(255, 0, 0)";
-                    break;
-                case ogColor:
-                    letter.style.color = "rgb(255, 0, 0)";
-                    break;
-                case "rgb(255, 0, 0)":
-                    letter.style.color = "rgb(255, 165, 0)";
-                    break;
-                case "rgb(255, 165, 0)":
-                    letter.style.color = "rgb(255, 255, 0)";
-                    break;
-                case "rgb(255, 255, 0)":
-                    letter.style.color = "rgb(0, 255, 0)";
-                    break;
-                case "rgb(0, 255, 0)":
-                    letter.style.color = "rgb(0, 255, 255)";
-                    break;
-                case "rgb(0, 255, 255)":
-                    letter.style.color = "rgb(0, 0, 255)";
-                    break;
-                case "rgb(0, 0, 255)":
-                    letter.style.color = "rgb(138, 43, 226)";
-                    break;
-                case "rgb(138, 43, 226)":
-                    letter.style.color = "rgb(255, 105, 180)";
-                    break;
-                case "rgb(255, 105, 180)":
-                    letter.style.color = ogColor;
-                    break;
-            }
+        let hyaFace;
+        function preload() {
+            hyaFace = loadImage("./assets/imgs/myFaceSticker.png");
+        }
+        function setup() {
+            var canvas = createCanvas(sectionWidth, sectionWidth);
+            canvas.parent("myFaceCanvas");
+            rectMode(CENTER);
+            textAlign(CENTER, CENTER);
+            imageMode(CENTER);
+            background(255);
+            image(hyaFace, sectionWidth / 2, sectionWidth / 2);
+            text("Click to draw on my face!", width / 2, 20);
+            // colorPicker = createColorPicker("#283077");
+            // colorPicker.position(sectionLeft + 10, sectionTop + 10);
         }
 
-        function caseChange(letter) {
-            let letterCase = window.getComputedStyle(letter).textTransform;
-            letter.classList.add("hover-accent");
-            switch (letterCase) {
-                case "uppercase":
-                    letter.style.textTransform = "lowercase";
-                    break;
-                case "lowercase":
-                    letter.style.textTransform = "uppercase";
-                    break;
-                case "none":
-                    if (
-                        letter.innerHTML.charCodeAt(0) >= 65 &&
-                        letter.innerHTML.charCodeAt(0) <= 90
-                    ) {
-                        letter.style.textTransform = "lowercase";
-                    } else if (
-                        letter.innerHTML.charCodeAt(0) >= 97 &&
-                        letter.innerHTML.charCodeAt(0) <= 122
-                    ) {
-                        letter.style.textTransform = "uppercase";
-                    }
-                    break;
+        function draw() {
+            if (mouseIsPressed) {
+                push();
+                strokeWeight(0);
+                // fill(colorPicker.color());
+                fill("#283077");
+                rect(mouseX, mouseY, 5, 5);
+                pop();
+            }
+            if (mouseX > 15 && mouseX < 75 && mouseY > 15 && mouseY < 25) {
+                btnCol = 200;
+            } else {
+                btnCol = 255;
+            }
+            ui();
+        }
+
+        function ui() {
+            push();
+            stroke(0);
+            strokeWeight(1);
+            fill(btnCol);
+            rect(40, 20, 50, 20);
+            pop();
+            text("CLEAR", 40, 21);
+        }
+
+        function mouseClicked() {
+            if (mouseX > 15 && mouseX < 75 && mouseY > 15 && mouseY < 25) {
+                clear();
+                background(255);
+                image(hyaFace, sectionWidth / 2, sectionWidth / 2);
+                text("Click to draw on my face!", width / 2, 20);
             }
         }
     </script>
-    <!-- <script type="text/babel" src="index.bundle.js"></script> -->
-    <!-- <script>
-    $(".move-area").mousemove(function(event) {
-        var eye = $(".eye");
-        console.log('eye', eye)
-        var x = (eye.offset().left) + (eye.width() / 2);
-        var y = (eye.offset().top) + (eye.height() / 2);
-        var rad = Math.atan2(event.pageX - x, event.pageY - y);
-        var rot = (rad * (180 / Math.PI) * -1) + 180;
-        eye.css({
-            '-webkit-transform': 'rotate(' + rot + 'deg)',
-            '-moz-transform': 'rotate(' + rot + 'deg)',
-            '-ms-transform': 'rotate(' + rot + 'deg)',
-            'transform': 'rotate(' + rot + 'deg)'
-        });
-    });
-</script> -->
 </html>

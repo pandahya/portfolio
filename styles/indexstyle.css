@@ -1,0 +1,132 @@
+#home h1 {
+    font-size: 96px;
+    font-family: PP Neue Montreal;
+    /* font-style: italic; */
+}
+#home h1 span {
+    /* font-size: 144px; */
+    font-size: 116px;
+    /* font-family: var(--pixelFont); */
+    font-family: PP Mondwest;
+    /* font-style: normal; */
+}
+#home h2 {
+    font-size: 40px;
+}
+
+main {
+    border-radius: 16px;
+    /* background-color: var(--background); */
+    /* padding: 48px; */
+}
+#home {
+    margin-top: var(--navHeight);
+}
+#about {
+    grid: 1fr / 0.5fr 0.5fr;
+    gap: 2rem;
+    display: grid;
+    /* background-color: red; */
+    /* padding: 15vh 10vw 0vh 10vw; */
+    padding: 40px;
+    margin-bottom: 40px;
+    min-height: 75vh;
+    overflow: hidden;
+}
+#about h1 {
+    font-size: 64px;
+}
+#about h1 span {
+    font-size: 50px;
+}
+
+.work-preview {
+    background-color: var(--background);
+    border: 1px solid var(--accent);
+    border-radius: 16px;
+    padding: 40px;
+    margin: 0px -24px 40px -24px;
+    display: grid;
+    grid: 1fr / 0.7fr 0.3fr;
+    gap: 44px;
+}
+.preview-text {
+    grid-area: 1 / 2 / span 1 / span 1;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+.preview-title {
+    font-size: 56px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--text);
+    line-height: 44px;
+    margin-bottom: 8px;
+}
+.tags-container {
+    margin-bottom: 16px;
+}
+.preview-description {
+    /* margin-bottom: auto; */
+    margin-bottom: 24px;
+    padding-left: 4px;
+}
+.action-link {
+    background-color: var(--accent);
+    color: var(--background);
+    text-decoration: none;
+    font-family: "PP Neuebit";
+    /* margin-bottom: 40px; */
+    font-size: 32px;
+    padding: 12px;
+    padding-bottom: 9px;
+    border: 1px solid var(--background);
+    border-radius: 12px;
+    text-transform: uppercase;
+    display: inline;
+}
+.action-link:hover {
+    background-color: var(--background);
+    color: var(--accent);
+    border-color: var(--accent);
+    transition-duration: 500ms;
+}
+
+/* https://www.codehim.com/html5-css3/cards-stack-with-scrolling-effect-using-css/ */
+.stack-card {
+    position: sticky;
+    top: calc(var(--navHeight) + var(--top));
+    transform-origin: center top;
+}
+.stack-card:nth-child(1) {
+    --top: 0px;
+}
+.stack-card:nth-child(2) {
+    --top: 40px;
+}
+.stack-card:nth-child(3s) {
+    --top: 80px;
+}
+
+#about h1 {
+    font-family: "PP Mondwest";
+    text-transform: capitalize;
+    margin: 16px 0px;
+    /* font-weight: bold; */
+}
+#about section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#about section :nth-last-child(2) {
+    margin-bottom: auto;
+}
+#about section p {
+    padding: 4px;
+}
+#note {
+    font-size: 12px;
+    color: var(--accent);
+}

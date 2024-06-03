@@ -32,12 +32,12 @@ function WorkNav(props) {
                     </a>
                 </li>
                 <li className="navbar">
-                    <a href="../work.html">
+                    <a href="../index.html#work-page">
                         work <span className="flower">✿</span>
                     </a>
                 </li>
                 <li className="navbar">
-                    <a href="../about.html">
+                    <a href="../index.html#about">
                         about <span className="flower">✿</span>
                     </a>
                 </li>
@@ -61,12 +61,13 @@ function WorkNav(props) {
                     <a href="../index.html">home</a>
                 </li>
                 <li className="hamburger">
-                    <a href="../work.html">work</a>
+                    <a href="../index.html#work-page">work</a>
                 </li>
                 <li className="hamburger">
-                    <a href="../about.html">about</a>
+                    <a href="../index.html#about">about</a>
                 </li>
             </ul>
+            <div id="banner">THIS WEBSITE IS CURRENTLY UNDER CONSTRUCTION!</div>
         </React.Fragment>
     );
 }
@@ -108,7 +109,7 @@ function Footer() {
                     {modeText}
                 </button>
             </li>
-            <li>Last updated: 4 Feb 2024</li>
+            <li>Last updated: 3 June 2024</li>
             {/* <li>NYC based (UTC-04:00)</li> */}
         </React.Fragment>
     );
