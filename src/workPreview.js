@@ -47,7 +47,7 @@ const projectData = [
     {
         img: "./assets/imgs/entropy_preview.png",
         project: "Entropy Website Design",
-        tags: ["uiux", "webdesign"],
+        tags: ["webdesign"],
         link: "./work/entropy.html",
         desc: "Designing the website for the Parsons Design & Technology 2023 Thesis showcase.",
     },

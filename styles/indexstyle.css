@@ -1,27 +1,28 @@
-#home h1 {
-    font-size: 96px;
-    font-family: PP Neue Montreal;
-    /* font-style: italic; */
-}
-#home h1 span {
-    /* font-size: 144px; */
-    font-size: 116px;
-    /* font-family: var(--pixelFont); */
-    font-family: PP Mondwest;
-    /* font-style: normal; */
-}
 #home h2 {
-    font-size: 40px;
+    font-size: 24px;
 }
-
-main {
-    border-radius: 16px;
-    /* background-color: var(--background); */
-    /* padding: 48px; */
+#home h4 {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    color: var(--accent);
 }
 #home {
-    margin-top: var(--navHeight);
+    /* margin-top: var(--navHeight); */
+    text-align: center;
+    padding: 80px 0px 0px 0px;
 }
+#nameContainer {
+    display: flex;
+    justify-content: center;
+}
+#name {
+    font-size: 140px;
+    font-family: "PP Mondwest";
+}
+#home p {
+    margin-top: calc(100vh - 400px);
+}
+
 #about {
     grid: 1fr / 0.5fr 0.5fr;
     gap: 2rem;
@@ -39,7 +40,45 @@ main {
 #about h1 span {
     font-size: 50px;
 }
+#reroll {
+    font-size: 1rem;
+    height: fit-content;
+    background-color: var(--background);
+    border: none;
+    color: var(--accent);
+}
+#reroll::before {
+    content: "⟲";
+}
+#reroll:hover {
+    color: var(--oppositeBg);
+    /* background-color: var(--background); */
+    /* border: none; */
+}
+#reroll:hover::before {
+    content: "⤿";
+}
+.darr {
+    position: relative;
+    animation-name: arrowBounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes arrowBounce {
+    0% {
+        top: -2px;
+    }
+    40% {
+        top: 2px;
+    }
+    100% {
+        top: -2px;
+    }
+}
 
+#work-page {
+    padding-top: 32px;
+}
 .work-preview {
     background-color: var(--background);
     border: 1px solid var(--accent);
@@ -85,12 +124,12 @@ main {
     border-radius: 12px;
     text-transform: uppercase;
     display: inline;
+    transition: 0.2s;
 }
 .action-link:hover {
     background-color: var(--background);
     color: var(--accent);
     border-color: var(--accent);
-    transition-duration: 500ms;
 }
 
 /* https://www.codehim.com/html5-css3/cards-stack-with-scrolling-effect-using-css/ */

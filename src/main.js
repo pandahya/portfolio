@@ -49,8 +49,7 @@ function Nav(props) {
             <ul id="navbar">
                 <li>
                     <a href="./index.html">
-                        <span style={{ fontSize: "0.75em" }}>✿</span> hyacinth
-                        weng
+                        <span style={{ fontSize: "1.2rem" }}>✿</span>
                         <span className="mobile-show mobile-flower">✿</span>
                     </a>
                 </li>
@@ -64,6 +63,11 @@ function Nav(props) {
                         <span className="flower">✿</span> about
                     </a>
                 </li>
+                {/* <li className="navbar">
+                    <a href="./scrapbook.html">
+                        <span className="flower">✿</span> scrapbook
+                    </a>
+                </li> */}
                 <button className="hamburger" onClick={() => openMenu()}>
                     <svg
                         width="20"
@@ -89,8 +93,14 @@ function Nav(props) {
                 <li className="hamburger">
                     <a href="./index.html#about">about</a>
                 </li>
+                <li className="hamburger">
+                    <a href="./index.html#about">about</a>
+                </li>
+                {/* <li className="hamburger">
+                    <a href="./scrapbook.html">scrapbook</a>
+                </li> */}
             </ul>
-            <div id="banner">THIS WEBSITE IS CURRENTLY UNDER CONSTRUCTION!</div>
+            {/* <div id="banner">THIS WEBSITE IS CURRENTLY UNDER CONSTRUCTION!</div> */}
         </React.Fragment>
     );
 }
@@ -118,7 +128,7 @@ function Footer() {
                     {modeText}
                 </button>
             </li>
-            <li id="timestamp">Last updated: 3 June 2024</li>
+            <li id="timestamp">Last updated: 23 June 2024</li>
             {/* <li>NYC based (UTC-04:00)</li> */}
         </React.Fragment>
     );

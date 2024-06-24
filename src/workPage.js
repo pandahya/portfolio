@@ -1,44 +1,69 @@
 // import React from 'react';
 // import ReactDOM from 'react-dom';
 
-function TOC(props) {
-    return (
-        // <div id="toc" className="mobile-hide">
-        <ul>
-            <li>
-                <h2>Contents</h2>
-            </li>
-            {props.toc.map((toc) => (
-                <li id={"#" + toc} key={toc}>
-                    <a href={"#" + toc}>{toc}</a>
-                </li>
-            ))}
-        </ul>
-        // </div>
-    );
-}
+// function TOC(props) {
+//     return (
+//         // <div id="toc" className="mobile-hide">
+//         <ul>
+//             <li>
+//                 <h2>Contents</h2>
+//             </li>
+//             {props.toc.map((toc) => (
+//                 <li id={"#" + toc} key={toc}>
+//                     <a href={"#" + toc}>{toc}</a>
+//                 </li>
+//             ))}
+//         </ul>
+//         // </div>
+//     );
+// }
+
+// function Header(props) {
+//     return (
+//         <React.Fragment>
+//             <figure>
+//                 <img id="header-img" src={props.header.img} />
+//             </figure>
+//             <h1>{props.header.project}</h1>
+//             <h2>{props.header.year}</h2>
+//             <div className="tags-container">
+//                 {props.header.tags.map((tag) => (
+//                     <h3 className={"tag " + tag} key={tag}>
+//                         {tag}
+//                     </h3>
+//                 ))}
+//             </div>
+//             <p>{props.header.description}</p>
+//             <p>Time: {props.header.time}</p>
+//         </React.Fragment>
+//     );
+// }
 
 function Header(props) {
     return (
         <React.Fragment>
+            <div id="header-info">
+                <div id="line1">
+                    <h1>{props.header.project}</h1>
+                    <h1>{props.header.year}</h1>
+                </div>
+                <div id="line2">
+                    <div className="tags-container">
+                        {props.header.tags.map((tag) => (
+                            <h2 className={"tag " + tag} key={tag}>
+                                {tag}
+                            </h2>
+                        ))}
+                    </div>
+                    <h3 id="work-type">{props.header.type}</h3>
+                </div>
+            </div>
             <figure>
                 <img id="header-img" src={props.header.img} />
             </figure>
-            <h1>{props.header.project}</h1>
-            <h2>{props.header.year}</h2>
-            <div className="tags-container">
-                {props.header.tags.map((tag) => (
-                    <h3 className={"tag " + tag} key={tag}>
-                        {tag}
-                    </h3>
-                ))}
-            </div>
-            <p>{props.header.description}</p>
-            <p>Time: {props.header.time}</p>
         </React.Fragment>
     );
 }
-
 const workData = [
     {
         toc: ["description", "images"],
@@ -59,6 +84,7 @@ const workData = [
             project: "Entropy Website Design",
             year: "2023",
             tags: ["webdesign"],
+            type: "@ Parsons School of Design",
             description:
                 "Designing the website for the Parsons Design & Technology 2023 Thesis showcase.",
             time: " 2 months",
@@ -126,7 +152,7 @@ const workData = [
     {
         toc: ["description", "research", "concept", "screens"],
         header: {
-            img: "../assets/imgs/icecream_mockup.jpg",
+            img: "../assets/imgs/icecream_mockup2.jpg",
             project: "find my ice cream",
             year: "2022",
             tags: ["uiux", "branding"],
@@ -234,12 +260,13 @@ const projNames = [
 
 for (let i = 0; i < projs.length; i++) {
     if (projs[i]) {
-        const tocRoot = ReactDOM.createRoot(document.getElementById(`toc`));
+        // const tocRoot = ReactDOM.createRoot(document.getElementById(`toc`));
         const headerRoot = ReactDOM.createRoot(
-            document.getElementById(`description`)
+            //id=header used to be id=description
+            document.getElementById(`header`)
         );
 
-        tocRoot.render(<TOC toc={workData[i].toc} />);
+        // tocRoot.render(<TOC toc={workData[i].toc} />);
         headerRoot.render(<Header header={workData[i].header} />);
     }
 }

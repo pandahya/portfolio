@@ -4,16 +4,20 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../styles/reset.css" />
-        <link rel="stylesheet" href="../styles/newstyle.css" />
-        <link rel="stylesheet" href="../styles/projectStyle.css" />
-        <!-- <link rel="stylesheet" href="../styles/style.css" /> -->
+        <link rel="stylesheet" type="text/css" href="../styles/reset.css" />
+        <link rel="stylesheet" type="text/css" href="../styles/newstyle.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="../styles/newprojectstyle.css"
+        />
+
         <link
             rel="shortcut icon"
             href="../assets/imgs/favicon.png"
             type="image/x-icon"
         />
-        <title>Find My Ice Cream</title>
+        <title>Find My Ice Cream | Hyacinth Weng</title>
     </head>
     <!-- change to production when ready to push -->
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
@@ -26,52 +30,115 @@
         crossorigin
     ></script>
     <style>
-        video,
+        /* video,
         img {
             border-radius: 20px;
+        } */
+        #project {
+            display: grid;
+            grid: auto / 1fr 0.5fr 0.5fr;
+            gap: 4rem;
+            padding: 0px 80px;
         }
     </style>
 
     <body>
         <nav id="nav"></nav>
         <main class="work" id="icecream">
-            <div id="toc" class="mobile-hide"></div>
             <section id="content">
-                <section id="description"></section>
-                <hr />
+                <section id="header"></section>
+                <section id="description">
+                    <div class="section-title">
+                        <h1>01</h1>
+                        <h1>project brief</h1>
+                    </div>
+                    <section class="section-contents" id="project">
+                        <div>
+                            <h2>ice cream?</h2>
+                            <p>
+                                When craving ice cream, trying to locate
+                                specific flavors can be tough. Find My Ice Cream
+                                makes hunting for that one specific flavor
+                                seamless and easy. The app puts the focus on ice
+                                cream flavors rather than brand or store. Search
+                                for flavors you crave, discover new tastes, and
+                                find exactly where to get it all.
+                            </p>
+                        </div>
+                        <div>
+                            <h2>task</h2>
+                            <p>Design an app for ice cream lovers.</p>
+                        </div>
+                        <div>
+                            <h2>tools</h2>
+                            <div id="tools-imgs">
+                                <img
+                                    class="tool-icon"
+                                    src="../assets/imgs/figma_icon.png"
+                                />
+                                <img
+                                    class="tool-icon"
+                                    src="../assets/imgs/illustrator_icon.svg"
+                                />
+                            </div>
+                        </div>
+                    </section>
+                </section>
                 <section id="research">
-                    <h1>research</h1>
-                    <img
-                        src="../assets/imgs/icecream_competitiveanalysis.png"
-                    />
-                    <img src="../assets/imgs/icecream_competitionmap.png" />
-                    <img src="../assets/imgs/icecream_surveys.png" />
-                    <img src="../assets/imgs/icecream_problemstatement.png" />
+                    <div class="section-title">
+                        <h1>02</h1>
+                        <h1>research</h1>
+                    </div>
+                    <section class="section-contents">
+                        <picture>
+                            <img
+                                src="../assets/imgs/icecream_competitiveanalysis.png"
+                            />
+                        </picture>
+                        <img src="../assets/imgs/icecream_competitionmap.png" />
+                        <img src="../assets/imgs/icecream_surveys.png" />
+                        <img
+                            src="../assets/imgs/icecream_problemstatement.png"
+                        />
+                    </section>
                 </section>
                 <section id="concept">
-                    <h1>concept</h1>
-                    <img src="../assets/imgs/icecream_visualdesign.png" />
-                    <img src="../assets/imgs/icecream_infoarch.png" />
+                    <div class="section-title">
+                        <h1>03</h1>
+                        <h1>concept</h1>
+                    </div>
+                    <section class="section-contents">
+                        <img src="../assets/imgs/icecream_visualdesign.png" />
+                        <img src="../assets/imgs/icecream_infoarch.png" />
+                    </section>
                 </section>
                 <section id="screens">
-                    <h1>screens</h1>
-                    <img src="../assets/imgs/icecream_mockup.jpg" />
-                    <img src="../assets/imgs/icecream_mockup2.jpg" />
-                    <img src="../assets/imgs/icecream_screens01.png" />
-                    <!-- <div> -->
-                    <video autoplay controls loop disablepictureinpicture>
-                        <source
-                            src="../assets/imgs/icecream_vid2.mp4"
-                            type="video/mp4"
-                        />
-                    </video>
-                    <!-- <img src="../assets/imgs/icecream_screens2.png" /> -->
-                    <!-- </div> -->
-                    <img src="../assets/imgs/icecream_screens02.png" />
-                    <!-- <img src="../assets/imgs/icecream_screens3.png" />
-                    <img src="../assets/imgs/icecream_screens4.png" /> -->
+                    <div class="section-title">
+                        <h1>04</h1>
+                        <h1>screens</h1>
+                    </div>
+                    <section class="section-contents">
+                        <img src="../assets/imgs/icecream_mockup.jpg" />
+                        <img src="../assets/imgs/icecream_mockup2.jpg" />
+                        <video autoplay controls loop disablepictureinpicture>
+                            <source
+                                src="../assets/imgs/icecream_vid2.mp4"
+                                type="video/mp4"
+                            />
+                            Your browser does not support video.
+                        </video>
+                        <img src="../assets/imgs/icecream_screens01.png" />
+                        <img src="../assets/imgs/icecream_screens02.png" />
+                    </section>
                 </section>
             </section>
+            <div id="endNav">
+                <a id="prevProj" href="./entropy.html">&larr; <br />entropy</a>
+                <button id="toTopBtn" type="button" onclick="scrollToTop()">
+                    to top
+                </button>
+                <a id="nextProj" href="./pose.html">&rarr;<br />pose </a>
+            </div>
         </main>
         <ul id="footer"></ul>
     </body>

@@ -44,6 +44,16 @@
     font-style: italic;
     src: url(../assets/fonts/PPEditorialNew-Italic.otf);
 }
+@font-face {
+    font-family: Dreamer TM;
+    font-style: normal;
+    src: url(../assets/fonts/Dreamer\ TM.woff2);
+}
+@font-face {
+    font-family: Offset TM;
+    font-style: normal;
+    src: url(../assets/fonts/Offset\ TM.woff2);
+}
 
 body {
     font-family: PP Neue Montreal;
@@ -60,7 +70,7 @@ main {
     /* max-width: 1024px; */
     /* min-height: calc(100vh - 12rem); */
     /* background-color: cornflowerblue; */
-    padding: 120px 0px;
+    padding: 80px 0px;
     margin: 0px 64px;
 }
 article {
@@ -75,6 +85,9 @@ img {
     width: 100%;
     border-radius: 2px;
     box-shadow: var(--shadow);
+}
+img:hover {
+    /* cursor: zoom-in; */
 }
 figure {
     margin-bottom: 1rem;
@@ -91,6 +104,7 @@ button {
     border-radius: 4px;
     padding: 2px 6px;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 h1 {
@@ -101,23 +115,27 @@ h1 {
 }
 h2 {
     font-size: 1.5rem;
-    margin: 1rem 0;
+    /* margin: 1rem 0; */
 }
 h3 {
     font-family: var(--pixelFont);
     font-size: 2rem;
     text-transform: uppercase;
 }
+p,
+ul {
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
 p {
     margin: 1rem 0;
-    line-height: 1.6rem;
 }
 .italics {
     font-style: italic;
 }
 .circle-list li {
-    /* list-style: circle; */
-    list-style-type: "✿ ";
+    margin-left: 1.5rem;
+    list-style-type: "✿  ";
 }
 .numbered li {
     list-style: decimal;
@@ -132,15 +150,12 @@ a:visited {
 }
 a:hover {
     color: var(--accent);
-    text-decoration: underline wavy;
+    /* text-decoration: underline wavy; */
     cursor: var(--pointerCursor);
 }
 
 h1 {
     font-family: PP Neuebit;
-}
-p {
-    font-size: 18px;
 }
 figcaption {
     margin: 0.2rem;
@@ -161,7 +176,6 @@ figcaption {
 }
 #navbar,
 #footer {
-    font-family: var(--pixelFont);
     display: flex;
     justify-content: space-between;
     /* background-color: red; */
@@ -175,19 +189,19 @@ figcaption {
     margin: 8px 40px;
 }
 #nav {
-    text-transform: uppercase;
     top: 0;
     /* height: 2.75rem; */
 }
 #navbar {
+    text-transform: lowercase;
+    font-family: var(--bodyFont);
     /* font-family: PP Eiko; */
     margin: 0px 40px;
     padding: 16px 0px 8px 0px;
     width: calc(100vw - 80px);
-    font-size: 1.6rem;
-    /* font-size: 1.2rem; */
+    font-size: 1rem;
     gap: 16px;
-    border-bottom: 1px dashed var(--oppositeBg);
+    border-bottom: 1px dashed var(--accent);
     /* background-color: slateblue; */
 }
 #side-menu {
@@ -207,9 +221,10 @@ figcaption {
     display: none;
 }
 #footer {
+    font-family: var(--pixelFont);
     font-size: 1.3rem;
     bottom: 0;
-    border-top: 1px dashed var(--oppositeBg);
+    border-top: 1px dashed var(--accent);
     /* background-color: red; */
 }
 #screenMode {
@@ -242,7 +257,7 @@ figcaption {
     display: block;
 }
 .flower {
-    font-size: 0.75em;
+    font-size: 1.2rem;
     visibility: hidden;
     color: var(--accent);
 }
@@ -252,7 +267,6 @@ figcaption {
     gap: 6px;
     --tag-wh: 12px;
     --uiux-color: #87cefa;
-    --webedesign-color: #afff8e;
     --branding-color: #ad9aff;
     --graphic-color: gold;
 }
@@ -410,9 +424,10 @@ figcaption {
 
 :root {
     --pixelFont: "PP NeueBit";
+    --bodyFont: "PP Neue Montreal";
     --h1Size: 4rem;
     --pixelFontWeight: 400;
-    --navHeight: 52px;
+    --navHeight: 45px;
 }
 
 :root[color-mode="pixel"] {
@@ -425,6 +440,7 @@ figcaption {
     /* --backgroundImg: url(../assets/imgs/pixelsbg.png); */
     --backgroundImg: none;
     --oppositeBg: #f1f0e7;
+    --oppositeBg50: #f1f0e780;
     --oppositeText: #262626;
     --tagOutline: 1px solid var(--text);
     /* --tagTransform: none; */
@@ -433,6 +449,7 @@ figcaption {
     --blendMode: normal;
     --defaultCursor: auto;
     --pointerCursor: pointer;
+    --webedesign-color: #afff8e;
 }
 :root[color-mode="paper"] {
     --background: #f1f0e7;
@@ -452,4 +469,5 @@ figcaption {
     --blendMode: luminosity;
     --defaultCursor: url(../assets/imgs/pencilCursor.png), auto;
     --pointerCursor: url(../assets/imgs/inspectCursor.png), auto;
+    --webedesign-color: #3ac600;
 }

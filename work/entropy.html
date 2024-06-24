@@ -4,17 +4,21 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../styles/reset.css" />
-        <link rel="stylesheet" href="../styles/newstyle.css" />
-        <link rel="stylesheet" href="../styles/projectStyle.css" />
+        <link rel="stylesheet" type="text/css" href="../styles/reset.css" />
+        <link rel="stylesheet" type="text/css" href="../styles/newstyle.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="../styles/newprojectstyle.css"
+        />
+
         <link
             rel="shortcut icon"
             href="../assets/imgs/favicon.png"
             type="image/x-icon"
         />
-        <title>entropy</title>
+        <title>Entropy | Hyacinth Weng</title>
     </head>
-    <!-- change to production when ready to push -->
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script
         src="https://unpkg.com/react@18/umd/react.development.js"
@@ -24,320 +28,220 @@
         src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
         crossorigin
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
     <style>
-        #tasks {
+        #project {
             display: grid;
-            grid: 1fr / 1fr 1fr 1fr;
-            gap: 16px;
+            grid: auto auto / 1fr 0.5fr 0.5fr;
+            gap: 4rem;
+            padding: 0px 80px;
         }
-        #wireframes-home {
-            grid: auto auto auto / 1fr 1fr 1fr;
-        }
-        #home-1 {
-            grid-area: 1 / 1 / 4 / 1;
-        }
-        #home-3 {
-            grid-area: 2 / 2 / 3 / 4;
-        }
-        #home-4 {
-            grid-area: 3 / 2 / 4 / 4;
-        }
-        #wireframes-projects {
-            grid: auto auto auto / 1fr 1fr 1fr;
-        }
-        #projects-1 {
-            grid-area: 1 / 2 / 2 / 4;
-        }
-        #projects-2 {
-            grid-area: 2 / 1 / 3 / 3;
-        }
-        #projects-3 {
-            grid-area: 3 / 1 / 4 / 2;
-        }
-        #projects-4 {
-            grid-area: 3 / 2 / 4 / 3;
-        }
-        #projects-5 {
-            grid-area: 3 / 3 / 4 / 4;
-        }
-        #wireframes-events {
-            grid: auto / 1fr 1fr 1fr;
-        }
-        #events-2 {
-            grid-area: 1 / 2 / 2 / 4;
-        }
-        #wireframes-reader {
-            grid: auto auto auto / 1fr 1fr 1fr;
-        }
-        #reader-4 {
-            grid-area: 2 / 2 / 3 / 4;
-        }
-        #reader-5 {
-            grid-area: 3 / 1 / 4 / 3;
-        }
-        #wireframes-people {
-            grid: auto / 1fr 1fr 1fr;
-        }
-        #people-1 {
-            grid-area: 1 / 1 / 2 / 3;
-        }
-        #wireframes-ackn {
-            grid: auto / 1fr 1fr 1fr;
-        }
-        #ackn-1 {
-            grid-area: 1 / 1 / 2 / 3;
+        #descomp-flex {
+            display: flex;
+            flex-direction: rows;
+            justify-content: space-between;
         }
     </style>
-
     <body>
         <nav id="nav"></nav>
         <main class="work" id="entropy">
-            <div id="toc" class="mobile-hide"></div>
             <section id="content">
-                <section id="description"></section>
-                <section id="links">
-                    <p>
-                        <b>Role:</b> webdesign, brand application & consistency,
-                        microinteraction design
-                    </p>
-                    <p>
-                        <a
-                            href="https://parsons.edu/dt-2023/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >link to website &nearr;
-                        </a>
-                        &emsp;
-                        <a
-                            href="https://www.figma.com/file/ZLlhZPew8lo3IYZyJ45lpO/EOY-Website?type=design&node-id=421%3A1683&t=qRHFnaM3fRaOS8jv-1"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >link to Figma &nearr;</a
-                        >
-                    </p>
-                </section>
-                <hr />
-                <section id="project">
-                    <div class="sectionTitle">
+                <section id="header"></section>
+                <section id="description">
+                    <div class="section-title">
                         <h1>01</h1>
-                        <h1>project</h1>
+                        <h1>project brief</h1>
                     </div>
-                    <h2>dt thesis showcase</h2>
-                    <p>
-                        Every year, the Design & Technology department at
-                        Parsons organizes a series of events to celebrate and
-                        showcase the graduating students and thesis projects of
-                        that year (BFA + MFA). The events are organized by
-                        committees of students in the graduating class and a
-                        faculty advisor, and include a pop up show, screening,
-                        symposium, reader/publication, and website.
-                    </p>
-                    <p>
-                        <i>Entropy</i> was chosen as the theme of this year’s
-                        showcase to embody the chaos and resilience our class of
-                        graduates experienced during our time in the program.
-                        <i>Entropy</i>, a physics concept, refers to a measure
-                        or state of disorder, randomness, or uncertainty. But
-                        for us, it represents the beauty of chaos and the power
-                        of creativity.
-                    </p>
-                    <h2>task</h2>
-                    <div id="tasks">
-                        <p>
-                            01
-                            <br />
-                            Design a website that is user friendly for a wide
-                            range of audiences including parents, students,
-                            employers, and industry colleagues.
-                        </p>
-                        <p>
-                            02
-                            <br />
-                            The website design needs to clearly showcase all
-                            projects, students, and events.
-                        </p>
-                        <p>
-                            03
-                            <br />
-                            The visual design must be consistent with brand
-                            guidelines.
-                        </p>
-                    </div>
+                    <section class="section-contents" id="project">
+                        <div>
+                            <h2>background</h2>
+                            <p>
+                                Every year, the Design & Technology department
+                                at Parsons organizes a series of events to
+                                celebrate and showcase the graduating students
+                                and thesis projects of that year (BFA + MFA).
+                                The events are organized by committees of
+                                students in the graduating class and a faculty
+                                advisor, and include a pop up show, screening,
+                                symposium, reader/publication, and website.
+                            </p>
+                            <p>
+                                Entropy was chosen as the theme of this year’s
+                                showcase to embody the chaos and resilience our
+                                class of graduates experienced during our time
+                                in the program. Entropy, a physics concept,
+                                refers to a measure or state of disorder,
+                                randomness, or uncertainty. But for us, it
+                                represents the beauty of chaos and the power of
+                                creativity.
+                            </p>
+                        </div>
+                        <div>
+                            <h2>task</h2>
+                            <p>
+                                01
+                                <br />
+                                Design a website that is user friendly for a
+                                wide range of audiences including parents,
+                                students, employers, and industry colleagues.
+                            </p>
+                            <p>
+                                02
+                                <br />
+                                The website design needs to clearly showcase all
+                                projects, students, and events.
+                            </p>
+                            <p>
+                                03
+                                <br />
+                                The visual design must be consistent with brand
+                                guidelines, referencinga sample poster design by
+                                the branding committee. (&rarr;)
+                            </p>
+                        </div>
+                        <!-- <div> -->
+                        <img src="../assets/imgs/entropy_poster.png" />
+                        <!-- </div> -->
+                        <div>
+                            <h2>role</h2>
+                            <p style="margin-bottom: 0">Web Design Team Lead</p>
+                            <ul class="circle-list">
+                                <li>
+                                    create development-ready Figma layouts with
+                                    existing brand guidelines
+                                </li>
+                                <li>organize and gather website contents</li>
+                                <li>
+                                    lead and facilitate communication between
+                                    and within functional teams
+                                </li>
+                                <li>
+                                    collaborate with developer and bug test
+                                    final website
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2>tools</h2>
+                            <div id="tools-imgs">
+                                <img
+                                    class="tool-icon"
+                                    src="../assets/imgs/figma_icon.png"
+                                />
+                                <img
+                                    class="tool-icon"
+                                    src="../assets/imgs/wordpress_icon.png"
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <h2>link</h2>
+                            <p>
+                                <a
+                                    href="https://parsons.edu/dt-2023/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >Live Website &nearr;
+                                    <br />
+                                    https://parsons.edu/dt-2023/</a
+                                >
+                            </p>
+                        </div>
+                    </section>
                 </section>
-                <section id="components">
-                    <div class="sectionTitle">
+                <section id="screens">
+                    <div class="section-title">
                         <h1>02</h1>
-                        <h1>components</h1>
+                        <h1>screens</h1>
                     </div>
-                    <h2>site map</h2>
-                    <figure>
-                        <img src="../assets/imgs/entropy_sitemap.png" />
-                    </figure>
-                    <h2>colors</h2>
-                    <figure>
-                        <img src="../assets/imgs/entropy_colors.png" />
-                    </figure>
-                    <h2>typography</h2>
-                    <figure>
-                        <img src="../assets/imgs/entropy_typography.png" />
-                    </figure>
-                    <h2>grid system</h2>
-                    <figure>
-                        <img src="../assets/imgs/entropy_grids.png" />
-                    </figure>
-                    <h2>ui kit</h2>
-                    <figure>
-                        <img src="../assets/imgs/entropy_uikit.png" />
-                    </figure>
+                    <section class="section-contents">
+                        <img src="../assets/imgs/entropy_desktoprender.jpg" />
+                        <img src="../assets/imgs/entropy_desktopgrid.jpg" />
+                        <div class="mini-section">
+                            <div class="mini-section-title">
+                                <h2>home page</h2>
+                                <hr />
+                            </div>
+                            <img src="../assets/imgs/entropy_home.png" />
+                        </div>
+                        <div class="mini-section">
+                            <div class="mini-section-title">
+                                <h2>projects page</h2>
+                                <hr />
+                            </div>
+                            <img src="../assets/imgs/entropy_projects.png" />
+                        </div>
+                        <div class="mini-section">
+                            <div class="mini-section-title">
+                                <h2>reader index & project page</h2>
+                                <hr />
+                            </div>
+                            <img src="../assets/imgs/entropy_reader.png" />
+                        </div>
+                        <div class="mini-section">
+                            <div class="mini-section-title">
+                                <h2>events page</h2>
+                                <hr />
+                            </div>
+                            <img src="../assets/imgs/entropy_events.png" />
+                        </div>
+                        <div class="mini-section">
+                            <div class="mini-section-title">
+                                <h2>people & acknowledgements page</h2>
+                                <hr />
+                            </div>
+                            <img src="../assets/imgs/entropy_peopleackn.png" />
+                        </div>
+                    </section>
                 </section>
-                <section id="wireframes">
-                    <div class="sectionTitle">
+                <section id="design-components">
+                    <div class="section-title">
                         <h1>03</h1>
-                        <h1>wireframes</h1>
+                        <h1>design components</h1>
                     </div>
-                    <figure>
-                        <img src="../assets/imgs/entropy_home-desktop.png" />
-                    </figure>
-                    <div class="wireframes-grid" id="wireframes-home">
-                        <figure id="home-1">
-                            <img src="../assets/imgs/entropy_home-mobile.png" />
-                        </figure>
-                        <figure id="home-2">
-                            <img src="../assets/imgs/entropy_menu-mobile.png" />
-                        </figure>
-                        <figure id="home-3">
-                            <img src="../assets/imgs/entropy_home-tablet.png" />
-                        </figure>
-                        <figure id="home-4">
-                            <img src="../assets/imgs/entropy_menu-tablet.png" />
-                        </figure>
-                    </div>
-                    <figure>
-                        <img
-                            src="../assets/imgs/entropy_projects-desktop.png"
-                        />
-                    </figure>
-                    <figure>
-                        <img
-                            src="../assets/imgs/entropy_indivproj-desktop.png"
-                        />
-                    </figure>
-                    <div class="wireframes-grid" id="wireframes-projects">
-                        <figure id="projects-1">
-                            <img
-                                src="../assets/imgs/entropy_projects-tablet.png"
-                            />
-                        </figure>
-                        <figure id="projects-2">
-                            <img
-                                src="../assets/imgs/entropy_indivproj-tablet.png"
-                            />
-                        </figure>
-                        <figure id="projects-3">
-                            <img
-                                src="../assets/imgs/entropy_projectscol-mobile.png"
-                            />
-                        </figure>
-                        <figure id="projects-4">
-                            <img
-                                src="../assets/imgs/entropy_projectsop-mobile.png"
-                            />
-                        </figure>
-                        <figure id="projects-5">
-                            <img
-                                src="../assets/imgs/entropy_indivproj-mobile.png"
-                            />
-                        </figure>
-                    </div>
-                    <figure>
-                        <img
-                            src="../assets/imgs/entropy_eventscol-desktop.png"
-                        />
-                    </figure>
-                    <figure>
-                        <img
-                            src="../assets/imgs/entropy_eventsop-desktop.png"
-                        />
-                    </figure>
-                    <div class="wireframes-grid" id="wireframes-events">
-                        <figure id="events-1">
-                            <img
-                                src="../assets/imgs/entropy_events-mobile.png"
-                            />
-                        </figure>
-                        <figure id="events-2">
-                            <img
-                                src="../assets/imgs/entropy_events-tablet.png"
-                            />
-                        </figure>
-                    </div>
-                    <figure>
-                        <img src="../assets/imgs/entropy_reader-desktop.png" />
-                    </figure>
-                    <figure>
-                        <img
-                            src="../assets/imgs/entropy_readerproj-desktop.png"
-                        />
-                    </figure>
-                    <div class="wireframes-grid" id="wireframes-reader">
-                        <figure id="reader-1">
-                            <img
-                                src="../assets/imgs/entropy_reader-mobile.png"
-                            />
-                        </figure>
-                        <figure id="reader-2">
-                            <img
-                                src="../assets/imgs/entropy_readerproj1-mobile.png"
-                            />
-                        </figure>
-                        <figure id="reader-3">
-                            <img
-                                src="../assets/imgs/entropy_readerproj2-mobile.png"
-                            />
-                        </figure>
-                        <figure id="reader-4">
-                            <img
-                                src="../assets/imgs/entropy_reader-tablet.png"
-                            />
-                        </figure>
-                        <figure id="reader-5">
-                            <img
-                                src="../assets/imgs/entropy_readerproj-tablet.png"
-                            />
-                        </figure>
-                    </div>
-                    <figure>
-                        <img src="../assets/imgs/entropy_people-desktop.png" />
-                    </figure>
-                    <div class="wireframes-grid" id="wireframes-people">
-                        <figure id="people-1">
-                            <img
-                                src="../assets/imgs/entropy_people-tablet.png"
-                            />
-                        </figure>
-                        <figure id="people-2">
-                            <img
-                                src="../assets/imgs/entropy_people-mobile.png"
-                            />
-                        </figure>
-                    </div>
-                    <figure>
-                        <img src="../assets/imgs/entropy_ackn-desktop.png" />
-                    </figure>
-                    <div class="wireframes-grid" id="wireframes-ackn">
-                        <figure id="ackn-1">
-                            <img src="../assets/imgs/entropy_ackn-tablet.png" />
-                        </figure>
-                        <figure id="ackn-2">
-                            <img src="../assets/imgs/entropy_ackn-mobile.png" />
-                        </figure>
-                    </div>
+                    <section class="section-contents">
+                        <div id="descomp-flex">
+                            <div>
+                                <h2>site map</h2>
+                                <img src="../assets/imgs/entropy_sitemap.png" />
+                            </div>
+                            <div>
+                                <h2>colors</h2>
+                                <img src="../assets/imgs/entropy_colors.png" />
+                            </div>
+                        </div>
+                        <div class="mini-section">
+                            <h2>typography</h2>
+                            <img src="../assets/imgs/entropy_typography.png" />
+                        </div>
+                        <div class="mini-section">
+                            <h2>ui kit</h2>
+                            <img src="../assets/imgs/entropy_uikit.png" />
+                        </div>
+                        <div class="mini-section">
+                            <h2>grid system</h2>
+                            <img src="../assets/imgs/entropy_grids.png" />
+                        </div>
+                    </section>
                 </section>
             </section>
+            <div id="endNav">
+                <!-- <a id="prevProj" href="./icecream.html">&larr; <br />none</a> -->
+                <button id="toTopBtn" type="button" onclick="scrollToTop()">
+                    to top
+                </button>
+                <a id="nextProj" href="./icecream.html"
+                    >&rarr;<br />find my ice cream
+                </a>
+            </div>
         </main>
         <ul id="footer"></ul>
     </body>
-
     <script type="text/babel" src="../../src/navFromWork.js"></script>
     <script type="text/babel" src="../../src/workPage.js"></script>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+        }
+    </script>
 </html>

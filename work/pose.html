@@ -1,152 +1,257 @@
 <!DOCTYPE html>
 <html lang="en" color-mode="pixel">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/reset.css">
-    <link rel="stylesheet" href="../styles/newstyle.css" />
-    <link rel="stylesheet" href="../styles/projectStyle.css" />
-    <!-- <link rel="stylesheet" href="../styles/style.css"> -->
-    <link rel="shortcut icon" href="../assets/imgs/favicon.png" type="image/x-icon">
-    <title>POSE</title>
-</head>
-<!-- change to production when ready to push -->
-<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="../styles/reset.css" />
+        <link rel="stylesheet" type="text/css" href="../styles/newstyle.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="../styles/newprojectstyle.css"
+        />
 
-<body>
-    <nav id="nav"></nav>
-    <main class="work" id="pose">
-        <div id="toc" class="mobile-hide"></div>
-        <section id="content">
-            <section id="description"></section>
-            <hr></hr>
-            <section id="research">
-                <h1>research</h1>
-                <p>
-                    If I wanted my brand to be a strong competitor to Kodak, I needed to do research into their brand strategy and the competitive landscape.
-                </p>
-            </section>
-            <section id="concept">
-                <h1>concept</h1>
-                <p></p>
-                    <div class="gallery three">
-                    <figure>
-                    <img src="../assets/imgs/pose_vintage.jpg"/>
-                    <figcaption>Vintage</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../assets/imgs/pose_approachable.jpg"/>
-                        <figcaption>Approachable</figcaption>
-                    </figure>
-                    <figure>
-                    <img src="../assets/imgs/pose_innovation.jpg"/>
-                        <figcaption>Innovation</figcaption>
-                    </figure>
-                </div>
-                <p></p>
-                <figure>
-                    <img src="../assets/imgs/pose_presentation3.jpg"/>
-                </figure>
-                <figure>
-                    <img src="../assets/imgs/pose_presentation4.jpg"/>
-                </figure>
-                <figure>
-                    <img src="../assets/imgs/pose_presentation5.jpg"/>
-                </figure>
-            </section>
-            <section id="brand-strategy">
-                <h1>brand strategy</h1>
-                <figure>
-                    <img src="../assets/imgs/pose_presentation7.jpg"/>
-                </figure>
-                <figure>
-                    <img src="../assets/imgs/pose_presentation8.jpg"/>
-                </figure>
-                <figure>
-                    <img src="../assets/imgs/pose_presentation9.jpg"/>
-                </figure>
-            </section>
-            <section id="visual-identity">
-                <h1>visual identity</h1>
-                <figure>
-                    <img src="../assets/imgs/pose_presentation11.jpg"/>
-                </figure>
-                <figure>
-                    <img src="../assets/imgs/pose_presentation12.jpg"/>
-                </figure>
-                <figure>
-                    <img src="../assets/imgs/pose_presentation13.jpg"/>
-                </figure>
-                <figure>
-                    <img src="../assets/imgs/pose_presentation14.jpg"/>
-                </figure>
-                <figure>
-                    <img src="../assets/imgs/pose_presentation15.jpg"/>
-                </figure>
-            </section>
-            <section id="verbal-identity">
-                <h1>verbal identity</h1>
-                <p>
-                    I wanted the language to be down-to-earth, casual, and relatable, but also descriptive in capturing the smaller everyday emotions and experiences. Ideally, there would be many more of these types of anectdote style text snippets POSE would be using.
-                </p>
-                <figure>
-                    <img src="../assets/imgs/pose_presentation17.jpg"/>
-                </figure>
-            </section>
-            <section id="style-frames">
-                <h1>style frames</h1>
-                <figure>
-                    <img src="../assets/imgs/pose_presentation19.jpg"/>
-                </figure>
-                <figure>
-                    <img src="../assets/imgs/pose_presentation20.jpg"/>
-                </figure>
-                <figure>
-                    <img src="../assets/imgs/pose_presentation21.jpg"/>
-                </figure>
-                <figure>
-                    <img src="../assets/imgs/pose_presentation22.jpg"/>
-                </figure>
-            </section>
-            <section id="applications">
-                <h1>brand applications</h1>
-                <figure>
-                    <img src="../assets/imgs/pose_presentation24.jpg"/>
-                    <figcaption>Website</figcaption>
-                </figure>
-                <figure>
-                    <img src="../assets/imgs/pose_presentation25.jpg"/>
-                    <figcaption>Instagram</figcaption>
-                </figure>
-                <figure>
-                    <img src="../assets/imgs/pose_presentation26.jpg"/>
-                    <figcaption>Film Packaging</figcaption>
-                </figure>
-                <figure>
-                    <img src="../assets/imgs/pose_presentation27.jpg"/>
-                    <figcaption>Sticker Sheet</figcaption>
-                </figure>
-                <figure>
-                    <img src="../assets/imgs/pose_presentation28.jpg"/>
-                    <figcaption>Photo Album</figcaption>
-                </figure>
-                <figure>
-                    <img src="../assets/imgs/pose_presentation29.jpg"/>
-                    <figcaption>Signage</figcaption>
-                </figure>
-                <figure>
-                    <img src="../assets/imgs/pose_presentation30.jpg"/>
-                    <figcaption>Posters</figcaption>
-                </figure>
-            </section>
-        </section>
-    </main>
-    <ul id="footer"></ul>
-</body>
+        <link
+            rel="shortcut icon"
+            href="../assets/imgs/favicon.png"
+            type="image/x-icon"
+        />
+        <title>POSE | Hyacinth Weng</title>
+    </head>
+    <!-- change to production when ready to push -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script
+        src="https://unpkg.com/react@18/umd/react.development.js"
+        crossorigin
+    ></script>
+    <script
+        src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+        crossorigin
+    ></script>
 
-<script type="text/babel" src="../../src/navFromWork.js"></script>
-<script type="text/babel" src="../../src/workPage.js"></script>
+    <style>
+        #project {
+            display: grid;
+            grid: auto / 1fr 0.5fr 0.5fr;
+            gap: 4rem;
+            padding: 0px 80px;
+        }
+    </style>
+    <body>
+        <nav id="nav"></nav>
+        <main class="work" id="pose">
+            <section id="content">
+                <section id="header"></section>
+                <section id="description">
+                    <div class="section-title">
+                        <h1>01</h1>
+                        <h1>project brief</h1>
+                    </div>
+                    <section class="section-contents" id="project">
+                        <div>
+                            <h2>background</h2>
+                            <p>
+                                POSE is a fictional brand creating an inviting
+                                culture around photography for those swept up by
+                                the fast-paced modern society by offering
+                                affordable and accessible film and cameras. POSE
+                                allows you to slow down, take a break, and
+                                appreciate the smaller moments in life.
+                            </p>
+                        </div>
+                        <div>
+                            <h2>task</h2>
+                            <p>Research and develop a new camera brand.</p>
+                        </div>
+                        <div>
+                            <h2>tools</h2>
+                            <div id="tools-imgs">
+                                <img
+                                    class="tool-icon"
+                                    src="../assets/imgs/indesign_icon.svg"
+                                />
+                                <img
+                                    class="tool-icon"
+                                    src="../assets/imgs/illustrator_icon.svg"
+                                />
+                                <img
+                                    class="tool-icon"
+                                    src="../assets/imgs/photoshop_icon.svg"
+                                />
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <!-- <section id="research">
+                    <h1>research</h1>
+                    <p>
+                        If I wanted my brand to be a strong competitor to Kodak,
+                        I needed to do research into their brand strategy and
+                        the competitive landscape.
+                    </p>
+                </section> -->
+                <section id="concept">
+                    <div class="section-title">
+                        <h1>01</h1>
+                        <h1>brand concept</h1>
+                    </div>
+                    <!-- <div class="gallery three">
+                        <figure>
+                            <img src="../assets/imgs/pose_vintage.jpg" />
+                            <figcaption>Vintage</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="../assets/imgs/pose_approachable.jpg" />
+                            <figcaption>Approachable</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="../assets/imgs/pose_innovation.jpg" />
+                            <figcaption>Innovation</figcaption>
+                        </figure>
+                    </div> -->
+                    <section class="section-contents">
+                        <figure>
+                            <img src="../assets/imgs/pose_presentation3.jpg" />
+                        </figure>
+                        <figure>
+                            <img src="../assets/imgs/pose_presentation4.jpg" />
+                        </figure>
+                        <figure>
+                            <img src="../assets/imgs/pose_presentation5.jpg" />
+                        </figure>
+                    </section>
+                </section>
+                <section id="brand-strategy">
+                    <div class="section-title">
+                        <h1>02</h1>
+                        <h1>brand strategy</h1>
+                    </div>
+                    <section class="section-contents">
+                        <figure>
+                            <img src="../assets/imgs/pose_presentation7.jpg" />
+                        </figure>
+                        <figure>
+                            <img src="../assets/imgs/pose_presentation8.jpg" />
+                        </figure>
+                        <figure>
+                            <img src="../assets/imgs/pose_presentation9.jpg" />
+                        </figure>
+                    </section>
+                </section>
+                <section id="visual-identity">
+                    <div class="section-title">
+                        <h1>03</h1>
+                        <h1>visual identity</h1>
+                    </div>
+                    <section class="section-contents">
+                        <figure>
+                            <img src="../assets/imgs/pose_presentation11.jpg" />
+                        </figure>
+                        <figure>
+                            <img src="../assets/imgs/pose_presentation12.jpg" />
+                        </figure>
+                        <figure>
+                            <img src="../assets/imgs/pose_presentation13.jpg" />
+                        </figure>
+                        <figure>
+                            <img src="../assets/imgs/pose_presentation14.jpg" />
+                        </figure>
+                        <figure>
+                            <img src="../assets/imgs/pose_presentation15.jpg" />
+                        </figure>
+                    </section>
+                </section>
+                <section id="verbal-identity">
+                    <div class="section-title">
+                        <h1>04</h1>
+                        <h1>verbal identity</h1>
+                    </div>
+                    <section class="section-contents">
+                        <p>
+                            I wanted the language to be down-to-earth, casual,
+                            and relatable, but also descriptive in capturing the
+                            smaller everyday emotions and experiences. Ideally,
+                            there would be many more of these types of anectdote
+                            style text snippets POSE would be using.
+                        </p>
+                        <figure>
+                            <img src="../assets/imgs/pose_presentation17.jpg" />
+                        </figure>
+                    </section>
+                </section>
+                <section id="style-frames">
+                    <div class="section-title">
+                        <h1>05</h1>
+                        <h1>style frames</h1>
+                    </div>
+                    <section class="section-contents">
+                        <figure>
+                            <img src="../assets/imgs/pose_presentation19.jpg" />
+                        </figure>
+                        <figure>
+                            <img src="../assets/imgs/pose_presentation20.jpg" />
+                        </figure>
+                        <figure>
+                            <img src="../assets/imgs/pose_presentation21.jpg" />
+                        </figure>
+                        <figure>
+                            <img src="../assets/imgs/pose_presentation22.jpg" />
+                        </figure>
+                    </section>
+                </section>
+                <section id="applications">
+                    <div class="section-title">
+                        <h1>06</h1>
+                        <h1>brand applications</h1>
+                    </div>
+                    <section class="section-contents">
+                        <figure>
+                            <img src="../assets/imgs/pose_presentation24.jpg" />
+                            <figcaption>Website</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="../assets/imgs/pose_presentation25.jpg" />
+                            <figcaption>Instagram</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="../assets/imgs/pose_presentation26.jpg" />
+                            <figcaption>Film Packaging</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="../assets/imgs/pose_presentation27.jpg" />
+                            <figcaption>Sticker Sheet</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="../assets/imgs/pose_presentation28.jpg" />
+                            <figcaption>Photo Album</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="../assets/imgs/pose_presentation29.jpg" />
+                            <figcaption>Signage</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="../assets/imgs/pose_presentation30.jpg" />
+                            <figcaption>Posters</figcaption>
+                        </figure>
+                    </section>
+                </section>
+            </section>
+            <div id="endNav">
+                <a id="prevProj" href="./icecream.html"
+                    >&larr; <br />find my ice cream</a
+                >
+                <button id="toTopBtn" type="button" onclick="scrollToTop()">
+                    to top
+                </button>
+                <!-- <a id="nextProj" href="./icecream.html"
+                    >&rarr;<br />ice cream app
+                </a> -->
+            </div>
+        </main>
+        <ul id="footer"></ul>
+    </body>
+
+    <script type="text/babel" src="../../src/navFromWork.js"></script>
+    <script type="text/babel" src="../../src/workPage.js"></script>
 </html>

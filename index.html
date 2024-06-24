@@ -30,11 +30,18 @@
         <nav id="nav"></nav>
         <!-- <div id="banner">THIS WEBSITE IS CURRENTLY UNDER CONSTRUCTION!</div> -->
         <main id="home">
-            <h1>Hi, I'm <span>Hyacinth Weng!</span> ✿</h1>
-            <h2>
-                I'm a designer and creative coder with a passion for bringing
-                playful experiences to life.
-            </h2>
+            <div id="nameContainer">
+                <h1 id="name">Hyacinth Weng</h1>
+                <button id="reroll" type="button" onclick="rerollFont()">
+                    reroll
+                </button>
+            </div>
+            <h2>designer, creative coder</h2>
+            <!-- <h4>(click to plant flowers)</h4> -->
+            <p>
+                <span class="darr">&darr;</span> I create playful experiences
+                <span class="darr">&darr;</span>
+            </p>
         </main>
         <main id="work-page">
             <section id="work-root"></section>
@@ -129,6 +136,53 @@
                 image(hyaFace, sectionWidth / 2, sectionWidth / 2);
                 text("Click to draw on my face!", width / 2, 20);
             }
+        }
+    </script>
+    <script>
+        const name = document.querySelector("#name");
+        let rolled = false;
+        let fontNum = 4;
+        let prevRandomNum = fontNum - 1;
+        let newFont;
+        function rerollFont() {
+            if (rolled) {
+                fontNum = 4;
+            } else {
+                fontNum = 5;
+            }
+            let randomNum = Math.floor(Math.random() * fontNum);
+            if (prevRandomNum == randomNum && randomNum < fontNum) {
+                // let randomNum = Math.floor(Math.random() * fontNum);
+                randomNum++;
+            } else if (prevRandomNum == randomNum && randomNum == fontNum) {
+                randomNum--;
+            }
+            // console.log(
+            //     `prev rand: ${prevRandomNum} // new rand: ${randomNum}`
+            // );
+            randomFont(randomNum);
+        }
+        function randomFont(randomNum) {
+            switch (randomNum) {
+                case 0:
+                    newFont = "PP Neuebit";
+                    break;
+                case 1:
+                    newFont = "PP Editorial New";
+                    break;
+                case 2:
+                    newFont = "Dreamer TM";
+                    break;
+                case 3:
+                    newFont = "Offset TM";
+                    break;
+                case 4:
+                    newFont = "PP Mondwest";
+                    break;
+            }
+            name.style.fontFamily = newFont;
+            rolled = true;
+            prevRandomNum = randomNum;
         }
     </script>
 </html>
