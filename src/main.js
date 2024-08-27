@@ -100,7 +100,7 @@ function Nav(props) {
                     <a href="./scrapbook.html">scrapbook</a>
                 </li> */}
             </ul>
-            {/* <div id="banner">THIS WEBSITE IS CURRENTLY UNDER CONSTRUCTION!</div> */}
+            <div id="banner">THIS WEBSITE IS CURRENTLY UNDER CONSTRUCTION!</div>
         </React.Fragment>
     );
 }

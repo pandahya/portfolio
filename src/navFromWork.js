@@ -66,7 +66,7 @@ function WorkNav(props) {
                     <a href="../index.html#about">about</a>
                 </li>
             </ul>
-            {/* <div id="banner">THIS WEBSITE IS CURRENTLY UNDER CONSTRUCTION!</div> */}
+            <div id="banner">THIS WEBSITE IS CURRENTLY UNDER CONSTRUCTION!</div>
         </React.Fragment>
     );
 }
