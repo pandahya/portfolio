@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" color-mode="pixel">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="/styles/reset.css" />
+        <link rel="stylesheet" type="text/css" href="/styles/newstyle.css" />
+        <link rel="stylesheet" type="text/css" href="/styles/indexstyle.css" />
+
+        <link
+            rel="shortcut icon"
+            href="./assets/imgs/favicon.png"
+            type="image/x-icon"
+        />
+        <title>hyacinth weng</title>
+    </head>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script
+        src="https://unpkg.com/react@18/umd/react.development.js"
+        crossorigin
+    ></script>
+    <script
+        src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+        crossorigin
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+
+    <body>
+        <nav id="nav"></nav>
+        <!-- <div id="banner">THIS WEBSITE IS CURRENTLY UNDER CONSTRUCTION!</div> -->
+        <main id="home">
+            <div id="nameContainer">
+                <h1 id="name">Hyacinth Weng</h1>
+                <button id="reroll" type="button" onclick="rerollFont()">
+                    reroll
+                </button>
+            </div>
+            <h2>designer, creative coder</h2>
+            <!-- <h4>(click to plant flowers)</h4> -->
+            <p>
+                <span class="darr">&darr;</span> I create playful experiences
+                <span class="darr">&darr;</span>
+            </p>
+        </main>
+        <main id="work-page">
+            <section id="work-root"></section>
+        </main>
+        <main id="about">
+            <section>
+                <h1>hyacinth weng <span>✿</span></h1>
+                <!-- <h3>
+                    <a href="mailto:hyacinthweng@gmail.com"
+                        >&nearr; hyacinthweng@gmail.com</a
+                    >
+                </h3> -->
+                <p>
+                    I graduated from Parsons School of Design with a BFA in
+                    Design & Technology and a minor in Communication Design. I
+                    excel in creative problem solving and love bridging the gap
+                    between form and function in my work.
+                </p>
+                <br />
+                <p>Currently based in NYC.</p>
+                <p id="note">
+                    This website was made with React + vanilla JS, HTML/CSS, and
+                    love ♥︎ by me. ☺
+                </p>
+            </section>
+        </main>
+        <ul id="footer" style="position: fixed; bottom: 0"></ul>
+    </body>
+    <script type="text/babel" src="./src/main.js"></script>
+    <script type="text/babel" src="src/workPreview.js"></script>
+    <script>
+        const newSection = document.createElement("section");
+        newSection.classList.add("mobile-hide");
+        newSection.setAttribute("id", "myFaceCanvas");
+        const mainDiv = document.querySelector("#about");
+
+        // let colorPicker;
+        // let btnCol = 255;
+        mainDiv.appendChild(newSection);
+        // let sectionLeft = newSection.offsetLeft;
+        let sectionWidth = newSection.offsetWidth;
+        // let sectionTop = newSection.offsetTop;
+
+        let hyaFace;
+        function preload() {
+            hyaFace = loadImage("./assets/imgs/myFaceSticker.png");
+        }
+        function setup() {
+            var canvas = createCanvas(sectionWidth, sectionWidth);
+            canvas.parent("myFaceCanvas");
+            rectMode(CENTER);
+            textAlign(CENTER, CENTER);
+            imageMode(CENTER);
+            background(255);
+            image(hyaFace, sectionWidth / 2, sectionWidth / 2);
+            text("Click to draw on my face!", width / 2, 20);
+            // colorPicker = createColorPicker("#283077");
+            // colorPicker.position(sectionLeft + 10, sectionTop + 10);
+        }
+
+        function draw() {
+            if (mouseIsPressed) {
+                push();
+                strokeWeight(0);
+                // fill(colorPicker.color());
+                fill("#283077");
+                rect(mouseX, mouseY, 5, 5);
+                pop();
+            }
+            if (mouseX > 15 && mouseX < 75 && mouseY > 15 && mouseY < 25) {
+                btnCol = 200;
+            } else {
+                btnCol = 255;
+            }
+            ui();
+        }
+
+        function ui() {
+            push();
+            stroke(0);
+            strokeWeight(1);
+            fill(btnCol);
+            rect(40, 20, 50, 20);
+            pop();
+            text("CLEAR", 40, 21);
+        }
+
+        function mouseClicked() {
+            if (mouseX > 15 && mouseX < 75 && mouseY > 15 && mouseY < 25) {
+                clear();
+                background(255);
+                image(hyaFace, sectionWidth / 2, sectionWidth / 2);
+                text("Click to draw on my face!", width / 2, 20);
+            }
+        }
+    </script>
+    <script>
+        const name = document.querySelector("#name");
+        let rolled = false;
+        let fontNum = 4;
+        let prevRandomNum = fontNum - 1;
+        let newFont;
+        function rerollFont() {
+            if (rolled) {
+                fontNum = 4;
+            } else {
+                fontNum = 5;
+            }
+            let randomNum = Math.floor(Math.random() * fontNum);
+            if (prevRandomNum == randomNum && randomNum < fontNum) {
+                // let randomNum = Math.floor(Math.random() * fontNum);
+                randomNum++;
+            } else if (prevRandomNum == randomNum && randomNum == fontNum) {
+                randomNum--;
+            }
+            // console.log(
+            //     `prev rand: ${prevRandomNum} // new rand: ${randomNum}`
+            // );
+            randomFont(randomNum);
+        }
+        function randomFont(randomNum) {
+            switch (randomNum) {
+                case 0:
+                    newFont = "PP Neuebit";
+                    break;
+                case 1:
+                    newFont = "PP Editorial New";
+                    break;
+                case 2:
+                    newFont = "Dreamer TM";
+                    break;
+                case 3:
+                    newFont = "Offset TM";
+                    break;
+                case 4:
+                    newFont = "PP Mondwest";
+                    break;
+            }
+            name.style.fontFamily = newFont;
+            rolled = true;
+            prevRandomNum = randomNum;
+        }
+    </script>
+</html>
