@@ -16,19 +16,72 @@
         <title>hyacinth weng</title>
     </head>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <script
-        src="https://unpkg.com/react@18/umd/react.development.js"
-        crossorigin
-    ></script>
-    <script
-        src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
-        crossorigin
-    ></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin ></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
-
+    <style>
+        /* https://www.codehim.com/html5-css3/cards-stack-with-scrolling-effect-using-css/ */
+        /* .stack-card {
+            position: sticky;
+            top: calc(var(--navHeight) + var(--top));
+            transform-origin: center top;
+        }
+        .stack-card:nth-child(1) {
+            --top: 0px;
+        }
+        .stack-card:nth-child(2) {
+            --top: 40px;
+        }
+        .stack-card:nth-child(3s) {
+            --top: 80px;
+        } */
+        /* .work-preview {
+            background-color: var(--background);
+            border: 1px solid var(--accent);
+            border-radius: 16px;
+            padding: 40px;
+            margin: 0px -24px 40px -24px;
+            display: grid;
+            grid: 1fr / 0.7fr 0.3fr;
+            gap: 44px;
+        } */
+        /* .preview-description {
+            margin-bottom: auto;
+            margin-bottom: 24px;
+            padding-left: 4px;
+        } */
+        .work-preview{
+        background-color: var(--background);
+        border: 1px solid var(--accent);
+        border-radius: 16px;
+        padding: 16px;
+        }
+        .preview-img{
+            width: 620px;
+        }
+        .preview-text {
+            grid-area: 1 / 2 / span 1 / span 1;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-between; */
+        }
+        .preview-title {
+            font-size: 56px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--text);
+            line-height: 44px;
+            margin-bottom: 8px;
+        }
+        #work-root{
+            display: flex;
+            flex-direction: row;
+            gap: 1%;
+            overflow: auto;
+        }
+    </style>
     <body>
         <nav id="nav"></nav>
-        <!-- <div id="banner">THIS WEBSITE IS CURRENTLY UNDER CONSTRUCTION!</div> -->
         <main id="home">
             <div id="nameContainer">
                 <h1 id="name">Hyacinth Weng</h1>
@@ -49,6 +102,7 @@
         <main id="about">
             <section>
                 <h1>hyacinth weng <span>✿</span></h1>
+                <h2>[ hi-uh-synth ]  [ whey-ng ]</h2>
                 <!-- <h3>
                     <a href="mailto:hyacinthweng@gmail.com"
                         >&nearr; hyacinthweng@gmail.com</a
@@ -62,6 +116,10 @@
                 </p>
                 <br />
                 <p>Currently based in NYC.</p>
+                <p>Like my work? Let's chat!
+                    <br>
+                    <a href="mailto:hyacinthweng@gmail.com">&nearr; hyacinthweng@gmail.com</a>
+                </p>
                 <p id="note">
                     This website was made with React + vanilla JS, HTML/CSS, and
                     love ♥︎ by me. ☺
@@ -73,6 +131,7 @@
     <script type="text/babel" src="./src/main.js"></script>
     <script type="text/babel" src="src/workPreview.js"></script>
     <script>
+        //p5 stuff
         const newSection = document.createElement("section");
         newSection.classList.add("mobile-hide");
         newSection.setAttribute("id", "myFaceCanvas");
@@ -139,6 +198,7 @@
         }
     </script>
     <script>
+        //name font reroll
         const name = document.querySelector("#name");
         let rolled = false;
         let fontNum = 4;

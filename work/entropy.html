@@ -30,9 +30,12 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
     <style>
+        :root{
+            --hot-green: #B5F500;
+        }
         #project {
             display: grid;
-            grid: auto auto / 1fr 0.5fr 0.5fr;
+            grid: auto auto / 1fr 1fr 0.5fr;
             gap: 4rem;
             padding: 0px 80px;
         }
@@ -41,86 +44,98 @@
             flex-direction: rows;
             justify-content: space-between;
         }
+        #task .section-contents{
+            display: grid;
+            grid: repeat(3, auto) / repeat(6, auto);
+            text-align: center;
+        }
+        #task .section-contents :first-child{
+            grid-area: 1 / 2 / 2 / 6;
+        }
+        #task .section-contents :nth-child(2){
+            grid-area: 2 / 1 / 3 / 7;
+        }
+        #task .section-contents :nth-child(3){
+            grid-area: 3 / 1 / 4 / 3;
+        }
+        #task .section-contents :nth-child(4){
+            grid-area: 3 / 3 / 4 / 5;
+        }
+        #task .section-contents :nth-child(5){
+            grid-area: 3 / 5 / 4 / 7;
+        }
+        .problem-number{
+            background-color: var(--hot-green);
+            color: black;
+            padding: 8px;
+            border-radius: 20px;
+            display: inline;
+        }
+        #research .section-contents{
+            display: grid;
+            grid: auto auto / 1fr 1fr;
+            gap: 4rem;
+        }
+        header{
+            /* width: 100vw; */
+            position: fixed;
+            margin: 50px auto;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        header ol{
+            display: flex;
+            padding: 6px 12px;
+            gap: 1rem;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 18px;
+            background-color: var(--background);
+        }
+        section{
+            scroll-margin-top: 80px;
+        }
     </style>
     <body>
         <nav id="nav"></nav>
+        <header>
+            <ol>
+                <li><a href="#description">01 overview</a></li>
+                <li><a href="#task">02 task</a></li>
+                <li><a href="#research">03 research</a></li>
+                <li><a href="#design">04 design</a></li>
+            </ol>
+        </header>
         <main class="work" id="entropy">
             <section id="content">
                 <section id="header"></section>
                 <section id="description">
                     <div class="section-title">
                         <h1>01</h1>
-                        <h1>project brief</h1>
+                        <h1>overview</h1>
                     </div>
                     <section class="section-contents" id="project">
                         <div>
-                            <h2>background</h2>
+                            <h2>project</h2>
                             <p>
-                                Every year, the Design & Technology department
-                                at Parsons organizes a series of events to
-                                celebrate and showcase the graduating students
-                                and thesis projects of that year (BFA + MFA).
-                                The events are organized by committees of
-                                students in the graduating class and a faculty
-                                advisor, and include a pop up show, screening,
-                                symposium, reader/publication, and website.
-                            </p>
-                            <p>
-                                Entropy was chosen as the theme of this year’s
-                                showcase to embody the chaos and resilience our
-                                class of graduates experienced during our time
-                                in the program. Entropy, a physics concept,
-                                refers to a measure or state of disorder,
-                                randomness, or uncertainty. But for us, it
-                                represents the beauty of chaos and the power of
-                                creativity.
+                                Designing the website for the Parsons Design & Technology Class of 2024 Thesis Showcase.
                             </p>
                         </div>
-                        <div>
-                            <h2>task</h2>
-                            <p>
-                                01
-                                <br />
-                                Design a website that is user friendly for a
-                                wide range of audiences including parents,
-                                students, employers, and industry colleagues.
-                            </p>
-                            <p>
-                                02
-                                <br />
-                                The website design needs to clearly showcase all
-                                projects, students, and events.
-                            </p>
-                            <p>
-                                03
-                                <br />
-                                The visual design must be consistent with brand
-                                guidelines, referencinga sample poster design by
-                                the branding committee. (&rarr;)
-                            </p>
-                        </div>
-                        <!-- <div> -->
-                        <img src="../assets/imgs/entropy_poster.png" />
-                        <!-- </div> -->
                         <div>
                             <h2>role</h2>
-                            <p style="margin-bottom: 0">Web Design Team Lead</p>
+                            <p style="margin-bottom: 0"><strong>Web Design Team Lead</strong></p>
                             <ul class="circle-list">
+                                <li>create development-ready Figma layouts</li>
+                                <li>organize & gather website contents</li>
                                 <li>
-                                    create development-ready Figma layouts with
-                                    existing brand guidelines
-                                </li>
-                                <li>organize and gather website contents</li>
-                                <li>
-                                    lead and facilitate communication between
-                                    and within functional teams
+                                    lead & facilitate communication between/ within functional teams
                                 </li>
                                 <li>
-                                    collaborate with developer and bug test
-                                    final website
+                                    QA testing
                                 </li>
                             </ul>
                         </div>
+                        
                         <div>
                             <h2>tools</h2>
                             <div id="tools-imgs">
@@ -133,29 +148,26 @@
                                     src="../assets/imgs/wordpress_icon.png"
                                 />
                             </div>
-                        </div>
-                        <div>
+
                             <h2>link</h2>
                             <p>
                                 <a
                                     href="https://parsons.edu/dt-2023/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    >Live Website &nearr;
-                                    <br />
-                                    https://parsons.edu/dt-2023/</a
+                                    >Live Website &nearr;</a
                                 >
                             </p>
                         </div>
                     </section>
                 </section>
-                <section id="screens">
+                <section id="task">
                     <div class="section-title">
                         <h1>02</h1>
-                        <h1>screens</h1>
+                        <h1>task</h1>
                     </div>
-                    <section class="section-contents">
-                        <img src="../assets/imgs/entropy_desktoprender.jpg" />
+                    <!-- <section class="section-contents"> -->
+                        <!-- <img src="../assets/imgs/entropy_desktoprender.jpg" />
                         <img src="../assets/imgs/entropy_desktopgrid.jpg" />
                         <div class="mini-section">
                             <div class="mini-section-title">
@@ -191,13 +203,81 @@
                                 <hr />
                             </div>
                             <img src="../assets/imgs/entropy_peopleackn.png" />
+                        </div> -->
+                    <!-- </section> -->
+                     <section class="section-contents">
+                        <div>
+                            <h2>background</h2>
+                            <p>
+                                Every year, the Design & Technology department at Parsons organizes a series of events to celebrate and showcase the graduating students and thesis projects of that year (BFA + MFA). The events are organized by select students in the graduating class with a faculty advisor, including a pop up show, screening, symposium, and publication.
+                            </p>
+                            <p>
+                                A website is needed to showcase all project, student, and event details.
+                            </p>
+                        </div>
+                        <div>
+                            <h2>problem</h2>
+                            <p>Design a website that:</p>
+                        </div>
+                        <div>
+                            <div class="problem-number">01</div>
+                            <p>
+                                is user friendly for a wide range of audiences including parents, students, employers, and industry colleagues
+                            </p>
+                        </div>
+                        <div>
+                            <div class="problem-number">02</div>
+                            <p>
+                                clearly showcases all projects, students, and events
+                            </p>
+                        </div>
+                        <div>
+                            <div class="problem-number">03</div>
+                            <p>
+                                has visual design consistent with brand guidelines
+                            </p>
+                        </div>
+
+                     </section>
+                </section>
+                <section id="research">
+                    <div class="section-title">
+                        <h1>03</h1>
+                        <h1>research</h1>
+                    </div>
+                    <section class="section-contents">
+                        <div>
+                            <h3>This is the 12th year of the Parsons DT thesis website.</h3>
+                            <p>
+                                We started by reviewing the previous iterations, identifying the common components that worked. Although not required, we decided to follow the same structure to maintain consistency. 
+                            </p>
+                            <p>
+                                We then took a deeper look at the 5 most recent sites, noting what we liked and disliked about the UX of each.
+                            </p>
+                        </div>
+                        <picture>
+                            <img src="../assets/imgs/entropy_pastsites.png" />
+                        </picture>
+                        <picture>
+                            <img src="../assets/imgs/entropy_refs.jpg" />
+                        </picture>
+                        <div>
+                            <h3>en·tro·py</h3>
+                            <p>
+                                Entropy was chosen as the theme of the class of 2023’s graduate showcase to embody the chaos and resilience we experienced during our time in the program.
+                            </p>
+                            <p>                               
+                                Entropy, a physics concept, refers to a measure or state of disorder, randomness, or uncertainty. For us, it represents the beauty of chaos and the power of creativity.
+                            </p>
+                                Our branding team drafted a sample poster as a visual reference for the web design team, determining fonts, colors, and all visual elements.
+                            </p>
                         </div>
                     </section>
                 </section>
-                <section id="design-components">
+                <section id="design">
                     <div class="section-title">
-                        <h1>03</h1>
-                        <h1>design components</h1>
+                        <h1>04</h1>
+                        <h1>design</h1>
                     </div>
                     <section class="section-contents">
                         <div id="descomp-flex">
@@ -225,15 +305,15 @@
                     </section>
                 </section>
             </section>
-            <div id="endNav">
-                <!-- <a id="prevProj" href="./icecream.html">&larr; <br />none</a> -->
+            <!-- <div id="endNav">
+                <a id="prevProj" href="./icecream.html">&larr; <br />none</a>
                 <button id="toTopBtn" type="button" onclick="scrollToTop()">
                     to top
                 </button>
                 <a id="nextProj" href="./icecream.html"
                     >&rarr;<br />find my ice cream
                 </a>
-            </div>
+            </div> -->
         </main>
         <ul id="footer"></ul>
     </body>

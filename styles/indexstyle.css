@@ -79,37 +79,9 @@
 #work-page {
     padding-top: 32px;
 }
-.work-preview {
-    background-color: var(--background);
-    border: 1px solid var(--accent);
-    border-radius: 16px;
-    padding: 40px;
-    margin: 0px -24px 40px -24px;
-    display: grid;
-    grid: 1fr / 0.7fr 0.3fr;
-    gap: 44px;
-}
-.preview-text {
-    grid-area: 1 / 2 / span 1 / span 1;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-between; */
-}
-.preview-title {
-    font-size: 56px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--text);
-    line-height: 44px;
-    margin-bottom: 8px;
-}
+
 .tags-container {
     margin-bottom: 16px;
-}
-.preview-description {
-    /* margin-bottom: auto; */
-    margin-bottom: 24px;
-    padding-left: 4px;
 }
 .action-link {
     background-color: var(--accent);
@@ -130,22 +102,6 @@
     background-color: var(--background);
     color: var(--accent);
     border-color: var(--accent);
-}
-
-/* https://www.codehim.com/html5-css3/cards-stack-with-scrolling-effect-using-css/ */
-.stack-card {
-    position: sticky;
-    top: calc(var(--navHeight) + var(--top));
-    transform-origin: center top;
-}
-.stack-card:nth-child(1) {
-    --top: 0px;
-}
-.stack-card:nth-child(2) {
-    --top: 40px;
-}
-.stack-card:nth-child(3s) {
-    --top: 80px;
 }
 
 #about h1 {

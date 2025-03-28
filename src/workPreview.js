@@ -4,21 +4,47 @@
 let allProjects = document.querySelectorAll(".work-preview");
 console.log(allProjects);
 
+// function WorkPreviews(props) {
+//     const projectData = props.projectData;
+//     return projectData.map((item) => (
+//         <div
+//             key={item.project}
+//             className={
+//                 "work-preview" +
+//                 " " +
+//                 item.tags[0] +
+//                 " " +
+//                 item.tags[1]
+//             }
+//         >
+//             <a href={item.link}>
+//                 <img className="preview-img" src={item.img} />
+//             </a>
+//             <div className="preview-text">
+//                 <a href={item.link}>
+//                     <h1 className="preview-title">{item.project}</h1>
+//                 </a>
+
+//                 <ul className="tags-container">
+//                     {item.tags.map((tag) => (
+//                         <li className={"tag " + tag} key={tag}>
+//                             {tag}
+//                         </li>
+//                     ))}
+//                 </ul>
+//                 <p className="preview-description">{item.desc}</p>
+//                 <a href={item.link}>
+//                     <h2 className="action-link">view project ↗</h2>
+//                 </a>
+//             </div>
+//         </div>
+//     ));
+// }
+
 function WorkPreviews(props) {
     const projectData = props.projectData;
     return projectData.map((item) => (
-        <div
-            key={item.project}
-            className={
-                "work-preview" +
-                " " +
-                "stack-card" +
-                " " +
-                item.tags[0] +
-                " " +
-                item.tags[1]
-            }
-        >
+        <div key={item.project} className={"work-preview"}>
             <a href={item.link}>
                 <img className="preview-img" src={item.img} />
             </a>
@@ -34,19 +60,22 @@ function WorkPreviews(props) {
                         </li>
                     ))}
                 </ul>
-                <p className="preview-description">{item.desc}</p>
-                <a href={item.link}>
-                    <h2 className="action-link">view project ↗</h2>
-                </a>
             </div>
+            <p className="preview-subtitle">{item.subtitle}</p>
         </div>
     ));
 }
-
 const projectData = [
+    {
+        img: "./assets/imgs/monthofmaking_preview.jpg",
+        project: "Year of Making",
+        tags: ["graphic","webdesign"],
+        link: "https://www.hyacinth.zip/monthofmaking.html",
+    },
     {
         img: "./assets/imgs/entropy_preview.png",
         project: "Entropy Website Design",
+        subtitle: "for Parsons School of Design",
         tags: ["webdesign"],
         link: "./work/entropy.html",
         desc: "Designing the website for the Parsons Design & Technology 2023 Thesis showcase.",

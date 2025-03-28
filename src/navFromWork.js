@@ -40,6 +40,11 @@ function WorkNav(props) {
                         <span className="flower">✿</span> about
                     </a>
                 </li>
+                <li className="navbar">
+                    <a href="https://www.hyacinth.zip/" target="_blank" rel="noopener noreferrer">
+                        <span className="flower">✿</span> .zip
+                    </a>
+                </li>
                 <button className="hamburger" onClick={() => openMenu()}>
                     <svg
                         width="20"
@@ -66,7 +71,7 @@ function WorkNav(props) {
                     <a href="../index.html#about">about</a>
                 </li>
             </ul>
-            <div id="banner">THIS WEBSITE IS CURRENTLY UNDER CONSTRUCTION!</div>
+            {/* <div id="banner">THIS WEBSITE IS CURRENTLY UNDER CONSTRUCTION!</div> */}
         </React.Fragment>
     );
 }
