@@ -11,6 +11,28 @@
 #line2 {
     margin-bottom: 40px;
 }
+main{
+    padding-top: 100px;
+}
+header{
+    width: max-content;
+    position: fixed;
+    margin: 50px auto;
+    left: 50%;
+    transform: translate(-50%);
+}
+header ol{
+    display: flex;
+    padding: 6px 12px;
+    gap: 1rem;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 18px;
+    background-color: var(--background);
+}
+section{
+    scroll-margin-top: 100px;
+}
 #header-img {
     border-radius: 1rem;
     height: calc(100vw / 2.7);
