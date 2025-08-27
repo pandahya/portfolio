@@ -76,25 +76,6 @@
             grid: auto auto / 1fr 1fr;
             gap: 4rem;
         }
-        header{
-            /* width: 100vw; */
-            position: fixed;
-            margin: 50px auto;
-            left: 50%;
-            transform: translate(-50%);
-        }
-        header ol{
-            display: flex;
-            padding: 6px 12px;
-            gap: 1rem;
-            justify-content: center;
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            border-radius: 18px;
-            background-color: var(--background);
-        }
-        section{
-            scroll-margin-top: 80px;
-        }
     </style>
     <body>
         <nav id="nav"></nav>
@@ -302,18 +283,24 @@
                             <h2>grid system</h2>
                             <img src="../assets/imgs/entropy_grids.png" />
                         </div>
+                        <div class="mini-section">
+                            <h2>mockups</h2>
+                            <figure><img src="../assets/imgs/entropy_home.png"/></figure>
+                            <figure><img src="../assets/imgs/entropy_projects.png"/></figure>
+                            <figure><img src="../assets/imgs/entropy_reader.png"/></figure>
+                        </div>
                     </section>
                 </section>
             </section>
-            <!-- <div id="endNav">
-                <a id="prevProj" href="./icecream.html">&larr; <br />none</a>
+            <div id="endNav">
+                <a id="prevProj" href="https://www.hyacinth.zip/monthofmaking.html">&larr; <br />year of making</a>
                 <button id="toTopBtn" type="button" onclick="scrollToTop()">
                     to top
                 </button>
                 <a id="nextProj" href="./icecream.html"
                     >&rarr;<br />find my ice cream
                 </a>
-            </div> -->
+            </div>
         </main>
         <ul id="footer"></ul>
     </body>
