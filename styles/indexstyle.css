@@ -24,7 +24,7 @@
 }
 
 #about {
-    grid: 1fr / 0.5fr 0.5fr;
+    grid: 1fr / 1fr 1fr;
     gap: 2rem;
     display: grid;
     /* background-color: red; */
